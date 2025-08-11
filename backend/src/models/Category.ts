@@ -1,7 +1,13 @@
 import mongoose, { Schema, Document } from 'mongoose';
-import { Category as ICategory } from '../../../shared/types';
 
-export interface CategoryDocument extends Omit<ICategory, '_id'>, Document {}
+export interface CategoryDocument extends Document {
+  name: string;
+  description?: string;
+  type: 'article' | 'product';
+  order: number;
+  createdAt: Date;
+  updatedAt: Date;
+}
 
 const CategorySchema = new Schema<CategoryDocument>({
   name: {

@@ -1,7 +1,16 @@
 import mongoose, { Schema, Document } from 'mongoose';
-import { Product as IProduct } from '../../../shared/types';
 
-export interface ProductDocument extends Omit<IProduct, '_id'>, Document {}
+export interface ProductDocument extends Document {
+  name: string;
+  description: string;
+  category: string;
+  images: string[];
+  specifications: Map<string, string>;
+  featured: boolean;
+  order: number;
+  createdAt: Date;
+  updatedAt: Date;
+}
 
 const ProductSchema = new Schema<ProductDocument>({
   name: {

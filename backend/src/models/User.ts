@@ -1,7 +1,13 @@
 import mongoose, { Schema, Document } from 'mongoose';
-import { User as IUser } from '../../../shared/types';
 
-export interface UserDocument extends Omit<IUser, '_id'>, Document {}
+export interface UserDocument extends Document {
+  username: string;
+  email: string;
+  password: string;
+  role: 'admin' | 'editor';
+  createdAt: Date;
+  updatedAt: Date;
+}
 
 const UserSchema = new Schema<UserDocument>({
   username: {

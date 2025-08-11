@@ -1,7 +1,27 @@
 import mongoose, { Schema, Document } from 'mongoose';
-import { SiteSettings as ISiteSettings } from '../../../shared/types';
 
-export interface SiteSettingsDocument extends Omit<ISiteSettings, '_id'>, Document {}
+export interface SiteSettingsDocument extends Document {
+  companyName: string;
+  companyDescription: string;
+  contactEmail: string;
+  contactPhone: string;
+  contactAddress: string;
+  seoTitle: string;
+  seoDescription: string;
+  seoKeywords: string[];
+  carouselImages: {
+    image: string;
+    title: string;
+    description: string;
+    link?: string;
+  }[];
+  socialLinks: {
+    platform: string;
+    url: string;
+  }[];
+  createdAt: Date;
+  updatedAt: Date;
+}
 
 const CarouselImageSchema = new Schema({
   image: { type: String, required: true },

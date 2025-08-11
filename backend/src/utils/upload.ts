@@ -19,7 +19,7 @@ const storage = multer.diskStorage({
   }
 });
 
-const fileFilter = (req: any, file: Express.Multer.File, cb: multer.FileFilterCallback) => {
+const fileFilter = (req: any, file: Express.Multer.File, cb: (error: Error | null, acceptFile: boolean) => void) => {
   const allowedTypes = /jpeg|jpg|png|gif|webp/;
   const extname = allowedTypes.test(path.extname(file.originalname).toLowerCase());
   const mimetype = allowedTypes.test(file.mimetype);
@@ -27,7 +27,7 @@ const fileFilter = (req: any, file: Express.Multer.File, cb: multer.FileFilterCa
   if (mimetype && extname) {
     return cb(null, true);
   } else {
-    cb(new Error('Only image files are allowed (jpeg, jpg, png, gif, webp)'));
+    cb(new Error('Only image files are allowed (jpeg, jpg, png, gif, webp)'), false);
   }
 };
 

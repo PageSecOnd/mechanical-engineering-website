@@ -1,7 +1,18 @@
 import mongoose, { Schema, Document } from 'mongoose';
-import { Article as IArticle } from '../../../shared/types';
 
-export interface ArticleDocument extends Omit<IArticle, '_id'>, Document {}
+export interface ArticleDocument extends Document {
+  title: string;
+  content: string;
+  excerpt: string;
+  author: string;
+  category: string;
+  tags: string[];
+  featuredImage?: string;
+  published: boolean;
+  publishedAt?: Date;
+  createdAt: Date;
+  updatedAt: Date;
+}
 
 const ArticleSchema = new Schema<ArticleDocument>({
   title: {
