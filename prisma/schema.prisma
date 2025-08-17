@@ -1,0 +1,143 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  name      String?
+  password  String
+  role      Role     @default(USER)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  articles Article[]
+  products Product[]
+
+  @@map("users")
+}
+
+model Article {
+  id          String        @id @default(cuid())
+  title       String
+  slug        String        @unique
+  content     String
+  excerpt     String?
+  status      ArticleStatus @default(DRAFT)
+  featured    Boolean       @default(false)
+  publishedAt DateTime?
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+
+  authorId   String
+  author     User       @relation(fields: [authorId], references: [id])
+  categoryId String?
+  category   Category?  @relation(fields: [categoryId], references: [id])
+  tags       TagOnArticle[]
+
+  @@map("articles")
+}
+
+model Product {
+  id          String        @id @default(cuid())
+  name        String
+  slug        String        @unique
+  description String
+  content     String?
+  price       Float?
+  images      String[]
+  specifications Json?
+  status      ProductStatus @default(ACTIVE)
+  featured    Boolean       @default(false)
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+
+  authorId   String
+  author     User      @relation(fields: [authorId], references: [id])
+  categoryId String?
+  category   Category? @relation(fields: [categoryId], references: [id])
+
+  @@map("products")
+}
+
+model Category {
+  id          String @id @default(cuid())
+  name        String
+  slug        String @unique
+  description String?
+  type        CategoryType
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  articles Article[]
+  products Product[]
+
+  @@map("categories")
+}
+
+model Tag {
+  id        String   @id @default(cuid())
+  name      String   @unique
+  slug      String   @unique
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  articles TagOnArticle[]
+
+  @@map("tags")
+}
+
+model TagOnArticle {
+  id        String @id @default(cuid())
+  articleId String
+  tagId     String
+
+  article Article @relation(fields: [articleId], references: [id], onDelete: Cascade)
+  tag     Tag     @relation(fields: [tagId], references: [id], onDelete: Cascade)
+
+  @@unique([articleId, tagId])
+  @@map("tag_on_articles")
+}
+
+model Setting {
+  id    String @id @default(cuid())
+  key   String @unique
+  value String
+  type  SettingType @default(TEXT)
+
+  @@map("settings")
+}
+
+enum Role {
+  USER
+  ADMIN
+}
+
+enum ArticleStatus {
+  DRAFT
+  PUBLISHED
+  ARCHIVED
+}
+
+enum ProductStatus {
+  ACTIVE
+  INACTIVE
+  OUT_OF_STOCK
+}
+
+enum CategoryType {
+  ARTICLE
+  PRODUCT
+}
+
+enum SettingType {
+  TEXT
+  JSON
+  BOOLEAN
+  NUMBER
+}
