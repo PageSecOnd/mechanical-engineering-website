@@ -1,0 +1,106 @@
+body { background-color:#f9f9f9; font-family:"Microsoft YaHei",sans-serif; color:#333; margin:0; padding:0; }
+
+/* Banner */
+.NyBanner { position:relative; text-align:center; color:#fff; overflow:hidden; }
+.NyBanner img { width:100%; height:400px; object-fit:cover; filter:brightness(0.6); }
+.NyBa_Con { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); }
+.NyBa_Con p { font-size:36px; font-weight:bold; margin:0; }
+.NyBa_Con span { font-size:18px; color:#eee; }
+
+/* 面包屑 */
+.NyCrumb { background:#fff; padding:10px 0; font-size:14px; }
+.NyCrumb_Main { width:1200px; margin:0 auto; display:flex; align-items:center; }
+.NyCrumb img.Crumb { vertical-align:middle; margin-right:5px; }
+
+/* 标题 */
+.abGsjj_main { width:1200px; margin:40px auto; }
+.ab_Title1 p { font-size:28px; font-weight:bold; margin-bottom:20px; }
+.ab_Title1 span i { display:inline-block; width:50px; height:3px; background:linear-gradient(90deg,#ff7e5f,#feb47b); vertical-align:middle; }
+
+/* 下载容器 */
+.download-container { position:relative; margin:40px 0; }
+.download-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(350px, 1fr)); gap:20px; }
+
+/* 下载条目 */
+.download-item {
+  background:#fff; border-radius:12px; padding:20px; box-shadow:0 2px 15px rgba(0,0,0,0.08);
+  transition:all 0.3s ease; position:relative; overflow:hidden;
+}
+.download-item::before {
+  content:''; position:absolute; top:0; left:0; width:100%; height:4px;
+  background:linear-gradient(90deg,#ff7e5f,#feb47b);
+}
+.download-item:hover, .download-item.hover {
+  transform:translateY(-5px); box-shadow:0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* 下载图标区域 */
+.download-icon {
+  text-align:center; margin-bottom:15px;
+}
+.file-icon {
+  display:inline-block; width:60px; height:60px; border-radius:50%;
+  position:relative; margin:0 auto;
+}
+
+/* 文件类型图标样式 */
+.file-icon.pdf { background:linear-gradient(135deg,#ff4757,#ff3838); }
+.file-icon.doc { background:linear-gradient(135deg,#5352ed,#3742fa); }
+.file-icon.xls { background:linear-gradient(135deg,#2ed573,#20bf6b); }
+.file-icon.ppt { background:linear-gradient(135deg,#ffa502,#ff6348); }
+.file-icon.zip { background:linear-gradient(135deg,#747d8c,#57606f); }
+
+.file-icon::after {
+  content:'📄'; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+  font-size:24px; color:#fff;
+}
+.file-icon.pdf::after { content:'📋'; }
+.file-icon.doc::after { content:'📝'; }
+.file-icon.xls::after { content:'📊'; }
+.file-icon.ppt::after { content:'📈'; }
+.file-icon.zip::after { content:'🗜️'; }
+
+/* 下载信息 */
+.download-info h3 { margin:0 0 10px 0; font-size:20px; color:#333; font-weight:bold; }
+.download-desc { margin:0 0 15px 0; color:#666; line-height:1.6; font-size:14px; }
+
+/* 元数据 */
+.download-meta { display:flex; flex-wrap:wrap; gap:10px; margin-bottom:15px; }
+.download-meta span {
+  display:inline-flex; align-items:center; gap:4px; padding:4px 8px;
+  background:#f8f9fa; border-radius:15px; font-size:12px; color:#666;
+}
+.download-meta span i { font-size:12px; }
+
+/* 下载操作区域 */
+.download-actions { display:flex; justify-content:space-between; align-items:center; }
+.download-btn {
+  display:inline-flex; align-items:center; gap:8px; padding:10px 20px;
+  background:linear-gradient(135deg,#ff7e5f,#feb47b); color:#fff; text-decoration:none;
+  border-radius:25px; font-weight:bold; transition:all 0.3s ease;
+}
+.download-btn:hover {
+  background:linear-gradient(135deg,#feb47b,#ff7e5f); transform:scale(1.05);
+  box-shadow:0 4px 15px rgba(255,126,95,0.4);
+}
+.download-btn i { font-size:14px; }
+
+.download-date { font-size:12px; color:#999; }
+
+/* 响应式设计 */
+@media screen and (max-width:992px){
+  .abGsjj_main,.NyCrumb_Main{width:95%;}
+  .download-grid { grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:15px; }
+}
+
+@media screen and (max-width:768px){
+  .download-grid { grid-template-columns:1fr; }
+  .download-item { padding:15px; }
+  .download-actions { flex-direction:column; gap:10px; align-items:stretch; }
+  .download-btn { justify-content:center; }
+}
+
+@media screen and (max-width:480px){
+  .download-meta { flex-direction:column; gap:5px; }
+  .download-meta span { flex:1; justify-content:center; }
+}
