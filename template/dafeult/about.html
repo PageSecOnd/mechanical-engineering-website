@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>{pboot:if('{sort:title}'=='')}{pboot:pagetitle}{else}{sort:title}{/pboot:if}</title>
+<meta name="keywords" content="{pboot:if('{sort:keywords}'=='')}{pboot:pagekeywords}{else}{sort:keywords}{/pboot:if}">
+<meta name="description" content="{pboot:if('{sort:description}'=='')}{pboot:pagedescription}{else}{sort:description}{/pboot:if}">
+<link rel="stylesheet" type="text/css" href="{pboot:sitedomain}/skin/css/common.css">
+<link rel="stylesheet" type="text/css" href="{pboot:sitedomain}/skin/css/nystyle.css">
+<script src="{pboot:sitedomain}/skin/js/jquery-3.6.0.min.js"></script>
+</head>
+<body style="background-color:#f9f9f9;">
+{include file=head.html}
+{pboot:sort scode={sort:tcode}}
+<div class="NyBanner"> <img src="[sort:pic]" class="nyBa_Img" />
+  <div class="NyBa_Con">
+    <p>[sort:name]</p>
+    <i></i><span>[sort:subname]</span></div>
+</div>
+{/pboot:sort}
+<div class="NyCrumb"> <i></i>
+  <div class="NyCrumb_Main">
+    <ul>
+      <li class="NyActive"><a href="#ab01">公司概况</a></li>
+      <li><em></em></li>
+      <li><a href="#ab02">企业文化</a></li>
+      <li><em></em></li>
+      <div class="clear"></div>
+    </ul>
+    <p><img src="{pboot:sitedomain}/skin/images/crumb.png" class="Crumb" />当前位置：{pboot:position}</p>
+    <div class="clear"></div>
+  </div>
+</div>
+<div id="ab01"></div>
+<!--NyAboutus 开始-->
+<div class="NyAboutus">
+  <div class="NyAboutus_Profile">
+    <div class="abGsjj_main">
+      <div class="ab_Title1">
+        <p>公司概况</p>
+        <span><i></i></span></div>
+      <div class="abGsjj_con">
+        <div class="abGsjj_name">
+          <p>{pboot:companyname}</p>
+          <i></i></div>
+        <div class="abGsjj_ms ab_img">
+          {content:content}
+        </div>
+        <ul>
+          <li>
+            <p>{label:chengli}</p>
+            <span>{label:chengli}年公司成立</span></li>
+          <li>
+            <p>{label:zijin}</p>
+            <span>注册资金{label:zijin}万</span></li>
+          <li>
+            <p>365</p>
+            <span>365天 用心服务每一天</span></li>
+          <div class="clear"></div>
+        </ul>
+      </div>
+      <div class="abGsjj_img"><img src="{content:ico}" /></div>
+      <div class="clear"></div>
+    </div>
+    <div id="ab02"></div>
+  </div>
+  <div class="NyAboutus_Culture">
+    <div class="NyAbCulture_Main">
+      <div class="ab_Title1 ab_Title2">
+        <p>企业文化</p>
+        <span><i></i></span></div>
+      <ul>
+        <li>
+          <div class="NyAbCulture_Con"> <i class="AbIco2"></i>
+            <p>我们的使命</p>
+            <em></em> <span>为客户保驾护航，为您提供更好的服务，我们一直在努力</span> </div>
+        </li>
+        <li>
+          <div class="NyAbCulture_Con"> <i class="AbIco3"></i>
+            <p>我们的经营理念</p>
+            <em></em> <span>提供有竞争力的解决方案和服务持续创造客户价值</span> </div>
+        </li>
+        <li>
+          <div class="NyAbCulture_Con"> <i class="AbIco4"></i>
+            <p>我们的价值观</p>
+            <em></em> <span>诚信高效服务用户团结进取争创效益追求卓越</span> </div>
+        </li>
+        <div class="clear"></div>
+      </ul>
+    </div>
+    <div id="ab03"></div>
+  </div>
+</div>
+<script>
+  $(function () { $(".NyAboutusHonor_List ul li").first().addClass('active'); });
+
+  $(".NyAboutusHonor_List ul li span").click(function () {
+    if ($(this).parents('li').hasClass('active')) {
+      $(this).parents('li').removeClass('active');
+    } else {
+      $(this).parents('li').addClass('active');
+    }
+  });
+</script> 
+<!--NyAboutus 结束--> 
+{include file=foot.html}
+</body>
+</html>

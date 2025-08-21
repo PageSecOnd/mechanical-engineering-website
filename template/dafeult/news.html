@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>{content:title}-{pboot:sitetitle}</title>
+<meta name="keywords" content="{content:keywords}">
+<meta name="description" content="{content:description}">
+<link rel="stylesheet" type="text/css" href="{pboot:sitedomain}/skin/css/common.css">
+<link rel="stylesheet" type="text/css" href="{pboot:sitedomain}/skin/css/nystyle.css">
+<script src="{pboot:sitedomain}/skin/js/jquery-3.6.0.min.js"></script>
+</head>
+<body style="background-color:#f9f9f9;">
+{include file=head.html}
+{pboot:sort scode={sort:tcode}}
+<div class="NyBanner"> <img src="[sort:pic]" class="nyBa_Img" />
+  <div class="NyBa_Con">
+    <p>[sort:name]</p>
+    <i></i><span>[sort:subname]</span></div>
+</div>
+{/pboot:sort}
+<!--NyCrumb 开始-->
+<div class="NyCrumb"> <i></i>
+  <div class="NyCrumb_Main">
+    <ul>
+     <li {pboot:if('{sort:scode}'=='{sort:tcode}')}class="NyActive"{/pboot:if}><a href="{sort:toplink}">全部</a></li>
+      {pboot:nav num=50 parent={sort:tcode}}
+      <li {pboot:if('[nav:scode]'=='{sort:scode}')}class="NyActive"{/pboot:if}><a href="[nav:link]">[nav:name]</a></li>
+      {/pboot:nav}
+      <div class="clear"></div>
+    </ul>
+    <p><img src="{pboot:sitedomain}/skin/images/crumb.png" class="Crumb" />当前位置：{pboot:position}</p>
+    <div class="clear"></div>
+  </div>
+</div>
+<!--NyCrumb 结束--> 
+
+<!--NyNewDetail 开始-->
+<div class="NyNewDetail">
+  <div class="NyNewDetail_Main">
+    <h1 class="NyNewDetail_Name">{content:title}</h1>
+    <div class="NyNewDetail_Tips"> <span><img src="{pboot:sitedomain}/skin/images/ico04.png" />更新时间：{content:date style=Y-m-d}</span><span><img src="{pboot:sitedomain}/skin/images/ico05.png" />点击次数：{content:visits}</span> </div>
+    <div class="NyNewDetail_Content ab_img">
+      {content:content}
+    </div>
+  </div>
+</div>
+<div class="NyPrevNext">
+  <ul>
+    <li><i>上一条</i>{content:precontent}</li>
+    <li><i>下一条</i>{content:nextcontent}</li>
+  </ul>
+</div>
+<!--NyNewDetail 结束--> 
+{include file=foot.html}
+</html>
+</body>

@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>{pboot:if('{sort:title}'=='')}{pboot:pagetitle}{else}{sort:title}{/pboot:if}</title>
+<meta name="keywords" content="{pboot:if('{sort:keywords}'=='')}{pboot:pagekeywords}{else}{sort:keywords}{/pboot:if}">
+<meta name="description" content="{pboot:if('{sort:description}'=='')}{pboot:pagedescription}{else}{sort:description}{/pboot:if}">
+<link rel="stylesheet" type="text/css" href="{pboot:sitedomain}/skin/css/common.css">
+<link rel="stylesheet" type="text/css" href="{pboot:sitedomain}/skin/css/nystyle.css">
+<script src="{pboot:sitedomain}/skin/js/jquery-3.6.0.min.js"></script>
+</head>
+<body style="background-color:#f9f9f9;">
+{include file=head.html}
+{pboot:sort scode={sort:tcode}}
+<div class="NyBanner"> <img src="[sort:pic]" class="nyBa_Img" />
+  <div class="NyBa_Con">
+    <p>[sort:name]</p>
+    <i></i><span>[sort:subname]</span></div>
+</div>
+{/pboot:sort}
+<div class="NyCrumb"> <i></i>
+  <div class="NyCrumb_Main">
+    <ul>
+      <li class="NyActive"><a>{sort:topname}</a></li>
+      <div class="clear"></div>
+    </ul>
+    <p><img src="{pboot:sitedomain}/skin/images/crumb.png" class="Crumb" />当前位置：{pboot:position}</p>
+    <div class="clear"></div>
+  </div>
+</div>
+<div class="NyProducts">
+  <div class="NyPro_Left">
+    <div class="h_left">
+      <div class="cp_type">
+        {pboot:sort scode={sort:tcode}}
+        <div class="hd">
+          <p><img src="{pboot:sitedomain}/skin/images/proico1.png" />[sort:name]</p>
+          <span>[sort:subname]</span><em></em><i></i></div>
+          {/pboot:sort}
+        <div class="bd">
+          <ul>
+            {pboot:nav num=10 parent={sort:tcode}}
+            <li {pboot:if('[nav:scode]'=='{sort:scode}')}class="on"{/pboot:if}>
+              <p><a href="[nav:link]" >[nav:name]</a><span></span></p>
+              <div>
+              {pboot:2nav parent=[nav:scode]}
+              <a href="[2nav:link]" {pboot:if('[2nav:scode]'=='{sort:scode}')}class="active"{/pboot:if}>[2nav:name]</a>
+              {/pboot:2nav}</div>
+            </li>
+            {/pboot:nav}
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!--相关文章 开始-->
+    {pboot:sort scode=15}
+    <div class="NyXgwz">
+      <div class="NyXgwz_Title">
+        <p><img src="{pboot:sitedomain}/skin/images/artico.png" />[sort:name]</p>
+        <span>[sort:subname]</span><em></em></div>
+      <div class="NyXgwz_List">
+        <dl>
+          {pboot:list scode=[sort:scode] num=5 order=sorting}
+          <dd><a href="[list:link]"><i></i>[list:title]</a></dd>
+          {/pboot:list}
+        </dl>
+      </div>
+    </div>
+    {/pboot:sort}
+    <!--相关文章 结束--> 
+  </div>
+  <script type="text/javascript" src="{pboot:sitedomain}/skin/js/pt_js.js"></script>
+  <div class="NyPro_Right">
+    <ul>
+      {pboot:list num=9 order=sorting}
+      <li>
+        <div class="abProducts_con">
+          <div class="abProducts_img"> <a href="[list:link]"><img src="[list:ico]" alt="[list:title]" /></a> </div>
+          <div class="abProducts_text"> <a href="[list:link]" class="abProducts_name">[list:title]</a>
+            <p> <i> <svg t="1728377117630" class="icon" viewBox="0 0 1024 1024" version="1.1"
+          xmlns="http://www.w3.org/2000/svg" p-id="129551" width="200" height="200">
+              <path
+            d="M995.213116 271.075254L546.246504 9.102212A68.32348 68.32348 0 0 0 511.999431 0c-11.946653 0-23.72264 3.015108-34.247073 9.102212L28.785746 271.075254A55.751049 55.751049 0 0 0 0 318.804979c0 19.342201 10.922655 37.31907 28.785746 47.729725l448.966612 261.973042c10.524433 6.030216 22.243531 9.102212 34.247073 9.102212 11.946653 0 23.72264-3.071997 34.247073-9.102212l448.966612-261.973042a55.751049 55.751049 0 0 0 28.785746-47.786614 55.751049 55.751049 0 0 0-28.785746-47.672836zM511.999431 580.778021L63.032819 318.804979 511.999431 56.831937l448.966612 261.973042L511.999431 580.778021z m431.729298-60.415933a34.076407 34.076407 0 0 1 43.918174 8.533324c9.443545 13.08443 5.461327 30.663077-9.272879 39.196401L529.464301 830.007967a34.247073 34.247073 0 0 1-17.237315 4.551106 34.247073 34.247073 0 0 1-17.237314-4.551106L46.02306 568.091813c-14.506651-8.533324-18.716424-25.998193-9.21599-39.253289a33.621296 33.621296 0 0 1 43.463063-8.305769L511.999431 772.436475l431.729298-252.074387z m0 189.43979a34.247073 34.247073 0 0 1 43.918174 8.476435c9.443545 13.08443 5.461327 30.719966-9.272879 39.25329L529.464301 1019.447756a34.247073 34.247073 0 0 1-17.237315 4.551106 34.247073 34.247073 0 0 1-17.237314-4.551106L46.02306 757.474714c-14.506651-8.533324-18.716424-25.941305-9.21599-39.196401a33.621296 33.621296 0 0 1 43.463063-8.362657L511.999431 961.876265l431.729298-252.131276z"
+            fill="#2c2c2c" p-id="129552"></path>
+              </svg> </i>型号：[list:ext_xinghao]</p>
+          </div>
+        </div>
+        <a href="[list:link]" class="abProducts_btn"> 查看详情 <i> <svg t="1728375336767" class="icon" viewBox="0 0 1024 1024" version="1.1"
+      xmlns="http://www.w3.org/2000/svg" p-id="97363" width="200" height="200">
+        <path
+        d="M818.778353 576H64.030118v64h827.361882c30.208 0 45.357176-36.532706 23.973647-57.916235l-252.687059-252.687059-45.266823 45.236706 201.366588 201.366588z"
+        p-id="97364" fill="#ffffff"></path>
+        </svg> </i> </a></li>
+      {/pboot:list}
+      <div class="clear"></div>
+    </ul>
+    
+    <!--分页 开始-->
+    {pboot:if({page:rows}>0)}
+    <div class="pagebar">
+    <div class="pagination">
+    <a class="page-item page-link hidden-sm" href="{page:index}" title="首页">首页</a>
+    <a class="page-item page-link st" href="{page:pre}" title="上一页"><<</a>
+    {page:numbar}
+    <a class="page-item page-link" href="javascript:;" title="当前页/总页数">{page:current}/{page:count}</a>
+    <a class="page-item page-link st" href="{page:next}" title="下一页">>></a>
+    <a class="page-item page-link hidden-sm" href="{page:last}" title="尾页">尾页</a>
+    </div>
+    </div>	
+    {else}
+    <div class="tac text-secondary">本分类下无任何数据！</div>
+    {/pboot:if}
+    <!--分页 结束--> 
+    
+  </div>
+  <div class="clear"></div>
+</div>
+{include file=foot.html}
+</html>
+</body>

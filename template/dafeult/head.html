@@ -1,0 +1,77 @@
+<div class="abTop nyTop">
+  <div class="abTop_Main">
+    <div class="ab_Logo"> <a href="{pboot:sitedomain}/"><img src="{pboot:sitelogo}" alt="{pboot:sitetitle}" /></a> </div>
+    <div class="abSearch">
+      <form action="{pboot:scaction}" method="get">
+        <div class="scIpt">
+          <input type="text" name="keyword" placeholder="输入搜索的产品名称..." />
+        </div>
+        <div class="scBtn">
+          <button type="submit"> <i> <svg t="1724225171400" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                  xmlns="http://www.w3.org/2000/svg" p-id="5242" width="200" height="200">
+          <path
+                    d="M940.288 881.872L776.56 721.008c137.584-155.376 127.936-390.496-20.624-533.504-156.832-154-408.576-154-566.784 0C36.448 336 32.336 580.752 180.896 733.376l8.256 8.272c143.072 137.488 365.92 152.608 525.504 34.368l165.088 162.24c6.88 8.256 17.872 12.384 28.896 13.744 11.008 0 22-4.128 30.256-12.368a39.872 39.872 0 0 0 1.392-57.76zM156.144 463.872C158.88 292 300.592 154.496 473.92 155.872c171.952-1.376 312.288 136.128 316.4 308-2.768 171.872-144.448 309.376-316.4 308.016-173.328 2.736-315.04-134.768-317.776-308.016z"
+                    fill="#ffffff" p-id="5243"></path>
+          </svg> </i> </button>
+        </div>
+        <div class="clear"></div>
+      </form>
+      <a href="javascript:;" class="close"> <svg t="1728637373488" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4255"
+            width="200" height="200">
+      <path
+              d="M566.97558594 521.09667969L856.8828125 231.18945312c14.63378906-14.63378906 14.63378906-38.75976563 0-53.39355468l-1.58203125-1.58203125c-14.63378906-14.63378906-38.75976563-14.63378906-53.39355469 0L512 466.51660156 222.09277344 176.21386719c-14.63378906-14.63378906-38.75976563-14.63378906-53.39355469 0l-1.58203125 1.58203125c-15.02929688 14.63378906-15.02929688 38.75976563 0 53.39355469l289.90722656 289.90722656L167.1171875 811.00390625c-14.63378906 14.63378906-14.63378906 38.75976563 0 53.39355469l1.58203125 1.58203125c14.63378906 14.63378906 38.75976563 14.63378906 53.39355469 0L512 576.07226563 801.90722656 865.97949219c14.63378906 14.63378906 38.75976563 14.63378906 53.39355469 0l1.58203125-1.58203125c14.63378906-14.63378906 14.63378906-38.75976563 0-53.39355469L566.97558594 521.09667969z"
+              fill="#2c2c2c" p-id="4256"></path>
+      </svg> </a> </div>
+    <div class="abSearch_btn"> <a href="javascript:;"> <i> <svg t="1724225171400" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+              p-id="5242" width="200" height="200">
+      <path
+                d="M940.288 881.872L776.56 721.008c137.584-155.376 127.936-390.496-20.624-533.504-156.832-154-408.576-154-566.784 0C36.448 336 32.336 580.752 180.896 733.376l8.256 8.272c143.072 137.488 365.92 152.608 525.504 34.368l165.088 162.24c6.88 8.256 17.872 12.384 28.896 13.744 11.008 0 22-4.128 30.256-12.368a39.872 39.872 0 0 0 1.392-57.76zM156.144 463.872C158.88 292 300.592 154.496 473.92 155.872c171.952-1.376 312.288 136.128 316.4 308-2.768 171.872-144.448 309.376-316.4 308.016-173.328 2.736-315.04-134.768-317.776-308.016z"
+                fill="#ffffff" p-id="5243"></path>
+      </svg> </i> </a> </div>
+    
+    <!--导航栏 start-->
+    <div class="ab_Nav"> 
+      <!-- 控制menu -->
+      <div class="nav_menu">
+        <p> <span></span> <span></span> <span></span> </p>
+      </div>
+      <!-- 菜单 -->
+      <div class="nav_list">
+        <ul>
+          <li {pboot:if(0=='{sort:scode}')}class="active"{/pboot:if}><a href="{pboot:sitedomain}/">网站首页</a></li>
+          {pboot:nav}
+          <li {pboot:if('[nav:scode]'=='{sort:tcode}')}class="active"{/pboot:if}><a href="[nav:link]">[nav:name]</a></li>
+          {/pboot:nav}
+        </ul>
+        <div class="nav_mask"></div>
+      </div>
+    </div>
+    <!--导航栏 end-->
+    <div class="clear"></div>
+  </div>
+</div>
+<script type="text/javascript">
+    $('.nav_mask').click(function () {
+      $('.nav_list').removeClass('open')
+    })
+    $('.nav_menu,.nav_list').click(function (e) {
+      e.stopPropagation()
+    })
+    $('.ab_Nav').find('.nav_menu').click(function (e) {
+      $('.nav_list').toggleClass('open')
+    })
+    $(function () {
+      $(".nav_list ul li i").click(function () {
+        var b = false;
+        if ($(this).attr("class") == "cur") {
+          b = true;
+        }
+        $(".nav_list ul li ul").prev("i").removeClass("cur");
+        $(".nav_list>ul>li").children("ul").slideUp("fast");
+        if (!b) {
+          $(this).addClass("cur");
+          $(this).siblings("ul").slideDown("fast");
+        }
+      })
+    });
+  </script> 

@@ -1,0 +1,75 @@
+body { background-color:#f9f9f9; font-family:"Microsoft YaHei",sans-serif; color:#333; margin:0; padding:0; }
+
+/* Banner */
+.NyBanner { position:relative; text-align:center; color:#fff; overflow:hidden; }
+.NyBanner img { width:100%; height:400px; object-fit:cover; filter:brightness(0.6); }
+.NyBa_Con { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); }
+.NyBa_Con p { font-size:36px; font-weight:bold; margin:0; }
+.NyBa_Con span { font-size:18px; color:#eee; }
+
+/* 面包屑 */
+.NyCrumb { background:#fff; padding:10px 0; font-size:14px; }
+.NyCrumb_Main { width:1200px; margin:0 auto; display:flex; align-items:center; }
+.NyCrumb img.Crumb { vertical-align:middle; margin-right:5px; }
+
+/* 标题 */
+.abGsjj_main { width:1200px; margin:40px auto; }
+.ab_Title1 p { font-size:28px; font-weight:bold; margin-bottom:20px; }
+.ab_Title1 span i { display:inline-block; width:50px; height:3px; background:linear-gradient(90deg,#ff7e5f,#feb47b); vertical-align:middle; }
+
+/* 时间轴容器 */
+.timeline-container { position:relative; margin:40px 0; }
+.timeline { list-style:none; padding:0; position:relative; }
+.timeline::before {
+  content:''; position:absolute; top:0; bottom:0; left:50%; width:4px;
+  background:linear-gradient(to bottom,#ff7e5f,#feb47b); transform:translateX(-50%);
+}
+
+/* 时间轴条目 */
+.timeline li {
+  position:relative; width:50%; padding:20px 40px; box-sizing:border-box;
+  margin-bottom:40px; opacity:0; transform:translateY(50px); transition:all 0.6s ease-out;
+}
+.timeline li.timeline-visible { opacity:1; transform:translateY(0); }
+
+/* 左右交错 */
+.timeline li:nth-child(odd) { left:0; text-align:right; }
+.timeline li:nth-child(even) { left:50%; text-align:left; }
+
+/* 节点 */
+.timeline-icon { position:absolute; top:30px; left:50%; width:20px; height:20px; background:#ff7e5f; border-radius:50%; transform:translateX(-50%); z-index:2; }
+
+/* 年份 */
+.timeline-year { font-size:28px; font-weight:bold; color:#ff7e5f; margin-bottom:10px; }
+
+/* 卡片内容 */
+.timeline-content {
+  background:#fff; padding:20px; border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,0.08);
+  transition:transform 0.3s,box-shadow 0.3s; position:relative;
+}
+.timeline-content:hover { transform:translateY(-5px); box-shadow:0 6px 18px rgba(0,0,0,0.15); }
+
+.timeline-content h3 { margin-top:0; font-size:22px; color:#333; }
+.timeline-img { margin:10px 0; overflow:hidden; border-radius:8px; }
+.timeline-img img { width:100%; transition:transform 0.5s; }
+.timeline-img img:hover { transform:scale(1.05); }
+.timeline-content p { margin:0; line-height:1.6; color:#666; }
+
+/* 左右箭头 */
+.timeline li:nth-child(odd) .timeline-content::after {
+    content: ''; position:absolute; top:20px; right:-15px; border-width:10px; border-style:solid;
+    border-color: transparent transparent transparent #fff;
+}
+.timeline li:nth-child(even) .timeline-content::after {
+    content: ''; position:absolute; top:20px; left:-15px; border-width:10px; border-style:solid;
+    border-color: transparent #fff transparent transparent;
+}
+
+/* 响应式 */
+@media screen and (max-width:992px){
+  .abGsjj_main,.NyCrumb_Main{width:95%;}
+  .timeline li{width:100%; left:0 !important; text-align:left !important; margin-left:40px;}
+  .timeline::before{left:20px;}
+  .timeline-icon{left:10px;}
+  .timeline li .timeline-content::after{display:none;} /* 移动端隐藏箭头 */
+}

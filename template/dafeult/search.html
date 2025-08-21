@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>{pboot:if('{sort:title}'=='')}{pboot:pagetitle}{else}{sort:title}{/pboot:if}</title>
+<meta name="keywords" content="{pboot:if('{sort:keywords}'=='')}{pboot:pagekeywords}{else}{sort:keywords}{/pboot:if}">
+<meta name="description" content="{pboot:if('{sort:description}'=='')}{pboot:pagedescription}{else}{sort:description}{/pboot:if}">
+<link rel="stylesheet" type="text/css" href="{pboot:sitedomain}/skin/css/common.css">
+<link rel="stylesheet" type="text/css" href="{pboot:sitedomain}/skin/css/nystyle.css">
+<script src="{pboot:sitedomain}/skin/js/jquery-3.6.0.min.js"></script>
+<style>
+.NyProducts .NyPro_Right{ width:100%; padding:0}
+.NyPro_Right ul li{ width:25%}
+@media screen and (max-width: 768px) {
+   .NyPro_Right ul li{ width:50%}
+}
+</style>
+</head>
+<body style="background-color:#f9f9f9;">
+{include file=head.html}
+{pboot:sort scode=2}
+<div class="NyBanner"> <img src="[sort:pic]" class="nyBa_Img" />
+  <div class="NyBa_Con">
+    <p>[sort:name]</p>
+    <i></i><span>[sort:subname]</span></div>
+</div>
+{/pboot:sort}
+<div class="NyCrumb"> <i></i>
+  <div class="NyCrumb_Main">
+    <ul>
+      <li {pboot:if('{sort:scode}'=='{sort:tcode}')}class="NyActive"{/pboot:if}><a>搜索结果</a></li>
+      <div class="clear"></div>
+    </ul>
+    <p><img src="{pboot:sitedomain}/skin/images/crumb.png" class="Crumb" />当前位置：{pboot:position}</p>
+    <div class="clear"></div>
+  </div>
+</div>
+<div class="NyProducts">
+  <div class="NyPro_Right">
+    <ul>
+      {pboot:search num=9 order=sorting}
+      <li>
+        <div class="abProducts_con">
+          <div class="abProducts_img"> <a href="[search:link]"><img src="[search:ico]" alt="[search:title]" /></a> </div>
+          <div class="abProducts_text"> <a href="[search:link]" class="abProducts_name">[search:title]</a>
+          </div>
+        </div>
+        <a href="[search:link]" class="abProducts_btn"> 查看详情 <i> <svg t="1728375336767" class="icon" viewBox="0 0 1024 1024" version="1.1"
+      xmlns="http://www.w3.org/2000/svg" p-id="97363" width="200" height="200">
+        <path
+        d="M818.778353 576H64.030118v64h827.361882c30.208 0 45.357176-36.532706 23.973647-57.916235l-252.687059-252.687059-45.266823 45.236706 201.366588 201.366588z"
+        p-id="97364" fill="#ffffff"></path>
+        </svg> </i> </a></li>
+      {/pboot:search}
+      <div class="clear"></div>
+    </ul>
+    
+    <!--分页 开始-->
+    {pboot:if({page:rows}>0)}
+    <div class="pagebar">
+    <div class="pagination">
+    <a class="page-item page-link hidden-sm" href="{page:index}" title="首页">首页</a>
+    <a class="page-item page-link st" href="{page:pre}" title="上一页"><<</a>
+    {page:numbar}
+    <a class="page-item page-link" href="javascript:;" title="当前页/总页数">{page:current}/{page:count}</a>
+    <a class="page-item page-link st" href="{page:next}" title="下一页">>></a>
+    <a class="page-item page-link hidden-sm" href="{page:last}" title="尾页">尾页</a>
+    </div>
+    </div>	
+    {else}
+    <div class="tac text-secondary">本分类下无任何数据！</div>
+    {/pboot:if}
+    <!--分页 结束--> 
+    
+  </div>
+  <div class="clear"></div>
+</div>
+{include file=foot.html}
+</html>
+</body>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>{pboot:if('{sort:title}'=='')}{pboot:pagetitle}{else}{sort:title}{/pboot:if}</title>
+<link rel="stylesheet" href="{pboot:sitedomain}/skin/css/common.css">
+<link rel="stylesheet" href="{pboot:sitedomain}/skin/css/nystyle.css">
+<link rel="stylesheet" href="{pboot:sitedomain}/skin/css/timeline.css">
+<script src="{pboot:sitedomain}/skin/js/jquery-3.6.0.min.js"></script>
+<script src="{pboot:sitedomain}/skin/js/timeline.js"></script>
+</head>
+<body>
+{include file=head.html}
+
+{pboot:sort scode={sort:tcode}}
+<div class="NyBanner">
+  <img src="[sort:pic]" alt="[sort:name]" />
+  <div class="NyBa_Con">
+    <p>[sort:name]</p>
+    <span>[sort:subname]</span>
+  </div>
+</div>
+{/pboot:sort}
+
+<div class="NyCrumb">
+  <div class="NyCrumb_Main">
+    <p><img src="{pboot:sitedomain}/skin/images/crumb.png" class="Crumb" />当前位置：{pboot:position}</p>
+  </div>
+</div>
+
+<div class="NyAboutus">
+  <div class="NyAboutus_Profile">
+    <div class="abGsjj_main">
+      <div class="ab_Title1">
+        <p>发展历程</p>
+        <span><i></i></span>
+      </div>
+
+      <div class="timeline-container">
+        <ul class="timeline">
+          {pboot:list scode={sort:scode} order=sorting extfields=ext_year,ico}
+          <li>
+            <div class="timeline-icon"></div>
+            {pboot:if('[list:ext_year]'!='')}
+            <div class="timeline-year">[list:ext_year]</div>
+            {/pboot:if}
+            <div class="timeline-content">
+              <h3>[list:title]</h3>
+              {pboot:if('[list:ico]'!='')}
+              <div class="timeline-img">
+                <img src="[list:ico]" alt="[list:title]" />
+              </div>
+              {/pboot:if}
+              <p>[list:content]</p>
+            </div>
+          </li>
+          {/pboot:list}
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+{include file=foot.html}
+</body>
+</html>

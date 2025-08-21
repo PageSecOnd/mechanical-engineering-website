@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>{pboot:if('{sort:title}'=='')}{pboot:pagetitle}{else}{sort:title}{/pboot:if}</title>
+<meta name="keywords" content="{pboot:if('{sort:keywords}'=='')}{pboot:pagekeywords}{else}{sort:keywords}{/pboot:if}">
+<meta name="description" content="{pboot:if('{sort:description}'=='')}{pboot:pagedescription}{else}{sort:description}{/pboot:if}">
+<link rel="stylesheet" type="text/css" href="{pboot:sitedomain}/skin/css/common.css">
+<link rel="stylesheet" type="text/css" href="{pboot:sitedomain}/skin/css/nystyle.css">
+<script src="{pboot:sitedomain}/skin/js/jquery-3.6.0.min.js"></script>
+</head>
+<body style="background-color:#f9f9f9;">
+{include file=head.html}
+{pboot:sort scode={sort:tcode}}
+<div class="NyBanner"> <img src="[sort:pic]" class="nyBa_Img" />
+  <div class="NyBa_Con">
+    <p>[sort:name]</p>
+    <i></i><span>[sort:subname]</span></div>
+</div>
+{/pboot:sort}
+<!--NyCrumb 开始-->
+<div class="NyCrumb"> <i></i>
+  <div class="NyCrumb_Main">
+    <ul>
+      <li class="NyActive"><a href="{sort:link}">{sort:name}</a></li>
+      <div class="clear"></div>
+    </ul>
+    <p><img src="{pboot:sitedomain}/skin/images/crumb.png" class="Crumb" />当前位置：{pboot:position}</p>
+    <div class="clear"></div>
+  </div>
+</div>
+<!--NyCrumb 结束--> 
+
+<!--NyOrder 开始-->
+<div class="NyOrder">
+  <div class="NyOrder_Main">
+    <div class="NyOrder_Left">
+      <div class="NyOrder_Img"><img src="{pboot:sitedomain}/skin/images/kfimg.jpg" /></div>
+      <p>欢迎您来到我们的<br />
+        在线留言板块！</p>
+      <span>请填写左侧的表格，收到您的留言，我们会尽快与您取得联系。</span>
+      <div class="NyOrder_Btn">{pboot:sort scode=20}<a href="[sort:link]"><img src="{pboot:sitedomain}/skin/images/ico06.png" />联系我们</a>{/pboot:sort}</div>
+    </div>
+    <div class="NyOrder_Right">
+      <a name="order" id="order"></a>
+      <div class="ab_msg" id="ab_msg">
+          <form action="{pboot:msgaction}"  method="post">
+            <h3>留言框 </h3>
+            <ul>
+              <li>
+                <h4 class="xh">您的姓名：</h4>
+                <div class="msg_ipt1">
+                  <input class="textborder" size="16" name="name" id="name"  placeholder="请输入您的姓名"/>
+                </div>
+              </li>
+              <li>
+                <h4 class="xh">联系电话：</h4>
+                <div class="msg_ipt1">
+                  <input class="textborder" size="30" name="tel" id="tel"  placeholder="请输入您的联系电话"/>
+                </div>
+              </li>
+              <li>
+                <h4>常用邮箱：</h4>
+                <div class="msg_ipt1">
+                  <input class="textborder" size="30" name="email" id="email" placeholder="请输入您的常用邮箱"/>
+                </div>
+              </li>
+              <li>
+                <h4>补充说明：</h4>
+                <div class="msg_ipt12 msg_ipt0">
+                  <textarea class="areatext" style="width:100%;" name="content" rows="8" cols="65" id="content"  placeholder="请输入您的任何要求、意见或建议"></textarea>
+                </div>
+              </li>
+              <li>
+                <h4 class="xh">验证码：</h4>
+                <div class="msg_ipt2">
+                  <div class="c_yzm">
+                    <input class="textborder" size="4" name="checkcode" id="checkcode"/>
+                    <a href="javascript:void(0);" class="yzm_img"><img src="{pboot:checkcode}" title="点击刷新验证码" onclick="this.src='{pboot:checkcode}?'+Math.round(Math.random()*10);" height="60" /></a> </div>
+                  </div>
+              </li>
+              <li>
+                <h4></h4>
+                <div class="msg_btn">
+                  <input type="submit" value="提 交" class="msg_btn1" id="tj"/>
+                  <input type="reset" value="重 填" />
+                </div>
+              </li>
+            </ul>
+          </form>
+        </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+</div>
+<!--NyOrder 结束--> 
+{include file=foot.html}
+<script>
+	$(function(){
+		$('#tj').click(function(){
+			//alert(1)
+			if($('#name').val()==''){alert('请输入您的姓名！'); $("#name").focus(); return false;}
+			if ($("#tel").val() == "") { alert("请输入你的手机！"); $("#tel").focus(); return false; } 
+			if (!$("#tel").val().match(/^(((13[0-9]{1})|(14[0-9]{1})|(15[0-9]{1})|(16[0-9]{1})|(17[0-9]{1})|(18[0-9]{1})|(19[0-9]{1}))+\d{8})$/)) { alert("手机号码格式不正确！"); $("#tel").focus(); return false;}
+		})
+	})
+</script>
+</body>
+</html>

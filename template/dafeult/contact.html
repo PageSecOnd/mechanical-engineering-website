@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>{pboot:if('{sort:title}'=='')}{pboot:pagetitle}{else}{sort:title}{/pboot:if}</title>
+<meta name="keywords" content="{pboot:if('{sort:keywords}'=='')}{pboot:pagekeywords}{else}{sort:keywords}{/pboot:if}">
+<meta name="description" content="{pboot:if('{sort:description}'=='')}{pboot:pagedescription}{else}{sort:description}{/pboot:if}">
+<link rel="stylesheet" type="text/css" href="{pboot:sitedomain}/skin/css/common.css">
+<link rel="stylesheet" type="text/css" href="{pboot:sitedomain}/skin/css/nystyle.css">
+<script src="{pboot:sitedomain}/skin/js/jquery-3.6.0.min.js"></script>
+</head>
+<body style="background-color:#f9f9f9;">
+{include file=head.html}
+{pboot:sort scode={sort:tcode}}
+<div class="NyBanner"> <img src="[sort:pic]" class="nyBa_Img" />
+  <div class="NyBa_Con">
+    <p>[sort:name]</p>
+    <i></i><span>[sort:subname]</span></div>
+</div>
+{/pboot:sort}
+<div class="NyCrumb"> <i></i>
+  <div class="NyCrumb_Main">
+    <ul>
+      <li class="NyActive"><a href="{sort:link}">{sort:name}</a></li>
+      <div class="clear"></div>
+    </ul>
+    <p><img src="{pboot:sitedomain}/skin/images/crumb.png" class="Crumb" />当前位置：{pboot:position}</p>
+    <div class="clear"></div>
+  </div>
+</div>
+<!--NyContactUs 开始-->
+<div class="NyContactUs">
+    <div class="NyContactUs_Infor">
+	    <div class="NyContactUsInfor_Main">        
+            <div class="NyContactUsInfor_Img">
+            	<img src="{pboot:sitedomain}/skin/images/contactimg.jpg" class="contactImg" />
+                <div class="contactText">
+                	<p>{pboot:companyname}</p>
+                    <i></i>
+                    <span>可以通过以下方式联系我们<br />我们将会提供专业贴心的服务</span>
+                    <em></em>
+                </div>
+            </div>
+            <div class="NyContactUsInfor_Con">
+            	<div class="NyContactUs_Ewm">
+                	<span><img src="{pboot:companyweixin}" /></span><p>公众号二维码</p>
+                </div>
+                <div class="NyContactUs_Lxfs">
+                	<ul>
+                    	<li>
+                        	<img src="{pboot:sitedomain}/skin/images/lxico1.png" />
+                            <span>公司电话</span><p>{pboot:companyphone}</p>
+                        </li>
+                        <li>
+                        	<img src="{pboot:sitedomain}/skin/images/lxico2.png" />
+                            <span>公司邮箱</span><p>{pboot:companyemail}</p>
+                        </li>
+                        <li>
+                        	<img src="{pboot:sitedomain}/skin/images/lxico3.png" />
+                            <span>公司地址</span><p>{pboot:companyaddress}</p>
+                        </li>
+                        <div class="clear"></div>
+                    </ul>
+                </div>
+                <div class="clear"></div>
+            </div>
+    	</div>
+    </div>
+</div>
+{include file=foot.html}
+</body>
+</html>

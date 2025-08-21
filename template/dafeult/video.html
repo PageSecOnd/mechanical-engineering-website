@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>{content:title}-{pboot:sitetitle}</title>
+<meta name="keywords" content="{content:keywords}">
+<meta name="description" content="{content:description}">
+<script src="{pboot:sitedomain}/skin/js/jquery-3.6.0.min.js"></script>
+<link rel="stylesheet" type="text/css" href="{pboot:sitedomain}/skin/css/common.css">
+<link rel="stylesheet" type="text/css" href="{pboot:sitedomain}/skin/css/nystyle.css">
+<style>
+/* Banner */
+.NyBanner{position:relative;height:300px;text-align:center;color:#fff;}
+.NyBanner img{width:100%;height:100%;object-fit:cover;opacity:0.5;}
+.NyBa_Con{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);}
+.NyBa_Con p{font-size:36px;margin:0;}
+.NyBa_Con span{font-size:18px;display:block;margin-top:5px;}
+
+/* 面包屑 */
+.NyCrumb{padding:10px 20px;background:#f5f5f5;margin-bottom:20px;}
+.NyCrumb_Main p{margin:0;}
+
+/* 视频列表 */
+.video-section{width:1200px;max-width:95%;margin:0 auto;}
+.video-list{display:flex;flex-wrap:wrap;gap:15px;}
+.video-item{width:28%;position:relative;cursor:pointer;margin-bottom:20px;}
+.video-item img{width:100%;border-radius:6px;transition:0.3s;}
+.video-item:hover img{transform:scale(1.05);}
+.video-overlay{position:absolute;top:0;left:0;width:100%;height:100%;display:flex;justify-content:center;align-items:center;}
+.video-overlay span{font-size:36px;color:#fff;text-shadow:0 0 5px rgba(0,0,0,0.5);}
+.video-item h4{text-align:center;margin-top:5px;font-size:14px;color:#333;}
+
+/* 弹窗 */
+.video-modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.8);justify-content:center;align-items:center;z-index:9999;flex-direction:column;}
+.video-modal video{width:80%;max-width:900px;border-radius:8px;}
+.video-modal .close-btn{position:absolute;top:20px;right:30px;font-size:28px;color:#fff;cursor:pointer;}
+.video-modal h2{color:#fff;text-align:center;margin-top:10px;}
+.video-modal p{color:#ddd;text-align:center;margin-top:5px;}
+@media screen and (max-width:1200px){.video-item{width:45%;}}
+@media screen and (max-width:768px){.video-item{width:100%;}}
+</style>
+</head>
+<body style="background-color:#f9f9f9;">
+{include file=head.html}
+
+{pboot:sort scode={sort:tcode}}
+<div class="NyBanner">
+  <img src="[sort:pic]" alt="[sort:name]" />
+  <div class="NyBa_Con">
+    <p>[sort:name]</p>
+    <span>[sort:subname]</span>
+  </div>
+</div>
+{/pboot:sort}
+
+<div class="NyCrumb">
+  <div class="NyCrumb_Main">
+    <p>当前位置：{pboot:position}</p>
+  </div>
+</div>
+
+<div class="video-section">
+  <!-- 视频列表 -->
+  <div class="video-list">
+    {pboot:list scode={sort:scode} order=sorting extfields=video_url,thumb}
+    <div class="video-item" data-video="[list:video_url]" data-title="[list:title]" data-desc="[list:content]" data-thumb="[list:thumb]">
+      <img src="[list:thumb]" alt="[list:title]" />
+      <div class="video-overlay"><span>&#9658;</span></div>
+      <h4>[list:title]</h4>
+    </div>
+    {/pboot:list}
+  </div>
+</div>
+
+<!-- 弹窗 -->
+<div class="video-modal" id="videoModal">
+  <span class="close-btn" id="closeModal">&#10005;</span>
+  <video id="modalVideo" controls poster="">
+    <source src="" type="video/mp4">
+    您的浏览器不支持 video 标签。
+  </video>
+  <h2 id="modalTitle"></h2>
+  <p id="modalDesc"></p>
+</div>
+
+{include file=foot.html}
+
+<script>
+$(function(){
+  // 点击小视频弹窗播放
+  $('.video-item').click(function(){
+    var videoUrl = $(this).data('video');
+    var title = $(this).data('title');
+    var desc = $(this).data('desc');
+    var thumb = $(this).data('thumb');
+
+    $('#modalVideo source').attr('src', videoUrl);
+    $('#modalVideo').attr('poster', thumb);
+    var v = $('#modalVideo').get(0);
+    v.load();
+    v.play();
+
+    $('#modalTitle').text(title);
+    $('#modalDesc').text(desc);
+
+    $('#videoModal').fadeIn();
+  });
+
+  // 关闭弹窗
+  $('#closeModal').click(function(){
+    var v = $('#modalVideo').get(0);
+    v.pause();
+    $('#videoModal').fadeOut();
+  });
+
+  // 点击遮罩关闭弹窗
+  $('#videoModal').click(function(e){
+    if(e.target.id=='videoModal'){
+      var v = $('#modalVideo').get(0);
+      v.pause();
+      $(this).fadeOut();
+    }
+  });
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,2336 @@
+@charset "utf-8";
+
+.NyBanner { width: 100%; height: 550px; overflow: hidden; margin: 90px auto 0; padding: 0; position: relative; }
+.NyBanner img.nyBa_Img { display: block; width: 1920px; height: 550px; margin: 0; padding: 0; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); -moz-transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); }
+.NyBanner .NyBa_Con { width: 1400px; height: auto; margin: 0; padding: 0; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); -moz-transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.NyBa_Con p { width: 100%; height: auto; line-height: 40px; color: #fff; font-size: 36px; font-weight: bold; text-align: center; margin: 0 auto; padding: 0; }
+.NyBa_Con i { display: block; width: 40px; height: 3px; margin: 10px auto 15px; padding: 0; background-color: #124b53; }
+.NyBa_Con span { display: block; width: 100%; height: auto; line-height: 30px; color: rgba(255,255,255,0.25); font-size: 24px; text-align: center; margin: 0 auto; padding: 0; }
+/*NyCrumb 开始*/
+.NyCrumb { width: 100%; height: auto; margin: -70px auto 0; padding: 0; position: relative; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.NyCrumb i { display: block; width: calc(50% - 700px); height: 70px; margin: 0; padding: 0; background-color: #fff; position: absolute; right: 0; bottom: 0; }
+.NyCrumb .NyCrumb_Main { width: 1400px; height: 70px; margin: 0 auto; padding: 0; background-color: #fff; position: relative; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.NyCrumb_Main ul { float: left; }
+.NyCrumb_Main ul li { height: 70px; float: left; position: relative; }
+.NyCrumb_Main ul li em { display: block; width: 1px; height: 18px; margin: 26px auto; padding: 0; background-color: #ddd; }
+.NyCrumb_Main ul li a { display: block; width: auto; height: 70px; overflow: hidden; line-height: 50px; color: #333; font-size: 20px; font-weight: bold; margin: 0; padding: 10px 60px; }
+.NyCrumb_Main ul li.NyActive a, .NyCrumb_Main ul li:hover a { background-color: #124b53; color: #fff; }
+.NyCrumb_Main p { width: auto; max-width: 72%; height: 70px; overflow: hidden; line-height: 50px; color: #333; font-size: 16px; white-space: nowrap; text-overflow: ellipsis; margin: 0; padding: 10px 0; float: right; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.NyCrumb_Main p img.Crumb { display: inline-block; width: 18px; height: 18px; vertical-align: middle; margin: -2px 6px 0 0; }
+.NyCrumb_Main p img.CrumbJt { display: inline-block; width: 12px; height: 12px; vertical-align: middle; margin: -2px 8px 0; }
+.NyCrumb_Main p a { color: #333; }
+.NyCrumb_Main p a:hover { color: #124b53; }
+.NyCrumb_Main p span { color: #666; }
+ @media (max-width:1680px) {
+.NyBanner { height: 520px; margin: 80px auto 0;}
+.NyBanner img.nyBa_Img { width: 1815px; height: 520px; }
+}
+@media (max-width:1600px) {
+.NyBanner { height: 480px; }
+.NyBanner img.nyBa_Img { width: 1676px; height: 480px; }
+}
+@media (max-width:1560px) {}
+@media (max-width:1440px) {
+.NyBanner { height: 440px; }
+.NyBanner img.nyBa_Img { width: 1536px; height: 440px; }
+.NyBa_Con p { line-height: 36px; font-size: 32px; }
+.NyBa_Con span { font-size: 20px; }
+.NyBa_Con i { margin: 10px auto; }
+.NyCrumb { margin: -60px auto 0; padding: 0 60px; }
+.NyCrumb .NyCrumb_Main { width: 100%; height: 60px; }
+.NyCrumb i { width: 60px; height: 60px; }
+.NyCrumb_Main ul li { height: 60px; }
+.NyCrumb_Main ul li a { height: 60px; line-height: 40px; font-size: 18px; padding: 10px 40px; }
+.NyCrumb_Main p { height: 60px; line-height: 40px; font-size: 15px; }
+.NyCrumb_Main ul li em { margin: 21px auto; }
+}
+@media (max-width:1366px) {
+.NyBanner { height: 420px; }
+.NyBanner img.nyBa_Img { width: 1466px; height: 420px; }
+}
+@media (max-width:1280px) {
+.NyBanner { height: 400px; }
+.NyBanner img.nyBa_Img { width: 1396px; height: 400px; }
+.NyBa_Con p { line-height: 32px; font-size: 30px; }
+.NyBa_Con span { line-height: 20px; font-size: 18px; }
+.NyBa_Con i { height: 2px; }
+}
+@media (max-width:1200px) {
+.NyBanner { height: 370px; }
+.NyBanner img.nyBa_Img { width: 1292px; height: 370px; }
+.NyCrumb { padding: 0 40px; }
+.NyCrumb i { width: 40px; height: 60px; }
+.NyCrumb_Main ul li a { padding: 10px 30px; }
+.NyCrumb_Main p { font-size: 14px; }
+}
+@media (max-width:1080px) {
+.NyBanner { height: 340px; margin: 70px auto 0;}
+.NyBanner img.nyBa_Img { width: 1187px; height: 340px; }
+.NyBa_Con p { line-height: 30px; font-size: 26px; }
+.NyBa_Con span { font-size: 16px; }
+.NyCrumb_Main ul li a { font-size: 16px; }
+}
+@media (max-width:1024px) {
+.NyBanner { height: 320px; }
+.NyBanner img.nyBa_Img { width: 1117px; height: 320px; }
+}
+@media (max-width:800px) {
+.NyBanner { height: 280px; }
+.NyBanner img.nyBa_Img { width: 977px; height: 280px; }
+.NyCrumb { margin: -50px auto 0; padding: 0 20px; }
+.NyCrumb i { width: 20px; height: 50px; }
+.NyCrumb .NyCrumb_Main { height: 50px; }
+.NyCrumb_Main ul li { height: 50px; }
+.NyCrumb_Main ul li a { height: 50px; padding: 5px 20px; }
+.NyCrumb_Main p { height: 50px; padding: 5px 0; }
+.NyCrumb_Main p img.CrumbJt { margin: -2px 6px 0; }
+.NyCrumb_Main ul li em { margin: 16px auto; }
+}
+@media (max-width:767px) {
+.NyBanner { height: 180px; margin: 60px auto 0;}
+.NyBanner img.nyBa_Img { width: 628px; height: 180px; }
+.NyBa_Con p { font-size: 24px; }
+.NyBa_Con span { font-size: 14px; }
+.NyBa_Con i { width: 30px; margin: 5px auto; }
+.NyCrumb { margin: 0 auto; padding: 0; background-color: #fff; }
+.NyCrumb i { display: block; }
+.NyCrumb .NyCrumb_Main { height: auto; }
+.NyCrumb_Main ul { width: 100%; border-bottom: 1px solid #f0f0f0; float: inherit; }
+.NyCrumb_Main ul li { height: 44px;}
+.NyCrumb_Main ul li a { height:44px; font-size: 15px; padding:2px 20px;}
+.NyCrumb_Main ul li em { margin: 13px auto;}
+.NyCrumb_Main p { width: 100%; max-width: 100%; height: auto; line-height: 30px; margin: 0 auto; padding: 10px 12px; }
+}
+@media (max-width:375px) {
+.NyBanner { height: 160px; }
+.NyBanner img.nyBa_Img { width: 559px; height: 160px; }
+}
+@media (max-width:320px) {
+.NyBanner { height: 140px; }
+.NyBanner img.nyBa_Img { width: 489px; height: 140px; }
+.NyBa_Con p { font-size: 22px; }
+}
+@media (max-width:280px) {
+.NyCrumb_Main ul li a { padding:0 15px;}
+}
+/*NyBanner 结束*/
+
+
+.ab_Title1 {
+  width: 100%;
+  overflow: hidden;
+  margin: 0 auto 40px;
+  padding: 0;
+}
+
+.ab_Title1 p {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  color: #333;
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.ab_Title2 p {
+  color: #fff;
+}
+
+.ab_Title1 span {
+  display: block;
+  width: 144px;
+  height: 13px;
+  margin: 17px auto 0;
+  padding: 0;
+  background: url(../images/line01.png) center center repeat-x;
+}
+
+.ab_Title1 span i {
+  display: block;
+  width: 13px;
+  height: 13px;
+  margin: 0 auto;
+  padding: 0;
+  background-color: #124b53;
+}
+
+@media (max-width:1680px) {}
+
+@media (max-width:1600px) {}
+
+@media (max-width:1560px) {}
+
+@media (max-width:1440px) {
+  .ab_Title1 {
+    margin: 0 auto 30px;
+  }
+
+  .ab_Title1 p {
+    height: 36px;
+    line-height: 36px;
+    font-size: 32px;
+  }
+
+  .ab_Title1 span {
+    width: 128px;
+    height: 9px;
+    margin: 15px auto 0;
+  }
+
+  .ab_Title1 span i {
+    width: 9px;
+    height: 9px;
+  }
+}
+
+@media (max-width:1366px) {}
+
+@media (max-width:1280px) {
+  .ab_Title1 p {
+    height: 32px;
+    line-height: 32px;
+    font-size: 30px;
+  }
+
+  .ab_Title1 span {
+    width: 120px;
+  }
+}
+
+@media (max-width:1200px) {
+  .ab_Title1 p {
+    font-size: 28px;
+  }
+}
+
+@media (max-width:1080px) {
+  .ab_Title1 p {
+    height: 30px;
+    line-height: 30px;
+    font-size: 26px;
+  }
+
+  .ab_Title1 span {
+    margin: 10px auto 0;
+  }
+}
+
+@media (max-width:1024px) {}
+
+@media (max-width:800px) {}
+
+@media (max-width:767px) {
+  .ab_Title1 {
+    margin: 0 auto 20px;
+  }
+
+  .ab_Title1 p {
+    height: 30px;
+    line-height: 30px;
+    font-size: 24px;
+  }
+
+  .ab_Title1 span {
+    width: 96px;
+    height: 5px;
+    margin: 5px auto 0;
+  }
+
+  .ab_Title1 span i {
+    width: 5px;
+    height: 5px;
+  }
+}
+
+@media (max-width:375px) {}
+
+@media (max-width:320px) {
+  .ab_Title1 p {
+    font-size: 22px;
+  }
+}
+
+
+/*NyAboutus 开始*/
+.NyAboutus { width: 100%; height: auto; min-height: 320px; margin: 0 auto; padding: 0; }
+.NyTitle { width: 100%; height: auto; margin: 0 auto 40px; padding: 0; }
+.NyTitle p { width: 100%; height: 40px; overflow: hidden; line-height: 40px; color: #333; font-size: 36px; font-weight: bold; text-align: center; margin: 0 auto 10px; padding: 0; }
+.NyTitle i { display: block; width: 143px; height: 13px; overflow: hidden; margin: 0 auto; padding: 0; background: url(../images/line04.png) center center no-repeat; }
+.NyTitle1 p { color: #fff; }
+.NyAboutus .NyAboutus_Profile { width: 100%; height: auto; margin: 0 auto; padding: 80px 0; background-color: #f9f9f9; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.abGsjj_main { width: 1400px; overflow: hidden; margin: 0 auto; padding: 0; }
+.abGsjj_main .abGsjj_img { width: 50%; overflow: hidden; margin: 0; padding: 0; float: right; }
+.abGsjj_img img { display: block; width: auto!important; height: auto!important; max-width: 100%; margin: 0 auto; padding: 0; }
+.abGsjj_main .abGsjj_con { width: 46%; overflow: hidden; margin: 0; padding: 0; float: left; }
+.abGsjj_con .abGsjj_name { width: 100%; overflow: hidden; margin: 0 auto; padding: 0; }
+.abGsjj_name p { width: 100%; overflow: hidden; line-height: 40px; color: #333; font-size: 30px; font-weight: bold; margin: 0 auto; padding: 0; }
+.abGsjj_name i { display: block; width: 80px; height: 3px; overflow: hidden; margin: 10px 0 30px; padding: 0; background-color: #124b53; }
+.abGsjj_con .abGsjj_ms { width: 100%; overflow: hidden; margin: 0 auto; padding: 0 20px 0 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; overflow: hidden; height: 336px; overflow-y: scroll; }
+.abGsjj_con .abGsjj_ms::-webkit-scrollbar {
+width:3px;
+}
+.abGsjj_ms p { width: 100%; overflow: hidden; line-height: 26px; color: #666; font-size: 16px; text-align: justify; word-break: break-all; margin: 0 auto; padding: 0; }
+.abGsjj_ms p span, .abGsjj_ms p em { color: #666!important; font-family: Arial, \5FAE\8F6F\96C5\9ED1, Helvetica, sans-serif!important; font-size: 15px!important; font-style: normal!important; font-weight: normal!important; }
+.abGsjj_con ul { margin: 45px -10px 0; }
+.abGsjj_con ul li { width: 33.333333%; overflow: hidden; margin: 0; padding: 0 10px; float: left; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.abGsjj_con ul li p { width: 100%; height: 60px; overflow: hidden; line-height: 60px; color: #124b53; font-size: 56px; font-weight: bold; text-align: center; margin: 0 auto; padding: 0; font-family: Arial, Helvetica, sans-serif; }
+.abGsjj_con ul li span { display: block; width: 100%; overflow: hidden; line-height: 30px; color: #666; font-size: 16px; text-align: center; margin: 0 auto; padding: 0; }
+
+.NyAboutus .NyAboutus_Culture { width: 100%; height: auto; margin: 0 auto; padding: 80px 0; background: #313131 url(../images/nyabbg1.png) center center no-repeat; background-size: cover; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.NyAboutus_Culture .NyAbCulture_Main { width: 1400px; height: auto; margin: 0 auto; padding: 0; }
+.NyAbCulture_Main ul { margin: 0 -20px;}
+.NyAbCulture_Main ul li { width: 33.333333%; height: auto; margin: 0; padding: 0 20px; float: left; transition: all 0.5s; -webkit-transition: all 0.5s; -moz-transition: all 0.5s; -o-transition: all 0.5s; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.NyAbCulture_Main ul li .NyAbCulture_Con { width: 100%; height: auto; overflow: hidden; background: #fff; padding: 80px 168px 40px 40px; position: relative;}
+.NyAbCulture_Main ul li .NyAbCulture_Con:hover { background: #124b53 url(../images/nyabculture_bg.png) right bottom no-repeat; }
+.NyAbCulture_Main ul li .NyAbCulture_Con i { display: block; width: 108px; height: 108px; overflow: hidden; padding: 24px; border-radius: 0 0 54px 54px; position: absolute; top: 0; right: 30px;}
+.NyAbCulture_Main ul li .NyAbCulture_Con i.AbIco1 { background:#124b53 url(../images/abico01.png) center center no-repeat; background-size: 60px 60px; }
+.NyAbCulture_Main ul li .NyAbCulture_Con i.AbIco2 { background:#124b53 url(../images/abico02.png) center center no-repeat; background-size: 60px 60px; }
+.NyAbCulture_Main ul li .NyAbCulture_Con i.AbIco3 { background:#124b53 url(../images/abico03.png) center center no-repeat; background-size: 60px 60px; }
+.NyAbCulture_Main ul li .NyAbCulture_Con i.AbIco4 { background:#124b53 url(../images/abico04.png) center center no-repeat; background-size: 60px 60px; }
+.NyAbCulture_Main ul li .NyAbCulture_Con:hover i.AbIco1 { background:#ffffff url(../images/abico1.png) center center no-repeat; background-size: 60px 60px; }
+.NyAbCulture_Main ul li .NyAbCulture_Con:hover i.AbIco2 { background:#ffffff url(../images/abico2.png) center center no-repeat; background-size: 60px 60px; }
+.NyAbCulture_Main ul li .NyAbCulture_Con:hover i.AbIco3 { background:#ffffff url(../images/abico3.png) center center no-repeat; background-size: 60px 60px; }
+.NyAbCulture_Main ul li .NyAbCulture_Con:hover i.AbIco4 { background:#ffffff url(../images/abico4.png) center center no-repeat; background-size: 60px 60px; }
+.NyAbCulture_Main ul li .NyAbCulture_Con p { width: 100%; height: auto; line-height: 30px; color: #124b53; font-size: 24px; font-weight: bold; margin: 0 auto; padding: 0;}
+.NyAbCulture_Main ul li .NyAbCulture_Con:hover p { color: #fff; }
+.NyAbCulture_Main ul li .NyAbCulture_Con em { display: block; width: 100%; height: 1px; margin: 15px auto 20px; padding: 0; background-color: #e6e6e6;}
+.NyAbCulture_Main ul li .NyAbCulture_Con:hover em { background-color: rgba(255,255,255,0.25);}
+.NyAbCulture_Main ul li .NyAbCulture_Con span { display: block; width: 100%; height: 52px; overflow: hidden; line-height: 26px; color: #666; font-size: 16px; margin: 0 auto; padding: 0; display: -webkit-box; text-overflow: ellipsis; -webkit-line-clamp: 2; -webkit-box-orient: vertical; transition: all 0.5s; -webkit-transition: all 0.5s; -moz-transition: all 0.5s; -o-transition: all 0.5s; }
+.NyAbCulture_Main ul li .NyAbCulture_Con:hover span { color: rgba(255,255,255,0.45); font-weight: bold;}
+
+.NyAboutus .NyAboutus_Honor { width: 100%; height: auto; margin: 0 auto; padding: 80px 0 60px; background-color: #f9f9f9; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.NyAboutus_Honor .NyAboutusHonor_Main { width: 1400px; height: auto; margin: 0 auto; padding: 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.NyAboutusHonor_List ul li { background-color: #fff; box-shadow: 10px 0 30px rgba(0,0,0,0.05); margin-bottom: 20px; padding: 20px 88px 20px 40px; position: relative; display: flex; align-items: center; justify-items: center;}
+.NyAboutusHonor_List ul li:hover { background-color: #dc002f;}
+.NyAboutusHonor_List ul li.active { background: #dc002f url(../images/hnr_bg.png) right bottom no-repeat;}
+
+.NyAboutusHonor_List ul li .NyAboutusHonor_Img { display: none; width: 280px; height: 188px; overflow: hidden;}
+.NyAboutusHonor_List ul li.active .NyAboutusHonor_Img { display: block;}
+.NyAboutusHonor_List ul li .NyAboutusHonor_Img a { display: block; width: 100%; height: 100%; overflow: hidden; position: relative;}
+.NyAboutusHonor_List ul li .NyAboutusHonor_Img a img { display: block; max-width: 100%; max-height: 100%; margin: auto; position: absolute; left: 0; top: 0; right: 0; bottom: 0;}
+.NyAboutusHonor_List ul li.active .NyAboutusHonor_Img a:hover img {-webkit-transform: scale(1.1); -moz-transform: scale(1.1); transform: scale(1.1);}
+
+.NyAboutusHonor_List ul li .NyAboutusHonor_Text { width: 100%; height: auto; overflow: hidden; padding-left: 0;}
+.NyAboutusHonor_List ul li.active .NyAboutusHonor_Text { width: calc(100% - 280px); padding-left: 80px;}
+.NyAboutusHonor_List ul li .NyAboutusHonor_Text a.NyAboutusHonor_Name { display: block; width: 100%; height: 48px; overflow: hidden; line-height: 48px; color: #333; font-size: 24px; font-weight: bold; white-space: nowrap; text-overflow: ellipsis; position: relative;}
+.NyAboutusHonor_List ul li:hover .NyAboutusHonor_Text a.NyAboutusHonor_Name, .NyAboutusHonor_List ul li.active .NyAboutusHonor_Text a.NyAboutusHonor_Name { color: #fff;}
+.NyAboutusHonor_List ul li.active .NyAboutusHonor_Text a.NyAboutusHonor_Name { padding-left: 16px;}
+.NyAboutusHonor_List ul li.active .NyAboutusHonor_Text a.NyAboutusHonor_Name::before { content: ''; display: block; width: 6px; height: 6px; margin-top: -3px; background-color: #fff; border-radius: 50%; position: absolute; left: 0; top: 50%;}
+.NyAboutusHonor_List ul li .NyAboutusHonor_Text p { display: none; width: 100%; height: 30px; overflow: hidden; line-height: 30px; color: rgba(255,255,255,0.45); font-size: 16px; white-space: nowrap; text-overflow: ellipsis;}
+.NyAboutusHonor_List ul li.active .NyAboutusHonor_Text p { display: block;}
+.NyAboutusHonor_List ul li .NyAboutusHonor_Text p i { display: block; width: 20px; height: 20px; overflow: hidden; margin: 8px 8px 8px 0; float: left;}
+.NyAboutusHonor_List ul li .NyAboutusHonor_Text p i svg { display: block; width: 100%; height: 100%; overflow: hidden;}
+.NyAboutusHonor_List ul li .NyAboutusHonor_Text p i svg path { fill: #ffffff;}
+
+.NyAboutusHonor_List ul li .NyAboutusHonor_Text i { display: none; width: 249px; height: 40px; overflow: hidden; margin-top: 40px;}
+.NyAboutusHonor_List ul li.active .NyAboutusHonor_Text i { display: block;}
+.NyAboutusHonor_List ul li .NyAboutusHonor_Text i img { display: block; max-width: 100%; max-height: 100%;}
+
+.NyAboutusHonor_List ul li span { display: block; width: 48px; height: 48px; overflow: hidden; position: absolute; top: 20px; right: 40px; cursor: pointer;}
+.NyAboutusHonor_List ul li span::before, .NyAboutusHonor_List ul li span::after { content: ''; display: block; background-color: #124b53; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); -moz-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); -o-transform: translate(-50%, -50%);}
+.NyAboutusHonor_List ul li span::before { width:20px; height: 2px;}
+.NyAboutusHonor_List ul li span::after { width: 2px; height: 20px;}
+.NyAboutusHonor_List ul li:hover span::before, .NyAboutusHonor_List ul li.active span::before, .NyAboutusHonor_List ul li:hover span::after { background-color: #fff;}
+.NyAboutusHonor_List ul li.active span::after { display: none;}
+
+@media (max-width:1680px) {
+}
+@media (max-width:1600px) {
+
+}
+@media (max-width:1560px) {
+}
+@media (max-width:1440px) {
+.NyAboutus .NyAboutus_Profile { padding: 60px; }
+.abGsjj_main { width: 100%; }
+.NyAboutus .NyAboutus_Culture { padding: 60px; }
+.NyAboutus_Culture .NyAbCulture_Main { width: 100%; }
+.NyAbCulture_Main ul { margin: 0 -15px;}
+.NyAbCulture_Main ul li { padding: 0 15px;}
+.NyAbCulture_Main ul li .NyAbCulture_Con { padding: 60px 168px 30px 30px;}
+
+.NyAboutus .NyAboutus_Honor { padding: 60px 60px 40px; }
+.NyAboutus_Honor .NyAboutusHonor_Main { width: 100%; }
+.NyAboutusHonor_List ul li.active .NyAboutusHonor_Text { padding-left: 60px;}
+
+}
+@media (max-width:1366px) {
+.abGsjj_con .abGsjj_ms { height: 270px; }
+.abGsjj_con ul li p { font-size: 48px; }
+}
+@media (max-width:1280px) {
+.abGsjj_con ul { margin: 35px -10px 0; }
+.abGsjj_con ul li span { font-size: 15px;}
+.NyAbCulture_Main ul li .NyAbCulture_Con { padding: 60px 128px 30px 30px;}
+.NyAbCulture_Main ul li .NyAbCulture_Con i { width: 88px; height: 88px; right: 20px;}
+.NyAbCulture_Main ul li .NyAbCulture_Con i.AbIco1 {
+  background: #124b53 url(../images/abico01.png) center center no-repeat; background-size: 50px 50px;
+}
+.NyAbCulture_Main ul li .NyAbCulture_Con i.AbIco2 {
+  background: #124b53 url(../images/abico02.png) center center no-repeat; background-size: 50px 50px;
+}
+.NyAbCulture_Main ul li .NyAbCulture_Con i.AbIco3 {
+  background: #124b53 url(../images/abico03.png) center center no-repeat; background-size: 50px 50px;
+}
+.NyAbCulture_Main ul li .NyAbCulture_Con i.AbIco4 {
+  background: #124b53 url(../images/abico04.png) center center no-repeat; background-size: 50px 50px;
+}
+.NyAbCulture_Main ul li .NyAbCulture_Con:hover i.AbIco1 {
+  background: #ffffff url(../images/abico1.png) center center no-repeat; background-size: 50px 50px;
+}
+.NyAbCulture_Main ul li .NyAbCulture_Con:hover i.AbIco2 {
+  background: #ffffff url(../images/abico2.png) center center no-repeat; background-size: 50px 50px;
+}
+.NyAbCulture_Main ul li .NyAbCulture_Con:hover i.AbIco3 {
+  background: #ffffff url(../images/abico3.png) center center no-repeat; background-size: 50px 50px;
+}
+.NyAbCulture_Main ul li .NyAbCulture_Con:hover i.AbIco4 {
+  background: #ffffff url(../images/abico4.png) center center no-repeat; background-size: 50px 50px;
+}
+
+.NyAbCulture_Main ul li .NyAbCulture_Con p { font-size: 20px;}
+.NyAbCulture_Main ul li .NyAbCulture_Con span { height: 50px; line-height: 25px; font-size: 15px;}
+
+.NyAboutusHonor_List ul li { padding: 20px 80px 20px 40px;}
+.NyAboutusHonor_List ul li .NyAboutusHonor_Img { width: 260px; height: 168px;}
+.NyAboutusHonor_List ul li.active .NyAboutusHonor_Text { width: calc(100% - 260px); padding-left: 40px;}
+.NyAboutusHonor_List ul li .NyAboutusHonor_Text a.NyAboutusHonor_Name { height: 40px; line-height: 40px; font-size: 22px;}
+.NyAboutusHonor_List ul li .NyAboutusHonor_Text p { font-size: 15px;}
+.NyAboutusHonor_List ul li .NyAboutusHonor_Text i { margin-top: 30px;}
+.NyAboutusHonor_List ul li span { width: 40px; height: 40px;}
+
+}
+@media (max-width:1200px) {
+.NyAboutus .NyAboutus_Profile { padding: 60px 40px; }
+.abGsjj_con .abGsjj_ms { height: 240px; }
+.abGsjj_con ul li p { font-size: 44px; }
+.NyAboutus .NyAboutus_Culture { padding: 60px 40px; }
+
+.NyAboutus .NyAboutus_Honor { padding: 60px 40px; }
+}
+@media (max-width:1080px) {
+.abGsjj_name p { font-size: 24px; }
+.abGsjj_name i { margin: 10px 0 20px; }
+.abGsjj_con ul { margin: 25px -10px 0; }
+.abGsjj_con ul li p { font-size: 40px; }
+.abGsjj_con ul li span { line-height: 22px; font-size: 14px;}
+.abGsjj_con .abGsjj_ms { height: 175px; }
+
+.NyAbCulture_Main ul { margin: 0 -10px;}
+.NyAbCulture_Main ul li { padding: 0 10px;}
+.NyAbCulture_Main ul li .NyAbCulture_Con { padding: 40px 110px 20px 20px;}
+.NyAbCulture_Main ul li .NyAbCulture_Con i { width: 72px; height: 72px;}
+.NyAbCulture_Main ul li .NyAbCulture_Con i.AbIco1 {
+  background: #124b53 url(../images/abico01.png) center center no-repeat; background-size: 40px 40px;
+}
+.NyAbCulture_Main ul li .NyAbCulture_Con i.AbIco2 {
+  background: #124b53 url(../images/abico02.png) center center no-repeat; background-size: 40px 40px;
+}
+.NyAbCulture_Main ul li .NyAbCulture_Con i.AbIco3 {
+  background: #124b53 url(../images/abico03.png) center center no-repeat; background-size: 40px 40px;
+}
+.NyAbCulture_Main ul li .NyAbCulture_Con i.AbIco4 {
+  background: #124b53 url(../images/abico04.png) center center no-repeat; background-size: 40px 40px;
+}
+.NyAbCulture_Main ul li .NyAbCulture_Con:hover i.AbIco1 {
+  background: #ffffff url(../images/abico1.png) center center no-repeat; background-size: 40px 40px;
+}
+.NyAbCulture_Main ul li .NyAbCulture_Con:hover i.AbIco2 {
+  background: #ffffff url(../images/abico2.png) center center no-repeat; background-size: 40px 40px;
+}
+.NyAbCulture_Main ul li .NyAbCulture_Con:hover i.AbIco3 {
+  background: #ffffff url(../images/abico3.png) center center no-repeat; background-size: 40px 40px;
+}
+.NyAbCulture_Main ul li .NyAbCulture_Con:hover i.AbIco4 {
+  background: #ffffff url(../images/abico4.png) center center no-repeat; background-size: 40px 40px;
+}
+.NyAbCulture_Main ul li .NyAbCulture_Con em { margin: 10px auto 15px;}
+.NyAbCulture_Main ul li .NyAbCulture_Con span { height: 48px; line-height: 24px; font-size: 14px;}
+
+}
+@media (max-width:1024px) {
+.NyAboutus .NyAboutus_Profile { padding: 40px; }
+.NyAboutus .NyAboutus_Culture { padding: 40px; }
+
+.NyAboutus .NyAboutus_Honor { padding: 40px 40px 20px; }
+}
+@media (max-width:880px) {
+.NyAboutus .NyAboutus_Profile { padding: 40px 20px; }
+.abGsjj_main .abGsjj_con { width: 100%; }
+.abGsjj_main .abGsjj_img { width: 100%; margin-top: 25px; }
+.abGsjj_con .abGsjj_ms { height: auto;overflow-y: inherit; padding: 0;}
+.NyAboutus .NyAboutus_Culture { padding: 40px 20px 20px; }
+
+.NyAbCulture_Main ul {
+  margin: 0;
+}
+
+.NyAbCulture_Main ul li {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 0;
+}
+
+.NyAbCulture_Main ul li .NyAbCulture_Con {
+  padding: 40px 110px 20px 20px;
+}
+
+.NyAbCulture_Main ul li .NyAbCulture_Con i {
+  width: 72px;
+  height: 72px;
+}
+
+.NyAbCulture_Main ul li .NyAbCulture_Con i.AbIco1 {
+  background: #124b53 url(../images/abico01.png) center center no-repeat;
+  background-size: 40px 40px;
+}
+
+.NyAbCulture_Main ul li .NyAbCulture_Con i.AbIco2 {
+  background: #124b53 url(../images/abico02.png) center center no-repeat;
+  background-size: 40px 40px;
+}
+
+.NyAbCulture_Main ul li .NyAbCulture_Con i.AbIco3 {
+  background: #124b53 url(../images/abico03.png) center center no-repeat;
+  background-size: 40px 40px;
+}
+
+.NyAbCulture_Main ul li .NyAbCulture_Con i.AbIco4 {
+  background: #124b53 url(../images/abico04.png) center center no-repeat;
+  background-size: 40px 40px;
+}
+
+.NyAbCulture_Main ul li .NyAbCulture_Con:hover i.AbIco1 {
+  background: #ffffff url(../images/abico1.png) center center no-repeat;
+  background-size: 40px 40px;
+}
+
+.NyAbCulture_Main ul li .NyAbCulture_Con:hover i.AbIco2 {
+  background: #ffffff url(../images/abico2.png) center center no-repeat;
+  background-size: 40px 40px;
+}
+
+.NyAbCulture_Main ul li .NyAbCulture_Con:hover i.AbIco3 {
+  background: #ffffff url(../images/abico3.png) center center no-repeat;
+  background-size: 40px 40px;
+}
+
+.NyAbCulture_Main ul li .NyAbCulture_Con:hover i.AbIco4 {
+  background: #ffffff url(../images/abico4.png) center center no-repeat;
+  background-size: 40px 40px;
+}
+
+.NyAbCulture_Main ul li .NyAbCulture_Con em {
+  margin: 10px auto 15px;
+}
+
+.NyAbCulture_Main ul li .NyAbCulture_Con span {
+  height: 48px;
+  line-height: 24px;
+  font-size: 14px;
+}
+
+.NyAboutusHonor_List ul li { padding: 20px 60px 20px 20px;}
+.NyAboutusHonor_List ul li span { right: 20px;}
+
+}
+@media (max-width:767px) {
+.NyAboutus .NyAboutus_Profile { padding: 20px 12px; }
+.abGsjj_main .abGsjj_img { margin-top: 15px; }
+.abGsjj_name p { font-size: 22px; }
+.abGsjj_name i { margin: 5px 0 15px; }
+.abGsjj_ms p { font-size: 15px; }
+.abGsjj_con ul { margin: 15px 0 0; }
+.abGsjj_con ul li p { font-size: 35px; }
+.abGsjj_con ul li span { font-size: 15px; line-height: 25px; }
+.NyAboutus .NyAboutus_Culture { padding: 20px 12px 0; }
+
+.NyAboutus .NyAboutus_Honor { padding: 20px 12px 0;}
+.NyAboutusHonor_List ul li { padding: 10px 60px 10px 20px;}
+.NyAboutusHonor_List ul li.active { padding: 20px; display: block; align-items: inherit; justify-items: inherit;}
+.NyAboutusHonor_List ul li span { top: 10px;}
+.NyAboutusHonor_List ul li.active span { top: inherit; bottom: 20px;}
+.NyAboutusHonor_List ul li span::before { height: 2px;}
+.NyAboutusHonor_List ul li span::after { width: 2px;}
+.NyAboutusHonor_List ul li .NyAboutusHonor_Text a.NyAboutusHonor_Name { font-size: 20px;}
+.NyAboutusHonor_List ul li .NyAboutusHonor_Img, .NyAboutusHonor_List ul li .NyAboutusHonor_Img a { width: 100%; height: auto;}
+.NyAboutusHonor_List ul li .NyAboutusHonor_Img a img { display: block; max-width: 100%; max-height: 100%; margin: 0 auto; position: inherit; left: inherit; top: inherit; right: inherit; bottom: inherit;}
+.NyAboutusHonor_List ul li.active .NyAboutusHonor_Text { width: 100%; margin-top: 12px; padding-left: 0;}
+.NyAboutusHonor_List ul li .NyAboutusHonor_Text p { height: auto; line-height: 24px; font-size: 14px; white-space: inherit; text-overflow: inherit;}
+.NyAboutusHonor_List ul li .NyAboutusHonor_Text i { width: 224px; height: 36px; margin-top: 20px;}
+    
+}
+@media (max-width:375px) {}
+@media (max-width:320px) {
+  .NyAbCulture_Main ul li .NyAbCulture_Con { padding: 40px 90px 20px 20px; }
+  .NyAboutusHonor_List ul li .NyAboutusHonor_Text a.NyAboutusHonor_Name { font-size: 18px;}
+}
+/*NyAboutus 结束*/
+
+/*NyNews 开始*/
+.NyNews { width: 100%; overflow: hidden; margin: 0 auto; padding: 80px 0; background-color: #f9f9f9; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.NyNews .NyNews_Main { width: 1400px; height: auto; min-height: 320px; margin: 0 auto; padding: 0; }
+.NyNews_Main .NyNews_List { width: 100%; height: auto; margin: 0 auto; padding: 0; }
+.newul li{ width:49%; float:left; background:#fff;margin-bottom: 30px; position:relative; padding:28px 0;transition: all .5s;}
+.newul li:nth-child(2n){ margin-left:2%;}
+.newul li:before{content: ""; vertical-align: middle;background: url(../images/new_ico.png) center center no-repeat;height: 12px; width: 12px;display: block;position: absolute;transition: all .5s; top:45px; left:17px;}
+.newul li:hover{background:#124b53;}
+.newul li:hover:before{background: url(../images/new_ico_on.png) center center no-repeat;}
+.newul li .new_box{ padding:0 40px;}
+.newul li p a{font-weight: bold;font-size: 18px;line-height: 46px; height: 46px;max-width:100%; overflow:hidden; white-space:nowrap;text-overflow:ellipsis;display: block; color:#333;}
+.newul li:hover p a{ color:#fff;}
+.newul li em{ display:block; font-style:normal;font-size: 16px;color: #666;margin-top: 0px; line-height: 36px;}
+.newul li em:before{content: "";display: inline-block; width:28px; height:28px;vertical-align: middle;background: url(../images/ny_time.png) center center no-repeat; margin-right:10px;}
+.newul li span{ display:block; font-size:16px; line-height:30px; color:#666;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;overflow:hidden; margin-top:20px;}
+.newul li:hover em{color: rgba(255, 255, 255, .65);}
+.newul li:hover em:before{background: url(../images/ny_time_on.png) center center no-repeat;}
+.newul li:hover span{color: rgba(255, 255, 255, .65);}
+/*分页样式 开始*/
+#fengye { margin: 40px auto 0; color: #666; font-size: 14px; text-align: center; }
+#fengye a { display: inline-block; padding: 0 15px; background-color: #fff; height: 30px; line-height: 30px; text-align: center; margin: 0 5px; border-radius: 2px; color: #666; font-size: 14px; border: 1px solid #ddd; }
+#fengye a:hover { background-color: #124b53; color: #fff; border: 1px solid #124b53; }
+#fengye a.pnnum1 { background-color: #124b53; color: #fff; border: 1px solid #124b53; }
+#fengye input { display: inline-block; padding: 0 5px; background-color: #124b53; width: 40px!important; height: 30px!important; line-height: 30px; text-align: center; border-radius: 2px; margin: 0 5px; color: #fff; cursor: pointer; border: 0; outline: none; }
+#fengye .p_input { display: inline-block; padding: 0 5px; background-color: #fff; width: 40px!important; height: 30px; line-height: 28px; text-align: center; margin: 0 5px; color: #555; font-size: 14px; cursor: default; border: 1px solid #efefef; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+/*分页样式 结束*/
+
+/*NyNewDetail 开始*/
+.NyNewDetail { width: 100%; height: auto; min-height: 320px; margin: 0 auto; padding: 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.NyNewDetail .NyNewDetail_Main { width: 1400px; height: auto; min-height: 320px; margin: 80px auto 60px; padding: 0; }
+.NyNewDetail_Main .NyNewDetail_Name { width: 100%; height: auto; overflow: hidden; line-height: 40px; color: #333; font-size: 30px; margin: 0 auto 15px; padding: 0; }
+.NyNewDetail_Main .NyNewDetail_Tips { width: 100%; height: 30px; overflow: hidden; line-height: 30px; color: #666; font-size: 16px; margin: 0 auto 30px; padding: 0 0 15px; border-bottom: 1px solid #e6e6e6; }
+.NyNewDetail_Tips span { display: inline-block; height: 30px; line-height: 30px; color: #666; font-size: 16px; margin: 0 40px 0 0; padding: 0; }
+.NyNewDetail_Tips span img { display: block; width: 16px; height: 16px; margin: 7px 10px 7px 0; padding: 0; float: left; }
+.NyNewDetail_Main .NyNewDetail_Content { width: 100%; height: auto; overflow: hidden; line-height: 28px!important; color: #666!important; font-family: Arial, Helvetica, \5FAE\8F6F\96C5\9ED1, sans-serif!important; font-size: 16px!important; word-break: break-all; text-align: justify; margin: 0 auto; padding: 0; }
+.NyNewDetail_Content div, .NyNewDetail_Content p, .NyNewDetail_Content span, .NyNewDetail_Content font, .NyNewDetail_Content em { width: 100%; height: auto; overflow: hidden;  line-height: 24px!important;  color: #666!important; font-family: Arial, Helvetica, \5FAE\8F6F\96C5\9ED1, sans-serif!important; font-size: 16px!important; font-style: normal; word-break: break-all; text-align: justify; margin: 0 auto; padding: 0; }
+.NyNewDetail_Content div, .NyNewDetail_Content p { /*margin: 0 auto 20px;*/ }
+.NyNewDetail_Content img { display: inline-block;/* width: auto!important; */max-width: 100%!important; height: auto!important; margin: 0 0 20px; }
+.NyPrevNext { width: 100%; height: auto; margin: 0 auto; padding: 0; background-color: #fff; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.NyPrevNext ul { width: 1400px; margin: 0 auto; }
+.NyPrevNext ul li { width: 100%; height: auto; min-height: 100px; overflow: hidden; line-height: 40px; color: #666; font-size: 18px; margin: 0; padding: 30px 0 30px 120px; position: relative; transition: all 0.5s; -webkit-transition: all 0.5s; -moz-transition: all 0.5s; -o-transition: all 0.5s; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.NyPrevNext ul li:nth-child(1) { border-bottom: 1px solid #e6e6e6; }
+.NyPrevNext ul li i { display: block; width: 100px; height: 40px; overflow: hidden; line-height: 40px; color: #666; font-size: 18px; font-style: normal; text-align: center; background-color: #f5f5f5; border-radius: 20px; margin: 0; padding: 0; position: absolute; left: 0; top: 30px; transition: all 0.5s; -webkit-transition: all 0.5s; -moz-transition: all 0.5s; -o-transition: all 0.5s; }
+.NyPrevNext ul li a { display: block; width: 100%; height: 40px; overflow: hidden; line-height: 40px; color: #333; font-size: 18px; white-space: nowrap; text-overflow: ellipsis; margin: 0; padding: 0; transition: all 0.5s; -webkit-transition: all 0.5s; -moz-transition: all 0.5s; -o-transition: all 0.5s; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.NyPrevNext ul li:hover i { color: #fff; background-color: #124b53; }
+.NyPrevNext ul li:hover a { color: #124b53; text-decoration: underline; }
+/*NyNewDetail 结束*/
+
+@media (max-width:1680px) {
+}
+@media (max-width:1600px) {
+}
+@media (max-width:1560px) {
+}
+@media (max-width:1440px) {
+.NyNews { padding: 60px; }
+.NyNews .NyNews_Main { width: 100%; }
+.NyNewDetail { padding: 0 60px; }
+.NyNewDetail .NyNewDetail_Main { width: 100%; margin: 60px auto 45px; }
+.NyNewDetail_Main .NyNewDetail_Name { font-size: 28px; }
+.NyNewDetail_Main .NyNewDetail_Tips { font-size: 15px; }
+.NyNewDetail_Tips span { font-size: 15px; margin: 0 30px 0 0; }
+.NyNewDetail_Main .NyNewDetail_Content { line-height: 25px!important; font-size: 15px!important; }
+.NyNewDetail_Content div, .NyNewDetail_Content p, .NyNewDetail_Content span, .NyNewDetail_Content font, .NyNewDetail_Content em { line-height: 25px!important; font-size: 15px!important; }
+.NyNewDetail_Content div, .NyNewDetail_Content p { margin: 0 auto 15px; }
+.NyNewDetail_Content img { margin: 0 0 15px; }
+.NyPrevNext { padding: 0 60px; }
+.NyPrevNext ul { width: 100%; }
+.NyPrevNext ul li { min-height: 80px; padding: 20px 0 20px 120px; }
+.NyPrevNext ul li i { top: 20px; }
+}
+@media (max-width:1366px) {
+.NyNewDetail_Main .NyNewDetail_Name { font-size: 26px; }
+}
+@media (max-width:1280px) {
+}
+@media (max-width:1200px) {
+.NyNews { padding: 60px 40px; }
+.newul li{margin-bottom: 25px;}
+.NyNewDetail { padding: 0 40px; }
+.NyNewDetail .NyNewDetail_Main { width: 100%; margin: 60px auto 50px; }
+.NyNewDetail_Main .NyNewDetail_Name { font-size: 24px; margin: 0 auto 10px; }
+.NyNewDetail_Main .NyNewDetail_Tips { font-size: 14px; margin: 0 auto 20px; padding: 0 0 5px; }
+.NyNewDetail_Tips span { font-size: 14px; margin: 0 30px 0 0; }
+.NyNewDetail_Main .NyNewDetail_Content { line-height: 24px!important; font-size: 14px!important; }
+.NyNewDetail_Content div, .NyNewDetail_Content p, .NyNewDetail_Content span, .NyNewDetail_Content font, .NyNewDetail_Content em { line-height: 24px!important; font-size: 14px!important; }
+.NyNewDetail_Content div, .NyNewDetail_Content p { margin: 0 auto 10px; }
+.NyNewDetail_Content img { margin: 0 0 10px; }
+.NyPrevNext { padding: 0 40px; }
+.NyPrevNext ul li { min-height: 80px; font-size: 16px; padding: 20px 0 20px 110px; }
+.NyPrevNext ul li a { font-size: 16px; }
+.NyPrevNext ul li i { width: 90px; font-size: 16px; }
+}
+@media (max-width:1080px) {
+}
+@media (max-width:1024px) {
+}
+@media (max-width:800px) {
+.NyNews { padding: 40px 20px; }
+.NyNews_List ul li { width: 100%; margin: 0 auto 20px; float: inherit; }
+.NyNews_List ul li:nth-child(2n+2) { margin: 0 auto 20px; }
+.NyNews_Main #fengye { margin: 20px auto 0; }
+.NyNewDetail { padding: 0 20px; }
+.NyNewDetail .NyNewDetail_Main { width: 100%; margin: 40px auto 30px; }
+.NyNewDetail_Main .NyNewDetail_Name { line-height: 32px; font-size: 22px; margin: 0 auto 10px; }
+.NyPrevNext { padding: 0 20px; }
+.NyPrevNext ul li { font-size: 16px; padding: 20px 0 20px 100px; }
+.NyPrevNext ul li a { font-size: 16px; }
+.NyPrevNext ul li i { width: 80px; font-size: 14px; }
+}
+@media (max-width:767px) {
+.NyNews { padding: 20px 12px; }
+.NyNews .NyNews_Main { min-height: inherit; }
+.NyNews_List ul li { margin: 0 auto 12px; }
+.NyNews_List ul li:nth-child(2n+2) { margin: 0 auto 12px; }
+#fengye { margin: 8px auto 0; font-size: 0; }
+#fengye .p_input, #fengye input { display: none; }
+.NyNewDetail { padding: 0 12px; }
+.NyNewDetail .NyNewDetail_Main { width: 100%; min-height: inherit; margin: 20px auto 10px; }
+.NyNewDetail_Main .NyNewDetail_Name { line-height: 30px; font-size: 20px; margin: 0 auto 10px; }
+.NyNewDetail_Tips span { margin: 0 20px 0 0; }
+.NyPrevNext { padding: 0 12px; }
+.NyPrevNext ul li { font-size: 16px; padding: 20px 0 20px 92px; }
+.NyPrevNext ul li a { font-size: 16px; }
+.NyPrevNext ul li i { width: 80px; font-size: 14px; }
+}
+@media (max-width:375px) {
+.NyNews_List ul li { min-height: 40px;padding: 10px 0;}
+.newul li:before{top: 28px;}
+.newul li span{margin-top: 10px;}
+.NyPrevNext ul li { min-height: 56px; line-height: 32px; font-size: 14px; padding: 12px 0 12px 80px; }
+.NyPrevNext ul li a { height: 32px; line-height: 32px; font-size: 14px; }
+.NyPrevNext ul li i { width: 68px; height: 32px; line-height: 32px; font-size: 14px; top: 12px; }
+}
+@media (max-width:320px) {
+.NyNewDetail_Main .NyNewDetail_Name { line-height: 26px; font-size: 18px; }
+#fengye a { padding: 0 10px; }
+}
+/*NyNews 结束*/
+
+/*NyHonor 开始*/
+.NyHonor { width: 100%; overflow: hidden; margin: 0 auto; padding: 80px 0; background-color: #f9f9f9; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.NyHonor .NyHonor_Main { width: 1400px; height: auto; margin: 0 auto; padding: 0; }
+.NyHonor_Main .NyHonor_List { width: 100%; height: auto;min-height:400px; margin: 0 auto; padding: 0; }
+.NyHonor_List ul li { width: 23.5%; height: auto; margin: 0 2% 40px 0; padding: 0; float: left; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.NyHonor_List ul li:nth-child(4n+4) { margin: 0 0 40px; }
+.NyHonor_List ul li .NyHonor_Img { width: 100%; height: 240px; overflow: hidden; margin: 0 auto 10px; padding: 0; background-color: #fff; box-shadow: 0 0 0 rgba(0,0,0,0.06); transition: all 0.5s; -webkit-transition: all 0.5s; -moz-transition: all 0.5s; -o-transition: all 0.5s; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.NyHonor_List ul li:hover .NyHonor_Img { box-shadow: 0 0 10px rgba(0,0,0,0.06); }
+.NyHonor_List ul li .NyHonor_Img a { display: block; width: 100%; height: 100%; overflow: hidden; margin: 0 auto; padding: 0; position: relative; }
+.NyHonor_List ul li .NyHonor_Img a img { display: block; max-width: 100%; max-height: 100%; margin: auto; padding: 0; position: absolute; left: 0; top: 0; right: 0; bottom: 0; transition: all 0.5s; -webkit-transition: all 0.5s; -moz-transition: all 0.5s; -o-transition: all 0.5s; }
+.NyHonor_List ul li:hover .NyHonor_Img a img { -webkit-transform: scale(1.1); -moz-transform: scale(1.1); transform: scale(1.1); }
+.NyHonor_List ul li a.NyHonor_Name { display: block; width: 100%; height: 50px; overflow: hidden; line-height: 30px; color: #333; font-size: 20px; font-weight: bold; text-align: center; white-space: nowrap; text-overflow: ellipsis; margin: 0 auto; padding: 10px 0; border-bottom: 1px solid #e6e6e6; }
+.NyHonor_List ul li:hover a.NyHonor_Name { color: #124b53; border-bottom: 1px solid #124b53; }
+ @media (max-width:1680px) {
+}
+@media (max-width:1600px) {
+}
+@media (max-width:1560px) {
+}
+@media (max-width:1440px) {
+.NyHonor { padding: 60px; }
+.NyHonor .NyHonor_Main { width: 100%; }
+.NyHonor_List ul li .NyHonor_Img { height: 220px; }
+.NyHonor_Main #fengye { margin: 30px auto 0; }
+}
+@media (max-width:1366px) {
+}
+@media (max-width:1280px) {
+.NyHonor_List ul li .NyHonor_Img { height: 200px; }
+}
+@media (max-width:1200px) {
+.NyHonor { padding: 60px 40px; }
+.NyHonor_List ul li { margin: 0 2% 30px 0; }
+.NyHonor_List ul li:nth-child(4n+4) { margin: 0 0 30px; }
+.NyHonor_List ul li .NyHonor_Img { height: 200px; }
+.NyHonor_Main #fengye { margin: 35px auto 0; }
+}
+@media (max-width:1080px) {
+.NyHonor_List ul li { margin: 0 2% 30px 0; }
+.NyHonor_List ul li:nth-child(4n+4) { margin: 0 0 30px; }
+.NyHonor_List ul li .NyHonor_Img { height: 180px; }
+.NyHonor_List ul li a.NyHonor_Name { font-size: 18px; }
+.NyHonor_Main #fengye { margin: 40px auto 0; }
+}
+@media (max-width:1024px) {
+.NyHonor_List ul li .NyHonor_Img { height: 170px; }
+}
+@media (max-width:800px) {
+.NyHonor { padding: 40px 20px; }
+.NyHonor_List ul li { width: 31.333333%; margin: 0 3% 25px 0; }
+.NyHonor_List ul li:nth-child(4n+4) { margin: 0 3% 25px 0; }
+.NyHonor_List ul li:nth-child(3n+3) { margin: 0 0 20px; }
+.NyHonor_List ul li .NyHonor_Img { height: 180px; margin: 0 auto; }
+.NyHonor_Main #fengye { margin: 20px auto 0; }
+}
+@media (max-width:767px) {
+.NyHonor { padding: 20px 12px; }
+.NyHonor_List ul li { width: 48.5%; margin: 0 3% 20px 0; }
+.NyHonor_List ul li:nth-child(3n+3), .NyHonor_List ul li:nth-child(4n+4) { margin: 0 3% 20px 0; }
+.NyHonor_List ul li:nth-child(2n+2) { margin: 0 0 20px; }
+.NyHonor_List ul li .NyHonor_Img { height: 150px; }
+.NyHonor_List ul li a.NyHonor_Name { font-size: 16px; }
+.NyHonor_Main #fengye { margin: 0 auto; }
+}
+@media (max-width:375px) {
+.NyHonor_List ul li .NyHonor_Img { height: 140px; }
+.NyHonor_List ul li a.NyHonor_Name { padding: 5px 0; font-size: 15px; }
+}
+@media (max-width:320px) {
+.NyHonor_List ul li { width: 100%; margin: 0 auto 20px; float: inherit; }
+.NyHonor_List ul li:nth-child(2n+2), .NyHonor_List ul li:nth-child(3n+3), .NyHonor_List ul li:nth-child(4n+4) { margin: 0 auto 20px; }
+.NyHonor_List ul li .NyHonor_Img { height: 220px; }
+.NyHonor_List ul li a.NyHonor_Name { padding: 10px 0; font-size: 18px; }
+}
+/*NyHonor 结束*/
+
+/*NyDown 开始*/
+.NyDown { width: 100%; overflow: hidden; margin: 0 auto; padding: 80px 0; background-color: #f9f9f9; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.NyDown .NyDown_Main { width: 1400px; height: auto; margin: 0 auto; padding: 0; }
+.NyDown_Main .NyDown_List { width: 100%; height: auto; min-height:400px;margin: 0 auto; padding: 0; }
+.NyDown_List ul li { width: 48.5%; height: auto; margin: 0 3% 30px 0; padding: 0 100px 0 0; background-color: #fff; box-shadow: 0 0 0 rgba(0,0,0,0); float: left; position: relative; transition: all 0.5s; -webkit-transition: all 0.5s; -moz-transition: all 0.5s; -o-transition: all 0.5s; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.NyDown_List ul li:nth-child(2n+2) { margin: 0 0 30px; }
+.NyDown_List ul li:hover { box-shadow: 0 0 10px rgba(0,0,0,0.06); }
+.NyDown_List ul li .NyDown_Btn { width: 100px; height: 100px; margin: 0; padding: 0; border-left: 1px solid #e6e6e6; position: absolute; top: 0; right: 0; transition: all 0.5s; -webkit-transition: all 0.5s; -moz-transition: all 0.5s; -o-transition: all 0.5s; }
+.NyDown_List ul li .NyDown_Btn a { display: block; width: 100px; height: 100px; margin: 0 auto; padding: 25px 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.NyDown_List ul li .NyDown_Btn a i.DwIco { display: block; width: 50px; height: 50px; margin: 0 auto; padding: 0; background: url(../images/down.svg) center center no-repeat; background-size: 100% 100%; transition: all 0.5s; -webkit-transition: all 0.5s; -moz-transition: all 0.5s; -o-transition: all 0.5s; }
+.NyDown_List ul li:hover .NyDown_Btn { border-left: 1px solid #124b53; }
+.NyDown_List ul li:hover .NyDown_Btn a i.DwIco { background: url(../fonts/down1.svg) center center no-repeat; background-size: 100% 100%; }
+.NyDown_List ul li .NyDown_Text { width: 100%; height: 100px; overflow: hidden; margin: 0; padding: 15px 20px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.NyDown_List ul li .NyDown_Text a.NyDown_Name { display: block; width: 100%; height: 40px; overflow: hidden; line-height: 40px; color: #333; font-size: 20px; font-weight: bold; white-space: nowrap; text-overflow: ellipsis; margin: 0 auto 6px; padding: 0 0 0 13px; position: relative; transition: all 0.5s; -webkit-transition: all 0.5s; -moz-transition: all 0.5s; -o-transition: all 0.5s; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.NyDown_List ul li .NyDown_Text a.NyDown_Name i { display: block; width: 3px; height: 20px; margin: 0; padding: 0; background-color: #124b53; position: absolute; left: 0; top: 10px; }
+.NyDown_List ul li .NyDown_Text span { display: block; width: 100%; height: 24px; overflow: hidden; line-height: 24px; color: #666; font-size: 14px; margin: 0 auto; padding: 0; }
+.NyDown_List ul li .NyDown_Text span img { display: block; width: 18px; height: 18px; margin: 2px 6px 2px 0; padding: 0; float: left; }
+.NyDown_List ul li:hover .NyDown_Text a.NyDown_Name { color: #124b53; }
+.DownABtn a { display: block; width: 160px; height: 44px; line-height: 44px; color: #fff; font-size: 16px; margin: 0 auto; padding: 0 33px; background: #124b53 url(../fonts/down2.svg) 104px 8px no-repeat; background-size: 28px 28px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.DownABtn a:hover { background-color: #c9002b; }
+ @media (max-width:1680px) {
+}
+@media (max-width:1600px) {
+}
+@media (max-width:1560px) {
+}
+@media (max-width:1440px) {
+.NyDown { padding: 60px; }
+.NyDown .NyDown_Main { width: 100%; }
+.NyDown_Main #fengye { margin: 30px auto 0; }
+}
+@media (max-width:1366px) {
+}
+@media (max-width:1280px) {
+}
+@media (max-width:1200px) {
+.NyDown { padding: 60px 40px; }
+.NyDown_List ul li .NyDown_Text a.NyDown_Name { font-size: 18px; }
+.NyDown_List ul li .NyDown_Text a.NyDown_Name i { height: 18px; top: 11px; }
+}
+@media (max-width:1080px) {
+}
+@media (max-width:1024px) {
+}
+@media (max-width:800px) {
+.NyDown { padding: 40px 20px; }
+.NyDown_List ul li { width: 100%; height: auto; margin: 0 auto 20px; float: inherit; }
+.NyDown_List ul li:nth-child(2n+2) { margin: 0 auto 20px; }
+.NyDown_Main #fengye { margin: 20px auto 0; }
+}
+@media (max-width:767px) {
+.NyDown { padding: 20px 12px; }
+.NyDown_List ul li { width: 100%; height: auto; margin: 0 auto 20px; padding: 0 60px 0 0; float: inherit; }
+.NyDown_List ul li:nth-child(2n+2) { margin: 0 auto 20px; }
+.NyDown_List ul li .NyDown_Text { height: 80px; padding: 10px 12px; }
+.NyDown_List ul li .NyDown_Text a.NyDown_Name { height: 36px; line-height: 36px; margin: 0 auto; }
+.NyDown_List ul li .NyDown_Text a.NyDown_Name i { top: 9px; }
+.NyDown_List ul li .NyDown_Btn { width: 60px; height: 80px; }
+.NyDown_List ul li .NyDown_Btn a { width: 60px; height: 80px; padding: 20px 0; }
+.NyDown_List ul li .NyDown_Btn a i.DwIco { width: 40px; height: 40px; }
+.NyDown_Main #fengye { margin: 0 auto; }
+}
+@media (max-width:375px) {
+.NyDown_List ul li .NyDown_Text a.NyDown_Name { font-size: 16px; }
+}
+@media (max-width:320px) {
+}
+/*NyDown 结束*/
+
+/*NyCases 开始*/
+.NyCases { width: 100%; overflow: hidden; margin: 0 auto; padding: 80px 0; background-color: #f9f9f9; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.NyCases .NyCases_Main { width: 1400px; height: auto; margin: 0 auto; padding: 0; }
+.NyCases_Main .NyCases_List { width: 100%; height: auto; min-height:400px;margin: 0 auto; padding: 0; }
+.NyCases_List ul li { width: 23.5%; height: auto; margin: 0 2% 30px 0; padding: 0; float: left; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.NyCases_List ul li:nth-child(4n+4) { margin: 0 0 30px; }
+.NyCases_List ul li .NyCases_Con { width: 100%; height: auto; overflow: hidden; margin: 0 auto; padding: 15px 15px 0; background-color: #fff; box-shadow: 0 0 0 rgba(0,0,0,0.06); transition: all 0.5s; -webkit-transition: all 0.5s; -moz-transition: all 0.5s; -o-transition: all 0.5s; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.NyCases_List ul li:hover .NyCases_Con { box-shadow: 0 0 10px rgba(0,0,0,0.06); }
+.NyCases_List ul li:hover .NyCases_Img { box-shadow: 0 0 10px rgba(0,0,0,0.06); }
+.NyCases_List ul li .NyCases_Con a.NyCases_Img { display: block; width: 100%; height: 240px; overflow: hidden; margin: 0 auto; padding: 0; position: relative; }
+.NyCases_List ul li .NyCases_Con a.NyCases_Img img { display: block; width: 100%; height: 100%; object-fit: cover; margin: auto; padding: 0; position: absolute; left: 0; top: 0; right: 0; bottom: 0; transition: all 0.5s; -webkit-transition: all 0.5s; -moz-transition: all 0.5s; -o-transition: all 0.5s; }
+.NyCases_List ul li:hover .NyCases_Con a.NyCases_Img img { -webkit-transform: scale(1.1); -moz-transform: scale(1.1); transform: scale(1.1); }
+.NyCases_List ul li .NyCases_Con a.NyCases_Name { display: block; width: 100%; height: 50px; overflow: hidden; line-height: 30px; color: #333; font-size: 20px; font-weight: bold; text-align: center; white-space: nowrap; text-overflow: ellipsis; margin: 0 auto; padding: 10px 0; }
+.NyCases_List ul li:hover .NyCases_Con a.NyCases_Name { color: #124b53; }
+.NyCases_List ul li .NyCases_Ms { width: 100%; height: auto; margin: 0 auto; padding: 15px; border-bottom: 1px solid #e6e6e6; transition: all 0.5s; -webkit-transition: all 0.5s; -moz-transition: all 0.5s; -o-transition: all 0.5s; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.NyCases_List ul li .NyCases_Ms p { width: 100%; height: 44px; overflow: hidden; line-height: 22px; color: #666; font-size: 14px; text-align: center; margin: 0 auto; padding: 0; display: -webkit-box; text-overflow: ellipsis; -webkit-line-clamp: 2; -webkit-box-orient: vertical; transition: all 0.5s; -webkit-transition: all 0.5s; -moz-transition: all 0.5s; -o-transition: all 0.5s; }
+.NyCases_List ul li:hover .NyCases_Ms { border-bottom: 1px solid #124b53; }
+.NyCases_List ul li:hover .NyCases_Ms p { color: #666; }
+ @media (max-width:1680px) {
+}
+@media (max-width:1600px) {
+}
+@media (max-width:1560px) {
+}
+@media (max-width:1440px) {
+.NyCases { padding: 60px; }
+.NyCases .NyCases_Main { width: 100%; }
+.NyCases_List ul li .NyCases_Con a.NyCases_Img { height: 220px; }
+.NyCases_Main #fengye { margin: 30px auto 0; }
+}
+@media (max-width:1366px) {
+.NyCases_List ul li .NyCases_Con a.NyCases_Img { height: 200px; }
+}
+@media (max-width:1280px) {
+.NyCases_List ul li .NyCases_Con { padding: 10px 10px 0; }
+.NyCases_List ul li .NyCases_Con a.NyCases_Img { height: 190px; }
+.NyCases_List ul li .NyCases_Ms { padding: 10px; }
+}
+@media (max-width:1200px) {
+.NyCases { padding: 60px 40px; }
+.NyCases_List ul li { margin: 0 2% 25px 0; }
+.NyCases_List ul li:nth-child(4n+4) { margin: 0 0 25px; }
+.NyCases_List ul li .NyCases_Con a.NyCases_Img { height: 180px; }
+.NyCases_Main #fengye { margin: 35px auto 0; }
+}
+@media (max-width:1080px) {
+.NyCases_List ul li .NyCases_Con a.NyCases_Img { height: 160px; }
+.NyCases_List ul li .NyCases_Con a.NyCases_Name { font-size: 18px; }
+}
+@media (max-width:1024px) {
+.NyCases_List ul li .NyCases_Con a.NyCases_Img { height: 155px; }
+}
+@media (max-width:800px) {
+.NyCases { padding: 40px 20px; }
+.NyCases_List ul li { width: 31.333333%; margin: 0 3% 20px 0; }
+.NyCases_List ul li:nth-child(4n+4) { margin: 0 3% 20px 0; }
+.NyCases_List ul li:nth-child(3n+3) { margin: 0 0 20px; }
+.NyCases_Main #fengye { margin: 20px auto 0; }
+}
+@media (max-width:767px) {
+.NyCases { padding: 20px 12px; }
+.NyCases_List ul li { width: 48.5%; margin: 0 3% 20px 0; }
+.NyCases_List ul li:nth-child(3n+3), .NyCases_List ul li:nth-child(4n+4) { margin: 0 3% 20px 0; }
+.NyCases_List ul li:nth-child(2n+2) { margin: 0 0 20px; }
+.NyCases_List ul li .NyCases_Con a.NyCases_Img { height: 130px; }
+.NyCases_List ul li .NyCases_Con a.NyCases_Name { height:40px; font-size: 16px; padding: 5px 0; }
+.NyCases_Main #fengye { margin: 0 auto; }
+}
+@media (max-width:375px) {
+.NyCases_List ul li { width: 100%; margin: 0 auto 20px; }
+.NyCases_List ul li:nth-child(2n+2), .NyCases_List ul li:nth-child(3n+3), .NyCases_List ul li:nth-child(4n+4) { margin: 0 auto 20px; }
+.NyCases_List ul li .NyCases_Con a.NyCases_Img { height: 200px; }
+.NyCases_List ul li .NyCases_Con a.NyCases_Name { height:50px; font-size: 18px; padding: 10px 0; }
+}
+@media (max-width:320px) {
+}
+/*NyCases 结束*/
+
+/*NyVideos 开始*/
+.NyVideos { width: 100%; overflow: hidden; margin: 0 auto; padding: 80px 0; background-color: #f9f9f9; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.NyVideos .NyVideos_Main { width: 1400px; height: auto; margin: 0 auto; padding: 0; }
+.NyVideos_Main .NyVideos_List { width: 100%; height: auto;min-height:400px; margin: 0 auto; padding: 0; }
+.NyVideos_List ul li { width: 23.5%; height: auto; margin: 0 2% 30px 0; padding: 0; background-color: #fff; float: left; transition: all 0.5s; -webkit-transition: all 0.5s; -moz-transition: all 0.5s; -o-transition: all 0.5s; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.NyVideos_List ul li:nth-child(4n+4) { margin: 0 0 30px; }
+.NyVideos_List ul li:hover { background-color: #124b53; }
+.NyVideos_List ul li .NyVideos_Img { width: 100%; height: 240px; overflow: hidden; margin: 0 auto; padding: 0; transition: all 0.5s; -webkit-transition: all 0.5s; -moz-transition: all 0.5s; -o-transition: all 0.5s; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.NyVideos_List ul li .NyVideos_Img a { display: block; width: 100%; height: 100%; overflow: hidden; margin: 0 auto; padding: 0; position: relative; }
+.NyVideos_List ul li .NyVideos_Img a img { display: block; width: 100%; height: 100%; object-fit: cover; margin: auto; padding: 0; position: absolute; left: 0; top: 0; right: 0; bottom: 0; transition: all 0.5s; -webkit-transition: all 0.5s; -moz-transition: all 0.5s; -o-transition: all 0.5s; }
+.NyVideos_List ul li:hover .NyVideos_Img a img { -webkit-transform: scale(1.1); -moz-transform: scale(1.1); transform: scale(1.1); }
+.NyVideos_List ul li .NyVideos_Img a i { display: block; width: 100%; height: 100%; margin: 0; padding: 0; background: rgba(0,0,0,0.4) url(../fonts/vdico.svg) center center no-repeat; background-size: 50px 50px; position: absolute; left: 0; top: 0; transition: all 0.5s; -webkit-transition: all 0.5s; -moz-transition: all 0.5s; -o-transition: all 0.5s; }
+.NyVideos_List ul li:hover .NyVideos_Img a i { background: rgba(0,0,0,0.2) url(../fonts/vdico1.svg) center center no-repeat; background-size: 50px 50px; }
+.NyVideos_List ul li .NyVideos_Text { width: 100%; height: auto; margin: 0 auto; padding: 15px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.NyVideos_List ul li .NyVideos_Text a.NyVideos_Name { display: block; width: 100%; height: 30px; overflow: hidden; line-height: 30px; color: #333; font-size: 20px; font-weight: bold; text-align: center; white-space: nowrap; text-overflow: ellipsis; margin: 0 auto; padding: 0; transition: all 0.5s; -webkit-transition: all 0.5s; -moz-transition: all 0.5s; -o-transition: all 0.5s; }
+.NyVideos_List ul li:hover a.NyVideos_Name { color: #fff; }
+.NyVideos_List ul li .NyVideos_Text p { width: 100%; height: 40px; overflow: hidden; line-height: 20px; color: #666; font-size: 14px; text-align: center; margin: 10px auto 15px; padding: 0; display: -webkit-box; text-overflow: ellipsis; -webkit-line-clamp: 2; -webkit-box-orient: vertical; transition: all 0.5s; -webkit-transition: all 0.5s; -moz-transition: all 0.5s; -o-transition: all 0.5s; }
+.NyVideos_List ul li:hover .NyVideos_Text p { color: rgba(255,255,255,0.65); }
+.NyVideos_List ul li .NyVideos_Text a.NyVideos_Btn { display: block; width: 120px; height: 36px; overflow: hidden; line-height: 36px; color: #fff; font-size: 14px; text-align: center; margin: 0 auto; padding: 0; background-color: #124b53; transition: all 0.5s; -webkit-transition: all 0.5s; -moz-transition: all 0.5s; -o-transition: all 0.5s; }
+.NyVideos_List ul li .NyVideos_Text a.NyVideos_Btn i { display: inline-block; width: 18px; height: 18px; background: url(../fonts/vdico.svg) center center no-repeat; background-size: 100% 100%; vertical-align: middle; margin: -2px 0 0 8px; transition: all 0.5s; -webkit-transition: all 0.5s; -moz-transition: all 0.5s; -o-transition: all 0.5s; }
+.NyVideos_List ul li:hover .NyVideos_Text a.NyVideos_Btn { color: #124b53; background-color: #fff; }
+.NyVideos_List ul li:hover .NyVideos_Text a.NyVideos_Btn i { background: url(../fonts/vdico1.svg) center center no-repeat; background-size: 100% 100%; }
+.NyNewDetail_Content iframe { display: block; width: 60%!important; height: 480px!important; margin: 0 auto 20px!important; }
+ @media (max-width:1680px) {
+}
+@media (max-width:1600px) {
+}
+@media (max-width:1560px) {
+}
+@media (max-width:1440px) {
+.NyVideos { padding: 60px; }
+.NyVideos .NyVideos_Main { width: 100%; }
+.NyVideos_List ul li .NyVideos_Img { height: 220px; }
+.NyVideos_Main #fengye { margin: 30px auto 0; }
+}
+@media (max-width:1366px) {
+.NyVideos_List ul li .NyVideos_Img { height: 210px; }
+}
+@media (max-width:1280px) {
+.NyVideos_List ul li .NyVideos_Img { height: 200px; }
+}
+@media (max-width:1200px) {
+.NyVideos { padding: 60px 40px; }
+.NyVideos_List ul li { margin: 0 2% 25px 0; }
+.NyVideos_List ul li:nth-child(4n+4) { margin: 0 0 25px; }
+.NyVideos_List ul li .NyVideos_Img { height: 190px; }
+.NyVideos_Main #fengye { margin: 35px auto 0; }
+}
+@media (max-width:1080px) {
+.NyVideos_List ul li .NyVideos_Img { height: 180px; }
+.NyVideos_List ul li .NyVideos_Text { padding: 10px; }
+.NyVideos_List ul li .NyVideos_Text a.NyVideos_Name { font-size: 18px; }
+.NyVideos_List ul li .NyVideos_Text p { margin: 10px auto; }
+.NyNewDetail_Content iframe { width: 80%!important; }
+}
+@media (max-width:1024px) {
+.NyVideos_List ul li .NyVideos_Img { height: 170px; }
+}
+@media (max-width:800px) {
+.NyVideos { padding: 40px 20px; }
+.NyVideos_List ul li { width: 31.333333%; margin: 0 3% 20px 0; }
+.NyVideos_List ul li:nth-child(4n+4) { margin: 0 3% 20px 0; }
+.NyVideos_List ul li:nth-child(3n+3) { margin: 0 0 20px; }
+.NyVideos_List ul li .NyVideos_Img { height: 170px; }
+.NyVideos_Main #fengye { margin: 20px auto 0; }
+.NyNewDetail_Content iframe { width: 100%!important; height: 420px!important; }
+}
+@media (max-width:767px) {
+.NyVideos { padding: 20px 12px; }
+.NyVideos_List ul li { width: 48.5%; margin: 0 3% 20px 0; }
+.NyVideos_List ul li:nth-child(3n+3), .NyVideos_List ul li:nth-child(4n+4) { margin: 0 3% 20px 0; }
+.NyVideos_List ul li:nth-child(2n+2) { margin: 0 0 20px; }
+.NyVideos_List ul li .NyVideos_Img { height: 140px; }
+.NyVideos_List ul li .NyVideos_Img a i { background-size: 40px 40px; }
+.NyVideos_List ul li .NyVideos_Text a.NyVideos_Name { font-size: 16px; }
+.NyVideos_Main #fengye { margin: 0 auto; }
+.NyNewDetail_Content iframe { height: 240px!important; }
+}
+@media (max-width:375px) {
+.NyVideos_List ul li .NyVideos_Img { height: 120px; }
+.NyVideos_List ul li .NyVideos_Text a.NyVideos_Btn { width: 108px; }
+.NyNewDetail_Content iframe { height: 200px!important; }
+}
+@media (max-width:320px) {
+.NyVideos_List ul li { width: 100%; margin: 0 auto 20px; }
+.NyVideos_List ul li:nth-child(2n+2), .NyVideos_List ul li:nth-child(3n+3), .NyVideos_List ul li:nth-child(4n+4) { margin: 0 auto 20px; }
+.NyVideos_List ul li .NyVideos_Img { height: 200px; }
+.NyVideos_List ul li .NyVideos_Text a.NyVideos_Btn { width: 120px; }
+.NyNewDetail_Content iframe { height: 180px!important; }
+}
+/*NyVideos 结束*/
+
+/*NyOrder 开始*/
+.NyOrder { width: 100%; height: auto; overflow: hidden; margin: 0 auto; padding: 80px 0; background-color: #f9f9f9; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.NyOrder .NyOrder_Main { width: 1400px; height: auto; margin: 0 auto; padding: 40px; background-color: #fff; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.NyOrder_Main .NyOrder_Left { width: 28%; height: 575px; overflow: hidden; margin: 0; padding: 60px 40px; background: #124b53; float: right; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.NyOrder_Left .NyOrder_Img { width: 180px; height: 180px; margin: 0 auto 40px; padding: 7px 0; background-color: rgba(0,0,0,0.05); border-radius: 50%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.NyOrder_Img img { display: block; width: 150px; height: 150px; margin: 0 auto; padding: 0; border: 8px solid rgba(0,0,0,0.05); border-radius: 50%; }
+.NyOrder_Left p { width: 100%; height: auto; line-height: 40px; color: #fff; font-size: 28px; margin: 0 auto 15px; padding: 0; }
+.NyOrder_Left span { display: block; width: 100%; height: auto; line-height: 30px; color: rgba(255,255,255,0.65); font-size: 16px; word-break: break-all; text-align: justify; margin: 0 auto; padding: 0; }
+.NyOrder_Left .NyOrder_Btn { width: 100%; height: auto; margin: 60px auto 0; padding: 0 40px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.NyOrder_Btn a { display: block; width: 100%; height: 52px; overflow: hidden; line-height: 52px; color: #fff; font-size: 16px; text-align: center; margin: 0 auto; padding: 0; background-color: #333; transition: all 0.5s; -webkit-transition: all 0.5s; -moz-transition: all 0.5s; -o-transition: all 0.5s; }
+.NyOrder_Btn a img { display: inline-block; width: 20px; height: 20px; vertical-align: middle; margin: -2px 10px 0 0; padding: 0; }
+.NyOrder_Btn a:hover { background-color: #202020; }
+.NyOrder_Main .NyOrder_Right { width: 72%; height: auto; overflow: hidden; margin: 0; padding: 0 40px 0 0; float: left; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.NyOrder_Right #ab_msg.ab_msg { width: 100%!important; height: auto!important; margin: 0 auto!important; padding: 0!important; }
+.NyOrder_Right #ab_msg.ab_msg h3 { display: none!important; }
+.NyOrder_Right #ab_msg.ab_msg ul { width: 100%!important; overflow: hidden!important; margin: 0 auto!important; padding: 0!important; }
+.NyOrder_Right #ab_msg.ab_msg ul li h4, .NyOrder_Right #ab_msg.ab_msg ul li h4.xh { display: none!important; }
+.NyOrder_Right #ab_msg.ab_msg ul li { width: 100%!important; height: auto!important; overflow: hidden!important; line-height: inherit!important; color: inherit!important; font-size: inherit!important; margin: 0 0 25px!important; padding: 0!important; clear: inherit!important; }
+.NyOrder_Right #ab_msg.ab_msg ul li:last-child { margin: 0 auto!important; }
+.NyOrder_Right #ab_msg.ab_msg ul li .msg_ipt1, .NyOrder_Right #ab_msg.ab_msg ul li .msg_ipt12, .NyOrder_Right #ab_msg.ab_msg ul li .msg_tara { width: 100%!important; height: auto!important; margin: 0!important; padding: 0!important; }
+.NyOrder_Right #ab_msg.ab_msg ul li .msg_ipt1 input, .NyOrder_Right #ab_msg.ab_msg ul li .msg_ipt12 input, .NyOrder_Right #ab_msg.ab_msg ul li .msg_ipt2 input, .NyOrder_Right #ab_msg.ab_msg ul li .msg_ipt12 .msg_option { display: block!important; width: 100%!important; height: 60px!important; line-height: 60px; color: #666; font-size: 16px; margin: 0!important; padding: 0 20px!important; background-color: #f9f9f9!important; border: 0!important; outline: none!important;}
+.NyOrder_Right #ab_msg.ab_msg ul li .msg_ipt1 input::placeholder, .NyOrder_Right #ab_msg.ab_msg ul li .msg_ipt12 input::placeholder, .NyOrder_Right #ab_msg.ab_msg ul li .msg_ipt2 input::placeholder { color:#666;}
+.NyOrder_Right #ab_msg.ab_msg ul li .msg_ipt12 .msg_option { padding: 0 20px 0 16px!important; }
+.NyOrder_Right #ab_msg.ab_msg ul li .c_yzm { margin: 0 10px 0 0!important; padding: 0!important; float: left!important; }
+.NyOrder_Right #ab_msg.ab_msg ul li .msg_ipt2 input { width: 240px!important; margin: 0 10px 0 0!important; float: left!important; }
+.NyOrder_Right #ab_msg.ab_msg ul li a.yzm_img { display: block!important; width: 120px!important; height: 40px!important; padding: 0!important; float: left!important; }
+.NyOrder_Right #ab_msg.ab_msg ul li .msg_ipt2>span { line-height: 60px!important; color: #666!important; font-size: 16px!important; }
+.NyOrder_Right #ab_msg.ab_msg ul li .msg_tara textarea, .NyOrder_Right #ab_msg.ab_msg ul li .msg_ipt0 textarea { display: block!important; width: 100%!important; height: 150px!important; line-height: 30px; color: #aaa; font-size: 16px; margin: 0!important; padding: 15px 20px!important; background-color: #f9f9f9!important; border: 0!important; outline: none!important; resize: none!important;}
+.NyOrder_Right #ab_msg.ab_msg ul li .msg_tara textarea::placeholder, .NyOrder_Right #ab_msg.ab_msg ul li .msg_ipt0 textarea::placeholder { color:#666;}
+.NyOrder_Right #ab_msg.ab_msg ul li .msg_btn { width: 100%!important; height: auto!important; overflow: hidden!important; margin: 0!important; padding: 0!important; float: inherit!important; }
+.NyOrder_Right #ab_msg.ab_msg .msg_btn input { width: 200px!important; height: 60px!important; overflow: hidden!important; line-height: 60px!important; color: #fff!important; font-size: 16px!important; text-align: center!important; background-color: #333!important; margin: 0 20px 0 0!important; padding: 0!important; border: none!important; cursor: pointer!important; }
+.NyOrder_Right #ab_msg.ab_msg .msg_btn input:hover { background-color: #202020!important; }
+.NyOrder_Right #ab_msg.ab_msg .msg_btn input.msg_btn1 { background-color: #124b53!important; }
+.NyOrder_Right #ab_msg.ab_msg .msg_btn input.msg_btn1:hover { background-color: #b00026!important; }
+.NyOrder_Right #ab_msg.ab_msg ul li .msg_ipt2 { width: 100%!important; }
+ @media (max-width:1680px) {
+}
+@media (max-width:1600px) {
+}
+@media (max-width:1560px) {
+}
+@media (max-width:1440px) {
+.NyOrder { padding: 60px; }
+.NyOrder .NyOrder_Main { width: 100%; }
+}
+@media (max-width:1366px) {
+}
+@media (max-width:1280px) {
+.NyOrder_Main .NyOrder_Left { height: 600px; }
+.NyOrder_Left p { font-size: 26px; }
+.NyOrder_Left font { font-size: 20px; }
+.NyOrder_Left span { font-size: 15px; line-height: 25px; }
+.NyOrder_Btn a { height: 50px; line-height: 50px; }
+.NyOrder_Right #ab_msg.ab_msg ul li:last-child { margin: 30px auto 0!important; }
+.NyOrder_Right #ab_msg.ab_msg ul li .msg_ipt1 input, .NyOrder_Right #ab_msg.ab_msg ul li .msg_ipt12 input, .NyOrder_Right #ab_msg.ab_msg ul li .msg_ipt2 input, .NyOrder_Right #ab_msg.ab_msg ul li .msg_ipt12 .msg_option { height: 50px!important; line-height: 50px; font-size: 15px; }
+.NyOrder_Right #ab_msg.ab_msg ul li .msg_tara textarea, .NyOrder_Right #ab_msg.ab_msg ul li .msg_ipt0 textarea { height: 145px!important; line-height: 25px; font-size: 15px; padding: 10px 20px; }
+.NyOrder_Right #ab_msg.ab_msg ul li a.yzm_img { margin: 5px 0!important; }
+.NyOrder_Right #ab_msg.ab_msg ul li .msg_ipt2>span { line-height: 50px!important; font-size: 15px!important; }
+.NyOrder_Right #ab_msg.ab_msg .msg_btn input { height: 50px!important; line-height: 50px!important; }
+}
+@media (max-width:1200px) {
+.NyOrder { padding: 60px 40px; }
+.NyOrder .NyOrder_Main { padding: 30px; }
+.NyOrder_Main .NyOrder_Left { padding: 60px 30px; }
+.NyOrder_Left p { line-height: 36px; }
+.NyOrder_Left .NyOrder_Btn { padding: 0 30px; }
+.NyOrder_Main .NyOrder_Right { padding: 0 30px 0 0; }
+.NyOrder_Right #ab_msg.ab_msg ul li .msg_ipt2 input { width: 200px!important; }
+}
+@media (max-width:1080px) {
+.NyOrder .NyOrder_Main { padding: 25px; }
+.NyOrder_Main .NyOrder_Left { height: 560px; padding: 50px 25px; background-size: 280px 160px; }
+.NyOrder_Left p { line-height: 32px; font-size: 24px; }
+.NyOrder_Left span { line-height: 24px; font-size: 14px; }
+.NyOrder_Left .NyOrder_Btn { margin: 50px auto 0; padding: 0 25px; }
+.NyOrder_Main .NyOrder_Right { padding: 0 25px 0 0; }
+.NyOrder_Right #ab_msg.ab_msg ul li { margin: 0 0 20px!important; }
+.NyOrder_Right #ab_msg.ab_msg ul li:nth-child(1), .NyOrder_Right #ab_msg.ab_msg ul li:nth-child(3), .NyOrder_Right #ab_msg.ab_msg ul li:nth-child(5) { width: 48.5%!important; margin: 0 3% 20px 0!important; float: left!important; }
+.NyOrder_Right #ab_msg.ab_msg ul li:nth-child(2), .NyOrder_Right #ab_msg.ab_msg ul li:nth-child(4), .NyOrder_Right #ab_msg.ab_msg ul li:nth-child(6) { width: 48.5%!important; margin: 0 0 20px 0!important; float: right!important; }
+.NyOrder_Right #ab_msg.ab_msg ul li:last-child { margin: 20px auto 0!important; }
+.NyOrder_Right #ab_msg.ab_msg ul li .msg_ipt1 input, .NyOrder_Right #ab_msg.ab_msg ul li .msg_ipt12 input, .NyOrder_Right #ab_msg.ab_msg ul li .msg_ipt2 input, .NyOrder_Right #ab_msg.ab_msg ul li .msg_ipt12 .msg_option { font-size: 14px; }
+.NyOrder_Right #ab_msg.ab_msg ul li .msg_tara textarea, .NyOrder_Right #ab_msg.ab_msg ul li .msg_ipt0 textarea { height: 140px!important; line-height: 24px; font-size: 14px; }
+.NyOrder_Right #ab_msg.ab_msg ul li .msg_ipt2 input { width: 180px!important; }
+.NyOrder_Right #ab_msg.ab_msg ul li .msg_ipt2>span { font-size: 14px!important; }
+}
+@media (max-width:1024px) {
+.NyOrder_Main .NyOrder_Left { width: 30%; height: 590px; }
+.NyOrder_Main .NyOrder_Right { width: 70%; }
+.NyOrder_Right #ab_msg.ab_msg ul li .c_yzm { height: 50px; float: inherit!important; }
+.NyOrder_Right #ab_msg.ab_msg ul li .msg_ipt2>span { display: block; width: 100%; line-height: 30px!important; }
+}
+@media (max-width:800px) {
+.NyOrder { padding: 40px 20px; }
+.NyOrder .NyOrder_Main { padding: 20px; }
+.NyOrder_Main .NyOrder_Left { width: 100%; height: auto; margin: 0 auto 20px; padding: 40px; float: inherit; }
+.NyOrder_Left .NyOrder_Img { float: left; margin: 0 40px 0 0; }
+.NyOrder_Left p { line-height: 30px; font-size: 24px; margin: 8px auto 2px; }
+.NyOrder_Left span { margin: 10px auto 0; }
+.NyOrder_Left .NyOrder_Btn { width: 200px; margin: 20px 0 0; padding: 0; float: left; }
+.NyOrder_Main .NyOrder_Right { width: 100%; margin: 0 auto; padding: 0; float: inherit; }
+.NyOrder_Right #ab_msg.ab_msg ul li .c_yzm { height: 50px; float: left!important; }
+.NyOrder_Right #ab_msg.ab_msg ul li .msg_ipt2>span { display: inline-block; width: auto; line-height: 50px!important; }
+}
+@media (max-width:767px) {
+.NyOrder { padding: 20px 12px; }
+.NyOrder .NyOrder_Main { padding: 12px; }
+.NyOrder_Main .NyOrder_Left { padding: 20px; }
+.NyOrder_Left .NyOrder_Img { width: 106px; height: 106px; margin: 0 20px 0 0; padding: 4px 0; }
+.NyOrder_Img img { width: 90px; height: 90px; border: 4px solid rgba(0,0,0,0.05); }
+.NyOrder_Left p { line-height: 24px; font-size: 18px; margin: 0 auto 2px; }
+.NyOrder_Left span { line-height: 20px; }
+.NyOrder_Left .NyOrder_Btn { width: 100%; margin: 20px auto 0; float: inherit; }
+.NyOrder_Btn a { height: 40px; line-height: 40px; font-size: 15px; }
+.NyOrder_Right #ab_msg.ab_msg ul li:nth-child(1), .NyOrder_Right #ab_msg.ab_msg ul li:nth-child(3), .NyOrder_Right #ab_msg.ab_msg ul li:nth-child(5) { width: 100%!important; margin: 0 auto 20px!important; float: inherit!important; }
+.NyOrder_Right #ab_msg.ab_msg ul li:nth-child(2), .NyOrder_Right #ab_msg.ab_msg ul li:nth-child(4), .NyOrder_Right #ab_msg.ab_msg ul li:nth-child(6) { width: 100%!important; margin: 0 auto 20px!important; float: inherit!important; }
+.NyOrder_Right #ab_msg.ab_msg ul li .msg_ipt1 input, .NyOrder_Right #ab_msg.ab_msg ul li .msg_ipt12 input, .NyOrder_Right #ab_msg.ab_msg ul li .msg_ipt2 input, .NyOrder_Right #ab_msg.ab_msg ul li .msg_ipt12 .msg_option { padding: 0 12px!important; }
+.NyOrder_Right #ab_msg.ab_msg ul li .msg_ipt2 input { width: 160px!important; }
+.NyOrder_Right #ab_msg.ab_msg ul li .c_yzm { height: 50px; float: inherit!important; }
+.NyOrder_Right #ab_msg.ab_msg ul li .msg_ipt2>span { display: block; width: 100%; line-height: 24px!important; margin: 10px auto 0; }
+.NyOrder_Right #ab_msg.ab_msg .msg_btn input { width: 48%!important; margin: 0!important; float: left; }
+.NyOrder_Right #ab_msg.ab_msg .msg_btn input.msg_btn1 { margin: 0 4% 0 0!important; }
+.NyOrder_Right #ab_msg.ab_msg ul li .msg_tara textarea, .NyOrder_Right #ab_msg.ab_msg ul li .msg_ipt0 textarea { padding: 10px 12px!important; }
+}
+@media (max-width:375px) {
+}
+@media (max-width:320px) {
+.NyOrder_Left .NyOrder_Img { float: inherit; margin: 0 auto 20px; }
+.NyOrder_Left p { text-align: center; }
+.NyOrder_Left span { text-align: center; }
+.NyOrder_Right #ab_msg.ab_msg ul li .msg_ipt2 input { width: 130px!important; }
+}
+/*NyOrder 结束*/
+
+/*NyContactUs 开始*/
+.NyContactUs { width: 100%; height: auto; min-height: 320px; margin: 0 auto; padding: 80px 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.NyContactUs .NyContactUs_Infor { width: 100%; height: auto; margin: 0 auto 40px; padding: 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.NyContactUs_Infor .NyContactUsInfor_Main { width: 1400px; height: auto; margin: 0 auto; padding: 0; }
+.NyContactUsInfor_Main .NyContactUsInfor_Img { width: 100%; height: 350px; margin: 0 auto; padding: 0; position: relative; }
+.NyContactUsInfor_Img img.contactImg { display: block; width: 100%; height: 100%; object-fit: cover; margin: auto; padding: 0; position: absolute; left: 0; top: 0; right: 0; bottom: 0; }
+.NyContactUsInfor_Img .contactText { width: 50%; height: 100%; overflow: hidden; margin: 0; padding: 100px 20% 100px 60px; background: url(../images/contactbg.png) 0 0 no-repeat; background-size: 100% 100%; position: absolute; left: 0; top: 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.contactText p { width: 100%; height: auto; line-height: 36px; color: #fff; font-size: 24px; font-weight: bold; word-break: break-all; margin: 0 auto; padding: 0; }
+.contactText i { display: block; width: 50px; height: 2px; margin: 10px 0 40px; padding: 0; background: url(../images/line06.png) 0 0 no-repeat; }
+.contactText span { display: block; width: 100%; height: auto; line-height: 30px; color: rgba(255,255,255,0.85); font-size: 16px; margin: 0 auto; padding: 0; }
+.contactText em { display: block; width: 80px; height: 80px; margin: 0; padding: 0; background: url(../images/xs.png) center center no-repeat; background-size: 100% 100%; position: absolute; top: 50px; right: 40%; }
+.NyContactUsInfor_Main .NyContactUsInfor_Con { width: 100%; height: auto; margin: 0 auto; padding: 40px 0; background-color: #fff; }
+.NyContactUsInfor_Con .NyContactUs_Ewm { width: 25%; height: 200px; overflow: hidden; margin: 0; padding: 20px 40px; border-right: 1px solid #e6e6e6; float: left; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.NyContactUs_Ewm span { display: block; width: 130px; height: 130px; overflow: hidden; margin: 0 auto 10px; padding: 4px; border: 1px solid #e6e6e6; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.NyContactUs_Ewm span img { display: block; width: 120px; height: 120px; margin: 0 auto; padding: 0; }
+.NyContactUs_Ewm p { width: 100%; height: auto; line-height: 20px; color: #666; font-size: 16px; text-align: center; margin: 0 auto; padding: 0; }
+.NyContactUsInfor_Con .NyContactUs_Lxfs { width: 75%; height: 200px; overflow: hidden; margin: 0; padding: 42px 0; float: right; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.NyContactUs_Lxfs ul li { width: 33.333333%; height: auto; margin: 0; padding: 0 20px; border-right: 1px solid #e6e6e6; float: left; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.NyContactUs_Lxfs ul li:nth-child(3) { border: 0; }
+.NyContactUs_Lxfs ul li img { display: block; width: 44px; height: 44px; margin: 0 auto 20px; padding: 0; }
+.NyContactUs_Lxfs ul li span { display: block; width: 100%; height: auto; line-height: 30px; color: #333; font-size: 18px; text-align: center; margin: 0 auto; padding: 0; }
+.NyContactUs_Lxfs ul li p { width: 100%; height: auto; max-height: 48px; overflow: hidden; line-height: 24px; color: #666; font-size: 18px; text-align: center; word-break: break-all; display: -webkit-box; text-overflow: ellipsis; -webkit-line-clamp: 2; -webkit-box-orient: vertical; margin: 0 auto; padding: 0; }
+.NyContactUs .NyContactUs_Map { width: 1400px; height: auto; margin: 0 auto; padding: 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.NyMap { width: 100%; height: 500px; overflow: hidden; margin: 0 auto; padding: 0; box-sizing: border-box; -webkit-box-sizing: border-box; -o-box-sizing: border-box; -moz-box-sizing: border-box; }
+.NyMap .dz_map { width: 100%; height: 100%; overflow: hidden; margin: 0 auto; padding: 0; }
+.NyMap .dz_map #container { height: 120%; }
+ @media (max-width:1680px) {
+}
+@media (max-width:1600px) {
+}
+@media (max-width:1560px) {
+}
+@media (max-width:1440px) {
+.NyContactUs { padding: 60px; }
+.NyContactUs_Infor .NyContactUsInfor_Main { width: 100%; }
+.contactText em { top: 40px; right: 30%; }
+.NyContactUs .NyContactUs_Infor { margin: 0 auto 30px; }
+.NyContactUsInfor_Main .NyContactUsInfor_Con { padding: 30px 0; }
+.NyContactUsInfor_Con .NyContactUs_Ewm { padding: 20px; }
+.NyContactUs_Lxfs ul li span { font-size: 16px; }
+.NyContactUs_Lxfs ul li p { font-size: 16px; }
+.NyContactUs .NyContactUs_Map { width: 100%; }
+.NyMap { height: 440px; }
+}
+@media (max-width:1366px) {
+.NyContactUsInfor_Main .NyContactUsInfor_Img { height: 320px; }
+.NyContactUsInfor_Img .contactText { padding: 80px 15% 80px 60px; }
+.contactText span { line-height: 25px; font-size: 15px; }
+.contactText em { width: 72px; height: 72px; }
+.NyContactUs_Ewm p { font-size: 15px; }
+.NyMap { height: 400px; }
+}
+@media (max-width:1280px) {
+.NyContactUsInfor_Main .NyContactUsInfor_Img { height: 300px; }
+.contactText em { width: 70px; height: 70px; top: 30px; right: 20%; }
+.NyContactUsInfor_Con .NyContactUs_Ewm { height: 220px; padding: 30px; }
+.NyContactUsInfor_Con .NyContactUs_Lxfs { height: 220px; padding: 52px 0; }
+.NyMap { height: 380px; }
+}
+@media (max-width:1200px) {
+.NyContactUs { padding: 60px 40px; }
+.NyContactUsInfor_Main .NyContactUsInfor_Img { height: 260px; }
+.NyContactUsInfor_Img .contactText { padding: 60px 12% 60px 40px; }
+.contactText p { line-height: 32px; font-size: 22px; }
+.contactText span { line-height: 24px; font-size: 14px; }
+.contactText i { margin: 10px 0 30px; }
+.NyContactUsInfor_Con .NyContactUs_Ewm { height: 200px; padding: 20px; }
+.NyContactUs_Ewm p { line-height: 20px; font-size: 14px; }
+.NyContactUsInfor_Con .NyContactUs_Lxfs { height: 200px; padding: 40px 0; }
+.NyContactUs_Lxfs ul li span { font-size: 16px; }
+.NyContactUs_Lxfs ul li p { font-size: 15px; }
+.NyMap { height: 360px; }
+}
+@media (max-width:1080px) {
+.NyContactUsInfor_Img .contactText { width: 56%; }
+.NyMap { height: 340px; }
+}
+@media (max-width:1024px) {
+}
+@media (max-width:800px) {
+.NyContactUs { padding: 40px 20px; }
+.NyContactUsInfor_Main .NyContactUsInfor_Img { height: 240px; }
+.NyContactUsInfor_Img .contactText { width: 65%; padding: 50px 12% 50px 40px; }
+.contactText em { width: 60px; height: 60px; top: 30px; right: 20%; }
+.NyContactUsInfor_Main .NyContactUsInfor_Con { padding: 20px 0; }
+.NyContactUsInfor_Con .NyContactUs_Ewm { width: 100%; height: auto; margin: 0 auto; padding: 20px; border: 0; float: inherit; }
+.NyContactUsInfor_Con .NyContactUs_Lxfs { width: 100%; height: auto; margin: 0 auto; padding: 20px; float: inherit; }
+.NyContactUs_Lxfs ul li span { font-size: 15px; }
+.NyContactUs_Lxfs ul li p { font-size: 15px; }
+.NyMap { height: 300px; }
+}
+@media (max-width:767px) {
+.NyContactUs { padding: 20px 12px; }
+.NyContactUsInfor_Main .NyContactUsInfor_Img { height: 180px; }
+.NyContactUsInfor_Img .contactText { width: 100%; padding: 30px 12% 30px 20px; }
+.NyContactUs_Ewm p { line-height: 30px; font-size: 16px; }
+.contactText em { width: 50px; height: 50px; top: 30px; right: 20%; }
+.contactText p { line-height: 30px; font-size: 20px; }
+.contactText i { margin: 10px 0 20px; }
+.NyContactUs .NyContactUs_Infor { margin: 0 auto 20px; }
+.NyContactUsInfor_Con .NyContactUs_Ewm { width: 100%; height: auto; margin: 0 auto; padding: 20px 20px; float: inherit; }
+.NyContactUsInfor_Con .NyContactUs_Lxfs { width: 100%; height: auto; margin: 0 auto; padding: 0 20px; float: inherit; }
+.NyContactUs_Lxfs ul li { width: 100%; margin: 0 auto; padding: 20px 0; border-right: 0; border-bottom: 1px solid #e6e6e6; float: inherit; }
+.NyContactUs_Lxfs ul li img { margin: 0 auto 10px; }
+.NyContactUs_Lxfs ul li span { font-size: 16px; }
+.NyContactUs_Lxfs ul li p { font-size: 18px; }
+.NyMap { height: 300px; }
+}
+@media (max-width:375px) {
+.contactText p { font-size: 18px; }
+}
+@media (max-width:320px) {
+}
+/*NyContactUs 结束*/
+
+/*NyJob 开始*/
+.NyJob { width: 100%; overflow: hidden; margin: 0 auto; padding: 0; background-color: #f9f9f9; }
+.NyJob .NyJob_Con { width: 100%; height: auto; margin: 2px auto 0; padding: 80px 0; background-color: #fff; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.NyJob_Con ul { width: 1400px; height: auto; margin: 0 auto; padding: 0; }
+.NyJob_Con ul li { width: 18.4%; height: auto; margin: 0 2% 0 0; padding: 60px 20px; background-color: #f9f9f9; float: left; transition: all 0.5s; -webkit-transition: all 0.5s; -moz-transition: all 0.5s; -o-transition: all 0.5s; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.NyJob_Con ul li:nth-child(5) { margin: 0; }
+.NyJob_Con ul li:hover { background-color: #124b53; }
+.NyJob_Con ul li i { display: block; width: 56px; height: 53px; overflow: hidden; margin: 0 auto; padding: 0; transition: all 0.5s; -webkit-transition: all 0.5s; -moz-transition: all 0.5s; -o-transition: all 0.5s; }
+.NyJob_Con ul li i.JobIco1 { background: url(../images/talent-nav_1.png) center center no-repeat; background-size: 100% 100%; }
+.NyJob_Con ul li i.JobIco2 { background: url(../images/talent-nav_2.png) center center no-repeat; background-size: 100% 100%; }
+.NyJob_Con ul li i.JobIco3 { background: url(../images/talent-nav_3.png) center center no-repeat; background-size: 100% 100%; }
+.NyJob_Con ul li i.JobIco4 { background: url(../images/talent-nav_4.png) center center no-repeat; background-size: 100% 100%; }
+.NyJob_Con ul li i.JobIco5 { background: url(../images/talent-nav_5.png) center center no-repeat; background-size: 100% 100%; }
+.NyJob_Con ul li:hover i.JobIco1 { background: url(../images/talent-nav_10.png) center center no-repeat; background-size: 100% 100%; }
+.NyJob_Con ul li:hover i.JobIco2 { background: url(../images/talent-nav_20.png) center center no-repeat; background-size: 100% 100%; }
+.NyJob_Con ul li:hover i.JobIco3 { background: url(../images/talent-nav_30.png) center center no-repeat; background-size: 100% 100%; }
+.NyJob_Con ul li:hover i.JobIco4 { background: url(../images/talent-nav_40.png) center center no-repeat; background-size: 100% 100%; }
+.NyJob_Con ul li:hover i.JobIco5 { background: url(../images/talent-nav_50.png) center center no-repeat; background-size: 100% 100%; }
+.NyJob_Con ul li span { display: block; width: 100%; height: auto; overflow: hidden; line-height: 30px; color: #333; font-size: 20px; font-weight: bold; text-align: center; margin: 15px auto; padding: 0; transition: all 0.5s; -webkit-transition: all 0.5s; -moz-transition: all 0.5s; -o-transition: all 0.5s; }
+.NyJob_Con ul li em { display: block; width: 44px; height: 2px; margin: 15px auto 30px; padding: 0; background: url(../images/line05.png) center center no-repeat; background-size: 100% 100%; transition: all 0.5s; -webkit-transition: all 0.5s; -moz-transition: all 0.5s; -o-transition: all 0.5s; }
+.NyJob_Con ul li p { width: 100%; height: 72px; overflow: hidden; line-height: 24px; color: #666; font-size: 14px; word-break: break-all; text-align: center; margin: 0 auto; padding: 0; display: -webkit-box; text-overflow: ellipsis; -webkit-line-clamp: 3; -webkit-box-orient: vertical; transition: all 0.5s; -webkit-transition: all 0.5s; -moz-transition: all 0.5s; -o-transition: all 0.5s; }
+.NyJob_Con ul li:hover span { color: #fff; }
+.NyJob_Con ul li:hover em { background: url(../images/line06.png) center center no-repeat; background-size: 100% 100%; }
+.NyJob_Con ul li:hover p { color: rgba(255,255,255,0.65); }
+.NyJob .NyJob_Main { width: 1400px; height: auto; margin: 80px auto; padding: 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.NyJob_Main .NyJob_List { width: 100%; height: auto;min-height:400px; margin: 0 auto; padding: 0; }
+.NyJob_List ul li { width: 32%; height: auto; margin: 0 2% 30px 0; padding: 30px; background-color: #fff; box-shadow: 0 0 0 rgba(0,0,0,0.06); float: left; transition: all 0.5s; -webkit-transition: all 0.5s; -moz-transition: all 0.5s; -o-transition: all 0.5s; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.NyJob_List ul li:nth-child(3n+3) { margin: 0 0 30px; }
+.NyJob_List ul li:hover { box-shadow: 0 0 10px rgba(0,0,0,0.06); }
+.NyJob_List ul li .NyJob_Name { width: 100%; height: auto; margin: 0 auto 30px; padding: 0; position: relative; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.NyJob_List ul li .NyJob_Name a { display: block; width: 100%; height: 30px; overflow: hidden; line-height: 30px; color: #333; font-size: 20px; font-weight: bold; white-space: nowrap; text-overflow: ellipsis; margin: 0; padding: 0; transition: all 0.5s; -webkit-transition: all 0.5s; -moz-transition: all 0.5s; -o-transition: all 0.5s; }
+.NyJob_List ul li:hover .NyJob_Name a { color: #124b53; }
+/*.NyJob_List ul li .NyJob_Name i { display:block; width:100px; height:30px; overflow:hidden; line-height:30px; color:#666; font-size:16px; font-style:normal; text-align:right; margin:0; padding:0; position:absolute; top:0; right:0;}
+.NyJob_List ul li .NyJob_Name i img { display:inline-block; width:18px; height:18px; vertical-align:middle; margin:-2px 6px 0 0; padding:0; vertical-align:middle;}*/
+.NyJob_List ul li .NyJob_Time { width: 100%; height: auto; margin: 0 auto; padding: 30px 0 0; border-top: 1px solid #e5e5e5; }
+.NyJob_List ul li .NyJob_Time span { display: block; width: auto; height: 36px; overflow: hidden; line-height: 36px; color: #666; font-size: 14px; margin: 0; padding: 0; float: left; }
+.NyJob_List ul li .NyJob_Time span img { display: block; width: 18px; height: 18px; margin: 8px 6px 10px 0; padding: 0; float: left; }
+.NyJob_List ul li .NyJob_Time a.NyJob_More { width: 108px; height: 36px; overflow: hidden; line-height: 34px; color: #124b53; font-size: 14px; text-align: center; margin: 0; padding: 0; background-color: #fff; border: 1px solid #124b53; float: right; transition: all 0.5s; -webkit-transition: all 0.5s; -moz-transition: all 0.5s; -o-transition: all 0.5s; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.NyJob_List ul li .NyJob_Time a.NyJob_More em { display: inline-block; width: 16px; height: 16px; margin: -2px 0 0 6px; padding: 0; vertical-align: middle; background: url(../images/jt13.png) center center no-repeat; background-size: 100% 100%; transition: all 0.5s; -webkit-transition: all 0.5s; -moz-transition: all 0.5s; -o-transition: all 0.5s; }
+.NyJob_List ul li:hover .NyJob_Time a.NyJob_More { color: #fff; background-color: #124b53; }
+.NyJob_List ul li:hover .NyJob_Time a.NyJob_More em { background: url(../images/jt12.png) center center no-repeat; background-size: 100% 100%; }
+.NyJobdetail { width: 1400px; height: auto; margin: 0 auto; padding: 80px 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.NyJobdetail .NyJobdetail_Title { width: 100%; height: auto; overflow: hidden; line-height: 40px; color: #333; font-size: 30px; margin: 0 auto 30px; padding: 0; }
+.NyJobdetail_Salary { width: auto; height: 40px; line-height: 40px; color: #333; font-size: 18px; font-weight: bold; margin: 0; padding: 0; float: right; }
+.NyJobdetail_Salary font { color: #124b53; font-size: 30px; }
+.NyJobdetail .NyJobdetail_Tips { width: 100%; height: auto; overflow: hidden; margin: 30px auto; padding: 15px 30px; background-color: #fff; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.NyJobdetail_Tips ul li { width: auto; height: 30px; line-height: 30px; color: #666; font-size: 16px; margin: 0 30px 0 0; padding: 0; float: left; }
+.NyJobdetail_Tips ul li img { display: block; width: 18px; height: 18px; margin: 6px 6px 6px 0; padding: 0; float: left; }
+.NyJobdetail_Tips ul li span { color: #333; }
+.NyJobdetail .NyJobdetail_Con { width: 100%; height: auto; overflow: hidden; margin: 30px auto 0; padding: 30px; background-color: #fff; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.NyJobdetail_Con dl dd { width: 48.5%; height: auto; margin: 0 3% 0 0; padding: 30px 0; float: left; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.NyJobdetail_Con dl dd:nth-child(2) { margin: 0; }
+.NyJobdetail_Con dl dd .NyJobdetail_Tit { width: 100%; height: auto; overflow: hidden; line-height: 30px; color: #333; font-size: 18px; font-weight: bold; margin: 0 auto 15px; padding: 0; }
+.NyJobdetail_Tit i { display: block; width: 3px; height: 18px; background-color: #124b53; margin: 6px 12px 6px 0; padding: 0; float: left; }
+.NyJobdetail_Con dl dd .NyJobdetail_Text { width: 100%; height: auto; overflow: hidden; line-height: 28px!important; color: #666!important; font-family: Arial, Helvetica, \5FAE\8F6F\96C5\9ED1, sans-serif!important; font-size: 16px!important; word-break: break-all; text-align: justify; margin: 0 auto 15px; padding: 0 15px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.NyJobdetail_Text div, .NyJobdetail_Text p, .NyJobdetail_Text span, .NyJobdetail_Text font, .NyJobdetail_Text em { width: 100%; height: auto; overflow: hidden; line-height: 28px!important; color: #666!important; font-family: Arial, Helvetica, \5FAE\8F6F\96C5\9ED1, sans-serif!important; font-size: 16px!important; font-style: normal; word-break: break-all; text-align: justify; margin: 0 auto; padding: 0; }
+.NyJobdetail_Text div, .NyJobdetail_Text p { line-height: 28px!important; color: #666!important; font-family: Arial, Helvetica, \5FAE\8F6F\96C5\9ED1, sans-serif!important; font-size: 16px!important; word-break: break-all; text-align: justify; margin: 0 auto 15px; padding: 0; }
+.NyJobdetail_Con .NyJobdetail_Btn { width: 100%; height: auto; overflow: hidden; margin: 0 auto 30px; padding: 0; }
+.NyJobdetail_Btn p { width: 100%; height: auto; overflow: hidden; line-height: 30px; color: #666; font-size: 16px; margin: 0 auto 15px; padding: 0; }
+.NyJobdetail_Btn p span { color: #124b53; }
+.NyJobdetail_Btn a { display: block; width: 160px; height: 50px; overflow: hidden; line-height: 50px; color: #fff; font-size: 16px; text-align: center; margin: 0; padding: 0; background-color: #124b53; transition: all 0.5s; -webkit-transition: all 0.5s; -moz-transition: all 0.5s; -o-transition: all 0.5s; }
+.NyJobdetail_Btn a img { display: inline-block; width: 20px; height: 20px; vertical-align: middle; margin: -2px 0 0 10px; padding: 0; transition: all 0.5s; -webkit-transition: all 0.5s; -moz-transition: all 0.5s; -o-transition: all 0.5s; }
+.NyJobdetail_Btn a:hover { background-color: #b00026; }
+.NyJobdetail_Btn a:hover img { margin: -2px 0 0 20px; }
+ @media (max-width:1680px) {
+}
+@media (max-width:1600px) {
+}
+@media (max-width:1560px) {
+}
+@media (max-width:1440px) {
+.NyJob .NyJob_Con { padding: 60px; }
+.NyJob_Con ul { width: 100%; }
+.NyJob_Con ul li { padding: 40px 15px; }
+.NyJob .NyJob_Main { width: 100%; margin: 60px auto; padding: 0 60px; }
+.NyJob_Main #fengye { margin: 30px auto 0; }
+.NyJobdetail { width: 100%; padding: 60px; }
+}
+@media (max-width:1366px) {
+}
+@media (max-width:1280px) {
+}
+@media (max-width:1200px) {
+.NyJob .NyJob_Con { padding: 60px 40px; }
+.NyJob .NyJob_Main { padding: 0 40px; }
+.NyJobdetail { width: 100%; padding: 60px 40px; }
+}
+@media (max-width:1080px) {
+}
+@media (max-width:1024px) {
+.NyJob .NyJob_Con { padding: 40px; }
+.NyJob_Con ul li { padding: 30px 10px; }
+.NyJob .NyJob_Main { margin: 40px auto; padding: 0 40px; }
+.NyJob_List ul li { margin: 0 2% 20px 0; padding: 20px; }
+.NyJob_List ul li:nth-child(3n+3) { margin: 0 0 20px; }
+.NyJob_List ul li .NyJob_Name { margin: 0 auto 20px; }
+.NyJob_List ul li .NyJob_Time { padding: 20px 0 0; }
+.NyJob_Main #fengye { margin: 20px auto 0; }
+.NyJobdetail { width: 100%; padding: 40px; }
+}
+@media (max-width:800px) {
+.NyJob .NyJob_Con { padding: 40px 20px; }
+.NyJob_Con ul li { width: 48.5%; height: auto; margin: 0 3% 20px 0; padding: 40px 20px; }
+.NyJob_Con ul li:nth-child(5) { width: 100%; margin: 0 auto; }
+.NyJob_Con ul li:nth-child(2n+2) { margin: 0 0 20px; }
+.NyJob_Con ul li p { height: 48px; -webkit-line-clamp: 2; }
+.NyJob .NyJob_Main { margin: 40px auto; padding: 0 20px; }
+.NyJob_List ul li { width: 48.5%; margin: 0 3% 20px 0; padding: 20px; }
+.NyJob_List ul li:nth-child(3n+3) { margin: 0 3% 20px 0; }
+.NyJob_List ul li:nth-child(2n+2) { margin: 0 0 20px; }
+.NyJobdetail { width: 100%; padding: 40px 20px; }
+.NyJobdetail .NyJobdetail_Title { font-size: 28px; margin: 0 auto 20px; }
+.NyJobdetail_Salary { font-size: 16px; }
+.NyJobdetail_Salary font { font-size: 28px; }
+.NyJobdetail .NyJobdetail_Tips { margin: 20px auto; padding: 10px 20px; }
+.NyJobdetail_Tips ul li { font-size: 15px; margin: 0 20px 0 0; }
+.NyJobdetail .NyJobdetail_Con { margin: 20px auto 0; padding: 20px; }
+.NyJobdetail_Con dl dd { width: 100%; margin: 0 auto 20px; padding: 0; float: inherit; }
+.NyJobdetail_Con dl dd .NyJobdetail_Text { line-height: 25px!important; font-size: 15px!important; }
+.NyJobdetail_Con dl dd .NyJobdetail_Tit { margin: 0 auto 10px; }
+.NyJobdetail_Btn p { font-size: 15px; }
+.NyJobdetail_Con .NyJobdetail_Btn { margin: 0 auto 10px; }
+}
+@media (max-width:767px) {
+.NyJob .NyJob_Con { padding: 20px 12px; }
+.NyJob_Con ul li { padding: 20px; }
+.NyJob_Con ul li p { height: 72px; -webkit-line-clamp: 3; }
+.NyJob_Con ul li:nth-child(5) p { height: 48px; -webkit-line-clamp: 2; }
+.NyJob .NyJob_Main { margin: 20px auto; padding: 0 12px; }
+.NyJob_List ul li { width: 100%; margin: 0 auto 20px; padding: 20px; }
+.NyJob_List ul li:nth-child(2n+2), .NyJob_List ul li:nth-child(3n+3) { margin: 0 auto 20px; }
+.NyJob_Main #fengye { margin: 0 auto; }
+.NyJobdetail { width: 100%; padding: 20px 12px; }
+.NyJobdetail { line-height: 30px; font-size: 24px; }
+.NyJobdetail_Salary { width: 100%; height: 30px; line-height: 30px; font-size: 16px; margin: 15px auto 0; float: inherit; }
+.NyJobdetail_Salary font { font-size: 24px; }
+.NyJobdetail .NyJobdetail_Tips { padding: 10px 12px; }
+.NyJobdetail_Tips ul li { font-size: 14px; margin: 0 12px 0 0; }
+.NyJobdetail .NyJobdetail_Con { padding: 20px 12px; }
+}
+@media (max-width:375px) {
+}
+@media (max-width:320px) {
+.NyJob_Con ul li { width: 100%; margin: 0 auto 20px; float: inherit; }
+.NyJob_Con ul li p { height: auto; display: inherit; text-overflow: inherit; -webkit-line-clamp: inherit; -webkit-box-orient: inherit; }
+}
+/*NyJob 结束*/
+
+/*NyProducts 开始*/
+.NyProducts { width: 1400px; height: auto; min-height: 320px; margin: 80px auto; padding: 0; -webkit-box-sizing: border-box; -o-box-sizing: border-box; -moz-box-sizing: border-box; }
+.NyProducts .NyPro_Left { width: 23.5%; height: auto; margin: 0; padding: 0; float: left; }
+.NyProducts .NyPro_Right { width: 76.5%; height: auto; margin: 0; padding: 0 0 0 30px; float: right; box-sizing: border-box; -webkit-box-sizing: border-box; -o-box-sizing: border-box; -moz-box-sizing: border-box; }
+.NyPro_Right ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  margin: 0 -15px;
+}
+
+.NyPro_Right ul li {
+  width: 33.333333%;
+  margin-bottom: 30px;
+  padding: 0 15px;
+}
+
+.NyPro_Right ul li .abProducts_con {
+  overflow: hidden;
+  background-color: #fff;
+  border: 1px solid #e6e6e6;
+  border-bottom: 0;
+  position: relative;
+}
+
+.NyPro_Right ul li:hover .abProducts_con {
+  border: 1px solid #124b53;
+  border-bottom: 0;
+}
+
+.NyPro_Right ul li .abProducts_con .abProducts_img {
+  width: 100%;
+  height: 250px;
+  margin: 0 auto;
+}
+
+.NyPro_Right ul li .abProducts_con .abProducts_img a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.NyPro_Right ul li .abProducts_con .abProducts_img a img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.NyPro_Right ul li:hover .abProducts_con .abProducts_img a img {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.NyPro_Right ul li .abProducts_con .abProducts_text {
+  margin: 0 auto;
+  padding: 20px 30px;
+  position: relative;
+}
+
+.NyPro_Right ul li .abProducts_con .abProducts_text::before {
+  content: '';
+  display: block;
+  width: calc(100% - 60px);
+  height: 1px;
+  background-color: #e6e6e6;
+  position: absolute;
+  left: 30px;
+  top: 0;
+}
+
+.NyPro_Right ul li .abProducts_con .abProducts_text a.abProducts_name {
+  display: block;
+  width: 100%;
+  height: 36px;
+  overflow: hidden;
+  line-height: 36px;
+  color: #222;
+  font-size: 18px;
+  font-weight: bold;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.NyPro_Right ul li:hover .abProducts_con .abProducts_text a.abProducts_name {
+  color: #124b53;
+}
+
+.NyPro_Right ul li .abProducts_con .abProducts_text p {
+  width: 100%;
+  height: 30px;
+  overflow: hidden;
+  line-height: 30px;
+  color: #666;
+  font-size: 16px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  position: relative;
+}
+
+.NyPro_Right ul li .abProducts_con .abProducts_text p i {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  overflow: hidden;
+  vertical-align: middle;
+  margin: -2px 10px 0 0;
+}
+
+.NyPro_Right ul li .abProducts_con .abProducts_text p i svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.NyPro_Right ul li .abProducts_con .abProducts_text p i svg path {
+  fill: #666999;
+}
+
+
+.NyPro_Right ul li a.abProducts_btn {
+  display: block;
+  width: 100%;
+  height: 58px;
+  overflow: hidden;
+  line-height: 58px;
+  color: #fff;
+  font-size: 16px;
+  padding: 0 30px;
+  background-color: #626262;
+}
+
+.NyPro_Right ul li:hover a.abProducts_btn {
+  background-color: #124b53;
+}
+
+.NyPro_Right ul li a.abProducts_btn i {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  overflow: hidden;
+  vertical-align: middle;
+  margin: -4px 0 0 15px;
+}
+
+.NyPro_Right ul li a.abProducts_btn i svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.NyPro_Right ul li a.abProducts_btn i svg path {
+  fill: #ffffff;
+}
+
+@media (max-width:1680px) {
+  .NyPro_Right ul li .abProducts_con .abProducts_text p {
+    font-size: 15px;
+  }
+
+  .NyPro_Right ul li a.abProducts_btn {
+    height: 50px;
+    line-height: 50px;
+    font-size: 15px;
+  }
+
+  .NyPro_Right ul li a.abProducts_btn i {
+    width: 22px;
+    height: 22px;
+    margin: -4px 0 0 12px;
+  }
+
+}
+
+@media (max-width:1600px) {}
+
+@media (max-width:1560px) {}
+
+@media (max-width:1440px) {
+
+  .NyPro_Right ul li .abProducts_con .abProducts_img {
+    height: 240px;
+  }
+
+  .NyPro_Right ul li .abProducts_con .abProducts_text {
+    padding: 15px 20px;
+  }
+
+  .NyPro_Right ul li .abProducts_con .abProducts_text::before {
+    width: calc(100% - 40px);
+    left: 20px;
+  }
+
+  .NyPro_Right ul li .abProducts_con .abProducts_text p {
+    height: 24px;
+    line-height: 24px;
+    font-size: 14px;
+    margin-top: 4px;
+  }
+
+  .NyPro_Right ul li .abProducts_con .abProducts_text p i {
+    width: 14px;
+    height: 14px;
+  }
+
+  .NyPro_Right ul li a.abProducts_btn {
+    height: 44px;
+    line-height: 44px;
+    font-size: 14px;
+    padding: 0 20px;
+  }
+
+  .NyPro_Right ul li a.abProducts_btn i {
+    width: 20px;
+    height: 20px;
+    margin: -4px 0 0 6px;
+  }
+}
+
+@media (max-width:1366px) {
+  .NyPro_Right ul li .abProducts_con .abProducts_img {
+    height: 226px;
+  }
+
+  .NyPro_Right ul li .abProducts_con .abProducts_text p {
+    margin-top: 2px;
+  }
+}
+
+@media (max-width:1280px) {
+  .NyPro_Right ul {
+    margin: 0 -10px;
+  }
+
+  .NyPro_Right ul li {
+    margin-bottom: 20px;
+    padding: 0 10px;
+  }
+
+  .NyPro_Right ul li .abProducts_con .abProducts_img {
+    height: 215px;
+  }
+}
+
+@media (max-width:1200px) {
+  .NyPro_Right ul li .abProducts_con .abProducts_img {
+    height: 200px;
+  }
+}
+
+@media (max-width:1080px) {
+
+  .NyPro_Right ul li .abProducts_con .abProducts_img {
+    height: 180px;
+  }
+
+  .NyPro_Right ul li .abProducts_con .abProducts_text a.abProducts_name {
+    height: 32px;
+    line-height: 32px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width:1024px) {
+  .NyPro_Right ul li .abProducts_con .abProducts_img {
+    height: 174px;
+  }
+}
+
+@media (max-width:920px) {
+
+  .NyPro_Right ul li .abProducts_con .abProducts_img {
+    height: 154px;
+  }
+
+  .NyPro_Right ul li .abProducts_con .abProducts_text {
+    padding: 10px;
+  }
+
+  .NyPro_Right ul li .abProducts_con .abProducts_text::before {
+    width: calc(100% - 20px);
+    left: 10px;
+  }
+
+  .NyPro_Right ul li .abProducts_con .abProducts_text p {
+    margin-top: 0;
+  }
+}
+
+@media (max-width:820px) {
+  .NyPro_Right ul li .abProducts_con .abProducts_img {
+    height: 134px;
+  }
+
+  .NyPro_Right ul li .abProducts_con .abProducts_text a.abProducts_name {
+    height: 30px;
+    line-height: 30px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width:767px) {
+
+  .NyPro_Right ul li {
+    width: 50%;
+  }
+
+  .NyPro_Right ul li .abProducts_con .abProducts_img {
+    height: 132px;
+  }
+
+  .NyPro_Right ul li a.abProducts_btn {
+    height: 40px;
+    line-height: 40px;
+  }
+}
+
+@media (max-width:390px) {
+  .NyPro_Right ul li .abProducts_con .abProducts_img {
+    height: 124px;
+  }
+}
+
+@media (max-width:320px) {
+  .NyPro_Right ul {
+    margin: 0;
+  }
+
+  .NyPro_Right ul li {
+    width: 100%;
+    padding: 0;
+  }
+
+  .NyPro_Right ul li .abProducts_con .abProducts_img {
+    height: 220px;
+  }
+
+  .NyPro_Right ul li .abProducts_con .abProducts_text {
+    padding: 12px 20px;
+  }
+
+  .NyPro_Right ul li .abProducts_con .abProducts_text::before {
+    width: calc(100% - 40px);
+    left: 20px;
+  }
+
+  .NyPro_Right ul li .abProducts_con .abProducts_text a.abProducts_name {
+    height: 36px;
+    line-height: 36px;
+    font-size: 18px;
+  }
+
+  .NyPro_Right ul li a.abProducts_btn {
+    height: 44px;
+    line-height: 44px;
+  }
+}
+
+@media (max-width:280px) {
+  .NyPro_Right ul li .abProducts_con .abProducts_img {
+    height: 192px;
+  }
+}
+ @media (max-width:1680px) {
+}
+@media (max-width:1600px) {
+}
+@media (max-width:1560px) {
+}
+@media (max-width:1440px) {
+.NyProducts { width: 100%; margin: 60px auto; padding: 0 60px; }
+.NyPro_Right #fengye { margin: 30px auto 0; }
+}
+@media (max-width:1366px) {
+}
+@media (max-width:1280px) {
+.NyPro_Right ul li a.abIdxPro_More { width: 40px; height: 40px; }
+}
+@media (max-width:1200px) {
+.NyProducts { padding: 0 40px; }
+.NyPro_Right #fengye { margin: 35px auto 0; }
+}
+@media (max-width:1080px) {
+.NyPro_Right #fengye { margin: 40px auto 0; }
+}
+@media (max-width:1024px) {
+}
+@media (max-width:800px) {
+.NyProducts { margin: 40px auto; padding: 0 20px; }
+.NyProducts .NyPro_Left { width: 100%; margin: 0 auto; float: inherit; }
+.NyProducts .NyPro_Right { width: 100%; margin: 0 auto; padding: 0; float: inherit; }
+.NyPro_Right ul li .abIdxPro_Img { height: 170px; }
+.NyPro_Right #fengye { margin: 20px auto 0; }
+}
+@media (max-width:767px) {
+.NyProducts { margin: 20px auto; padding: 0 12px; }
+
+}
+@media (max-width:375px) {}
+@media (max-width:320px) {}
+
+
+/*产品分类 开始*/
+.h_left { width: 100%; overflow: hidden; background-color: #fff; margin: 0 auto; padding: 0; box-sizing: border-box; -webkit-box-sizing: border-box; -o-box-sizing: border-box; -moz-box-sizing: border-box; }
+.cp_type { }
+.cp_type .hd { width: 100%; height: auto; margin: 0 auto 10px; padding: 30px; border-bottom: 1px solid #e5e5e5; box-sizing: border-box; -webkit-box-sizing: border-box; -o-box-sizing: border-box; -moz-box-sizing: border-box; }
+.cp_type .hd p { width: 100%; height: 30px; line-height: 30px; color: #124b53; font-size: 24px; font-weight: bold; margin: 0 auto 4px; padding: 0; }
+.cp_type .hd p img { display: block; width: 24px; height: 24px; margin: 3px 10px 3px 0; padding: 0; float: left; }
+.cp_type .hd span { display: block; height: 24px; line-height: 24px; color: #aaa; font-size: 14px; }
+.cp_type .hd em { display: block; width: 50px; height: 2px; margin: 6px 0 0; padding: 0; background: url(../images/line05.png) 0 0 no-repeat; }
+.cp_type .hd i { display: none; }
+.cp_type .bd { padding: 0; }
+.cp_type .bd ul li { background-color: #fff; padding: 0; }
+.cp_type .bd ul li.on { }
+.cp_type .bd ul li p { height: 48px; line-height: 40px; padding: 4px 70px 4px 30px; position: relative; }
+.cp_type .bd ul li:last-child p { }
+.cp_type .bd ul li p a { display: block; width: 100%; padding: 0; overflow: hidden; line-height: 40px; color: #333; font-size: 16px; font-weight: bold; white-space: nowrap; text-overflow: ellipsis; float: left; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.cp_type .bd ul li p span { display: block; width: 40px; height: 100%; background: url(../images/mulu0.png) center center no-repeat; cursor: pointer; position: absolute; top: 0; right: 30px; }
+.cp_type .bd ul li div { display: none; padding: 15px 30px; }
+.cp_type .bd ul li div a { display: block; height: 32px; line-height: 32px; color: #666; font-size: 14px; border-top: 0px solid #eaeaea; padding: 0 0 0 20px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; background: url(../images/ico08.png) 4px 14px no-repeat; }
+.cp_type .bd ul li div a.active{ color:#124b53}
+.cp_type .bd ul li div a:first-child { border-top: 0; }
+.cp_type .bd ul li:hover p, .cp_type .bd ul li.on p { background-color: #333 }
+.cp_type .bd ul li:hover p a, .cp_type .bd ul li.on p a { color: #fff; }
+.cp_type .bd ul li:hover p span { background: url(../images/mulu1.png) center center no-repeat; }
+.cp_type .bd ul li.on p span { background: url(../images/mulu2.png) center center no-repeat; }
+.cp_type .bd ul li div a:hover { color: #124b53; background: url(../images/ico09.png) 4px 14px no-repeat; }
+.cp_type .bd ul a.ckqb { display: block; height: 34px; line-height: 34px; font-size: 16px; color: #333; background: #f1f1f1; width: 92%; margin: 10px auto; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; cursor: pointer; }
+.cp_type .bd ul a.ckqb:hover { background: #124b53; color: #fff; }
+.ProAll { width: 100%; height: auto; margin: 0 auto; padding: 10px 0; box-sizing: border-box; -webkit-box-sizing: border-box; -o-box-sizing: border-box; -moz-box-sizing: border-box; }
+.ProAll a { display: block; width: 100%; height: 40px; overflow: hidden; line-height: 40px; color: #333; font-size: 16px; font-weight: bold; white-space: nowrap; text-overflow: ellipsis; margin: 0 auto; padding: 0 30px; position: relative; box-sizing: border-box; -webkit-box-sizing: border-box; -o-box-sizing: border-box; -moz-box-sizing: border-box; }
+.ProAll a i { display: block; width: 40px; height: 40px; margin: 0; padding: 0; background: url(../images/mulu0.png) center center no-repeat; position: absolute; top: 0; right: 30px; }
+.ProAll a:hover { color: #124b53; }
+.ProAll a:hover i { background: url(../images/mulu1.png) center center no-repeat; }
+/*相关文章 开始*/
+.NyXgwz { width: 100%; overflow: hidden; background-color: #fff; margin: 30px auto; padding: 0; box-sizing: border-box; -webkit-box-sizing: border-box; -o-box-sizing: border-box; -moz-box-sizing: border-box; }
+.NyXgwz .NyXgwz_Title { width: 100%; height: auto; margin: 0 auto; padding: 30px; border-bottom: 1px solid #e5e5e5; box-sizing: border-box; -webkit-box-sizing: border-box; -o-box-sizing: border-box; -moz-box-sizing: border-box; }
+.NyXgwz_Title p { width: 100%; height: 30px; line-height: 30px; color: #124b53; font-size: 24px; font-weight: bold; margin: 0 auto 4px; padding: 0; }
+.NyXgwz_Title p img { display: block; width: 24px; height: 24px; margin: 3px 10px 3px 0; padding: 0; float: left; }
+.NyXgwz_Title span { display: block; height: 24px; line-height: 24px; color: #ccc; font-size: 14px; }
+.NyXgwz_Title em { display: block; width: 50px; height: 2px; margin: 6px 0 0; padding: 0; background: url(../images/line05.png) 0 0 no-repeat; }
+.NyXgwz .NyXgwz_List { width: 100%; height: auto; margin: 0 auto; padding: 15px 30px; box-sizing: border-box; -webkit-box-sizing: border-box; -o-box-sizing: border-box; -moz-box-sizing: border-box; }
+.NyXgwz_List dl dd { width: 100%; height: auto; margin: 0 auto; padding: 4px 0; }
+.NyXgwz_List dl dd a { display: block; width: 100%; height: 40px; overflow: hidden; line-height: 40px; color: #333; font-size: 16px; white-space: nowrap; text-overflow: ellipsis; margin: 0 auto; padding: 0 0 0 20px; position: relative; box-sizing: border-box; -webkit-box-sizing: border-box; -o-box-sizing: border-box; -moz-box-sizing: border-box; }
+.NyXgwz_List dl dd a i { display: block; width: 6px; height: 6px; margin: 0; padding: 0; background: url(../images/ico08.png) center center no-repeat; position: absolute; top: 20px; left: 4px; }
+.NyXgwz_List dl dd a:hover { color: #124b53; }
+.NyXgwz_List dl dd a:hover i { background: url(../images/ico09.png) center center no-repeat; }
+
+/*相关文章 结束*/
+@media screen and (max-width:1440px) {
+}
+@media screen and (max-width:1366px) {
+.cp_type .bd ul li p a { font-size: 15px; }
+.ProAll a { font-size: 15px; }
+.NyXgwz_List dl dd a { font-size: 15px; }
+}
+@media screen and (max-width:1280px) {
+.cp_type .hd { padding: 20px; }
+.cp_type .bd ul li p { padding: 4px 60px 4px 20px; }
+.cp_type .bd ul li p span { right: 20px; }
+.ProAll a { padding: 0 20px; }
+.ProAll a i { right: 20px; }
+.cp_type .bd ul li div { padding: 10px 20px; }
+.NyXgwz .NyXgwz_Title { padding: 20px; }
+.NyXgwz .NyXgwz_List { padding: 10px 20px; }
+.NyXgwz_List dl dd { padding: 0; }
+}
+@media screen and (max-width:1200px) {
+.cp_type .hd p { font-size: 22px; }
+.NyXgwz_Title p { font-size: 22px; }
+}
+@media screen and (max-width:1080px) {
+.cp_type .hd { padding: 15px; }
+.cp_type .bd ul li p { padding: 4px 55px 4px 15px; }
+.cp_type .bd ul li p span { right: 15px; }
+.ProAll a { padding: 0 15px; }
+.ProAll a i { right: 15px; }
+.NyXgwz .NyXgwz_Title { padding: 15px; }
+.NyXgwz_Title p img { display: block; width: 26px; height: 26px; margin: 3px 10px 3px 0; padding: 0; float: left; }
+.NyXgwz .NyXgwz_List { padding: 10px 15px; }
+}
+@media screen and (max-width:1024px) {
+.cp_type .hd p { height: 30px; line-height: 30px; font-size: 24px; }
+.cp_type .hd p img { width: 24px; height: 24px; }
+.NyXgwz_Title p { height: 30px; line-height: 30px; font-size: 24px; }
+.NyXgwz_Title p img { width: 24px; height: 24px; }
+}
+@media screen and (max-width:800px) {
+.h_left { margin: 0 auto 20px; }
+.cp_type .hd { margin: 0 auto; padding: 20px; position: relative; }
+.cp_type .hd p:before { display: none; }
+.cp_type .hd p { font-size: 22px; margin: 0 auto 2px; }
+.cp_type .hd p img { width: 22px; height: 22px; margin: 4px 10px 4px 0; }
+.cp_type .hd span { height: 20px; line-height: 20px; }
+.cp_type .hd i { display: block; width: 40px; height: 40px; margin: 0; padding: 0; background: rgba(18,75,83,0.06) url(../images/mulu1.png) center center no-repeat; position: absolute; top: 30px; right: 20px; }
+.cp_type .hd.on i { background: rgba(18,75,83,0.06) url(../images/mulu2.png) center center no-repeat; }
+.cp_type .bd { margin: 20px auto 0; }
+.cp_type .bd ul li { padding: 0; }
+.cp_type .bd ul li.on { padding: 0; }
+.cp_type .bd ul li p { padding: 4px 60px 4px 20px; }
+.cp_type .bd ul li div a { padding: 0 0 0 20px; }
+.cp_type .bd { display: none; }
+.ProAll a { padding: 0 19px; }
+.NyXgwz { margin: 20px auto; }
+.NyXgwz .NyXgwz_Title { padding: 20px; }
+.NyXgwz_Title p { font-size: 22px; margin: 0 auto 2px; }
+.NyXgwz_Title p img { width: 22px; height: 22px; margin: 4px 10px 4px 0; }
+.NyXgwz_Title span { height: 20px; line-height: 20px; }
+.NyXgwz .NyXgwz_List { padding: 15px 20px; }
+}
+@media screen and (max-width:767px) {
+.cp_type .hd p { font-size: 20px; }
+.NyXgwz_Title p { font-size: 20px; }
+}
+@media screen and (max-width:320px) {
+}
+/*产品分类 结束*/
+/*NyProducts 结束*/
+
+/*NyProlist 开始*/
+.NyProlist { width: 1400px; height: auto; min-height: 320px; margin: 80px auto; padding: 0; box-sizing: border-box; -webkit-box-sizing: border-box; -o-box-sizing: border-box; -moz-box-sizing: border-box; }
+.NyProlist .NyProlist_Left { width: 23.5%; height: auto; margin: 0; padding: 0; float: left; }
+.NyProlist .NyProlist_Right { width: 76.5%; height: auto; margin: 0; padding: 0 0 0 30px; float: right; box-sizing: border-box; -webkit-box-sizing: border-box; -o-box-sizing: border-box; -moz-box-sizing: border-box; }
+.NyProlist_Right ul li { width: 100%; height: auto; margin: 0 auto 30px; padding: 15px; background-color: #fff; box-shadow: 0 0 0 rgba(0,0,0,0.06); position: relative; transition: all 0.5s; -webkit-transition: all 0.5s; -moz-transition: all 0.5s; -o-transition: all 0.5s; box-sizing: border-box; -webkit-box-sizing: border-box; -o-box-sizing: border-box; -moz-box-sizing: border-box; }
+.NyProlist_Right ul li:hover { box-shadow: 0 0 20px rgba(0,0,0,0.06); }
+.NyProlist_Right ul li .NyProlist_Img { width: 28.5%; height: 200px; overflow: hidden; margin: 0; padding: 0; float: left; }
+.NyProlist_Right ul li .NyProlist_Img a { display: block; width: 100%; height: 100%; overflow: hidden; margin: 0; padding: 0; background-color: #fff; border: 1px solid #eee; position: relative; transition: all 0.5s; -webkit-transition: all 0.5s; -moz-transition: all 0.5s; -o-transition: all 0.5s; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.NyProlist_Right ul li .NyProlist_Img a img { display: block; max-width: 100%; max-height: 100%; overflow: hidden; margin: auto; padding: 0; position: absolute; left: 0; top: 0; right: 0; bottom: 0; transition: all 0.5s; -webkit-transition: all 0.5s; -moz-transition: all 0.5s; -o-transition: all 0.5s; }
+.NyProlist_Right ul li:hover .NyProlist_Img a { border: 1px solid #124b53; }
+.NyProlist_Right ul li:hover .NyProlist_Img a img { -webkit-transform: scale(1.1); -moz-transform: scale(1.1); transform: scale(1.1); }
+.NyProlist_Right ul li .NyProlist_Text { width: 71.5%; height: auto; overflow: hidden; margin: 0; padding: 15px 15px 25px 30px; float: right; box-sizing: border-box; -webkit-box-sizing: border-box; -o-box-sizing: border-box; -moz-box-sizing: border-box; }
+.NyProlist_Right ul li .NyProlist_Text .NyProlist_Name { width: 100%; height: auto; overflow: hidden; margin: 0 auto; padding: 0; }
+.NyProlist_Right ul li .NyProlist_Text .NyProlist_Name a { display: block; width: 100%; height: 38px; overflow: hidden; line-height: 38px; color: #333; font-size: 20px; font-weight: bold; white-space: nowrap; text-overflow: ellipsis; margin: 0 auto; padding: 0; transition: all 0.5s; -webkit-transition: all 0.5s; -moz-transition: all 0.5s; -o-transition: all 0.5s; }
+.NyProlist_Right ul li:hover .NyProlist_Text .NyProlist_Name a { color: #124b53; }
+.NyProlist_Right ul li .NyProlist_Text .NyProlist_Ms { width: 100%; height: auto; overflow: hidden; margin: 10px auto 20px; padding: 0; }
+.NyProlist_Right ul li .NyProlist_Text .NyProlist_Ms p { width: 100%; height: 56px; overflow: hidden; line-height: 28px; color: #666; font-size: 16px; word-break: break-all; text-align: justify; margin: 0 auto; padding: 0; display: -webkit-box; text-overflow: ellipsis; -webkit-line-clamp: 2; -webkit-box-orient: vertical; transition: all 0.5s; -webkit-transition: all 0.5s; -moz-transition: all 0.5s; -o-transition: all 0.5s; }
+.NyProlist_Right ul li .NyProlist_Text .NyProlist_Tags { width: 100%; height: auto; overflow: hidden; margin: 0 auto; padding: 0; }
+.NyProlist_Right ul li .NyProlist_Text .NyProlist_Tags dl { width: 100%; height: auto; margin: 0 auto; padding: 0; }
+.NyProlist_Right ul li .NyProlist_Text .NyProlist_Tags dl dd { display: block; width: auto; max-width: 40%; height: 36px; overflow: hidden; line-height: 36px; color: #666; font-size: 14px; white-space: nowrap; text-overflow: ellipsis; margin: 0 2% 0 0; padding: 0 15px; background-color: #f9f9f9; position: relative; float: left; box-sizing: border-box; -webkit-box-sizing: border-box; -o-box-sizing: border-box; -moz-box-sizing: border-box; }
+.NyProlist_Right ul li .NyProlist_Text .NyProlist_Tags dl dd:nth-child(3) { margin: 0; }
+.NyProlist_Right ul li .NyProlist_Text .NyProlist_Tags dl dd img { display: inline-block; width: 16px; height: 16px; vertical-align: middle; margin: -2px 4px 0 0; padding: 0; }
+.NyProlist_Right ul li a.NyProlist_More { display: block; width: 50px; height: 50px; margin: 0; padding: 0; position: absolute; right: 0; bottom: 0; opacity: 0; transition: all 0.5s; -webkit-transition: all 0.5s; -moz-transition: all 0.5s; -o-transition: all 0.5s; }
+.NyProlist_Right ul li a.NyProlist_More img { display: block; width: 100%; height: 100%; margin: 0; padding: 0; }
+.NyProlist_Right ul li:hover a.NyProlist_More { opacity: 1; }
+ @media (max-width:1680px) {
+}
+@media (max-width:1600px) {
+}
+@media (max-width:1560px) {
+}
+@media (max-width:1440px) {
+.NyProlist { width: 100%; margin: 60px auto; padding: 0 60px; }
+.NyProlist_Right #fengye { margin: 30px auto 0; }
+}
+@media (max-width:1366px) {
+.NyProlist_Right ul li .NyProlist_Img { height: 194px; }
+.NyProlist_Right ul li .NyProlist_Text .NyProlist_Ms p { height: 50px; line-height: 25px; font-size: 15px; }
+.NyProlist_Right ul li .NyProlist_Text .NyProlist_Tags dl dd { margin: 0 15px 0 0; }
+}
+@media (max-width:1280px) {
+.NyProlist_Right ul li .NyProlist_Img { height: 168px; }
+.NyProlist_Right ul li .NyProlist_Text { padding: 2px 15px 12px 30px; }
+.NyProlist_Right ul li .NyProlist_Text .NyProlist_Tags dl { width: 100%; float: inherit; }
+}
+@media (max-width:1200px) {
+.NyProlist { padding: 0 40px; }
+.NyProlist_Right ul li { margin: 0 auto 25px; }
+.NyProlist_Right ul li .NyProlist_Img { height: 164px; }
+.NyProlist_Right ul li .NyProlist_Text { padding: 10px 5px 18px 20px; }
+.NyProlist_Right ul li .NyProlist_Text .NyProlist_Name a { height: 30px; line-height: 30px; font-size: 18px; }
+.NyProlist_Right ul li .NyProlist_Text .NyProlist_Ms { margin: 10px auto 5px; }
+.NyProlist_Right ul li .NyProlist_Text .NyProlist_Tags dl dd { max-width: 36%; margin: 0 10px 0 0; padding: 0 10px; }
+.NyProlist_Right ul li a.NyProlist_More { width: 40px; height: 40px; }
+.NyProlist_Right #fengye { margin: 35px auto 0; }
+}
+@media (max-width:1080px) {
+.NyProlist .NyProlist_Right { margin: 0; }
+.NyProlist_Right ul li { margin: 0 auto 20px; padding: 10px; }
+.NyProlist_Right ul li .NyProlist_Img { height: 148px; }
+.NyProlist_Right ul li .NyProlist_Text { padding: 5px 10px 0 20px; }
+.NyProlist_Right ul li .NyProlist_Text .NyProlist_Ms p { height: 48px; line-height: 24px; font-size: 14px; }
+.NyProlist_Right ul li .NyProlist_Text .NyProlist_Tags dl dd { max-width: 48%; height: 30px; line-height: 30px; margin: 0 2% 5px 0; }
+.NyProlist #fengye { margin: 40px auto 0; }
+}
+@media (max-width:1024px) {
+}
+@media (max-width:800px) {
+.NyProlist { margin: 40px auto; padding: 0 20px; }
+.NyProlist .NyProlist_Left { width: 100%; height: auto; margin: 0 auto 20px; float: inherit; }
+.NyProlist .NyProlist_Right { width: 100%; height: auto; margin: 0 auto; padding: 0; float: inherit; }
+.NyProlist_Right ul li { margin: 0 auto 20px; padding: 10px; }
+.NyProlist_Right ul li .NyProlist_Text { padding: 0 10px 0 20px; }
+.NyProlist_Right ul li .NyProlist_Text .NyProlist_Ms { margin: 10px auto; }
+.NyProlist_Right ul li .NyProlist_Text .NyProlist_Ms p { height: 48px; line-height: 24px; font-size: 14px; }
+.NyProlist_Right ul li .NyProlist_Text .NyProlist_Tags dl dd { max-width: 49%; }
+.NyProlist #fengye { margin: 20px auto 0; }
+}
+@media (max-width:767px) {
+.NyProlist { margin: 20px auto; padding: 0 12px; }
+.NyProlist_Right ul li .NyProlist_Img { width: 100%; height: 250px; margin: 0 auto; padding: 0; float: inherit; }
+.NyProlist_Right ul li .NyProlist_Text { width: 100%; margin: 0 auto; padding: 10px; float: inherit; }
+.NyProlist_Right ul li .NyProlist_Text .NyProlist_Tags dl dd { width: 100%; max-width: 100%; margin: 10px auto 0; float: inherit; }
+.NyProlist_Right ul li .NyProlist_Text .NyProlist_Tags dl dd:nth-child(3) { margin: 10px auto 0; }
+.NyProlist_Right ul li a.NyProlist_More { width: 30px; height: 30px; }
+.NyProlist #fengye { margin: 10px auto 0; }
+}
+@media (max-width:375px) {
+}
+@media (max-width:320px) {
+.NyProlist_Right ul li .NyProlist_Img { height: 200px; }
+}
+/*NyProlist 结束*/
+
+
+/*NyProDetail 开始*/
+.NyProDetail { width: 1400px; height: auto; margin: 0 auto; padding: 0; box-sizing: border-box; -webkit-box-sizing: border-box; -o-box-sizing: border-box; -moz-box-sizing: border-box; }
+.NyProDetail .NyProDetail_Main { width: 100%; height: auto; margin: 60px auto; padding: 20px; background-color: #fff; box-sizing: border-box; -webkit-box-sizing: border-box; -o-box-sizing: border-box; -moz-box-sizing: border-box; }
+.NyProDetail_Main .NyProDetail_Img { width: 38%; height: auto; margin: 0; padding: 0; float: left; box-sizing: border-box; -webkit-box-sizing: border-box; -o-box-sizing: border-box; -moz-box-sizing: border-box; }
+#preview { width: 100%; margin: 0; text-align: center; position: relative; }
+.list-h li { float: left; }
+#spec-n5 { width: 100%; height: 98px; padding-top: 10px; overflow: hidden; }
+#spec-left { width: 16px; height: 88px; float: left; cursor: pointer; margin-top: 3px; }
+#spec-right { width: 16px; height: 88px; float: left; cursor: pointer; margin-top: 3px; }
+#spec-list { width: 440px; float: left; overflow: hidden; margin-left: 2px; display: inline; }
+#spec-list ul { }
+#spec-list ul li { float: left; display: inline; padding: 0; width: 23.5%; height: 88px; margin: 0 2% 0 0; }
+#spec-list ul li:nth-child(4) { margin: 0; }
+#spec-list ul li p { width: 100%; height: 100%; overflow: hidden; margin: 0; padding: 0; background-color: #fff; border: 1px solid #e5e5e5; position: relative; box-sizing: border-box; -webkit-box-sizing: border-box; -o-box-sizing: border-box; -moz-box-sizing: border-box; }
+#spec-list ul li:hover p { border: 1px solid #124b53; }
+#spec-list ul li img { display: block; max-width: 92%; max-height: 94%; margin: auto; padding: 0; position: absolute; left: 0; top: 0; right: 0; bottom: 0; }
+/*jqzoom*/
+.jqzoom { position: relative; width: 100%; height: 350px; overflow: hidden; padding: 0; background-color: #fff; box-sizing: border-box; -webkit-box-sizing: border-box; -o-box-sizing: border-box; -moz-box-sizing: border-box; }
+.jqzoom img { display: block; max-width: 100%; max-height: 100%; margin: auto; padding: 0; position: absolute; left: 0; top: 0; right: 0; bottom: 0; }
+.zoomdiv { z-index: 100; position: absolute; top: 1px; left: 0px; background: url(../images/loading.gif) #fff no-repeat center center; border: 1px solid #eaeaea; display: none; text-align: center; overflow: hidden; left: 102%!important; top: 0!important; }
+.bigimg { }
+.jqZoomPup { width: 200px!important; height: 200px!important; z-index: 10; visibility: hidden; position: absolute; top: 0px; left: 0px; background: url(../images/mask.png) 0 0 repeat; opacity: 0.5; -moz-opacity: 0.5; -khtml-opacity: 0.5; filter: alpha(Opacity=50); cursor: move; }
+#spec-list { position: relative; width: 100%; margin: 0; }
+#spec-list div { width: 100%!important; height: 70px!important; margin: 0; }
+#ceshi { display: block; margin: auto!important; left: 0; top: 0; bottom: 0; right: 0; }
+.NyProDetail_Img a.videoIco { left: 20px!important; bottom: 20px!important; z-index: 99!important; }
+.Warning { width: 100%!important; height: 100%!important; }
+.NyProDetail_Main .NyProDetail_Text { width: 62%; height: auto; margin: 0; padding: 40px 20px 0 40px; float: right; box-sizing: border-box; -webkit-box-sizing: border-box; -o-box-sizing: border-box; -moz-box-sizing: border-box; }
+.NyProDetail_Text .NyProDetail_Name { width: 100%; height: auto; min-height: 40px; max-height: 80px; overflow: hidden; line-height: 40px; color: #333; font-size: 30px; font-weight: bold; word-break: break-all; position: relative; display: -webkit-box; text-overflow: ellipsis; -webkit-line-clamp: 2; -webkit-box-orient: vertical; margin: 0 auto 40px; padding: 0; box-sizing: border-box; -webkit-box-sizing: border-box; -o-box-sizing: border-box; -moz-box-sizing: border-box; }
+.NyProDetail_Text .NyProDetail_Ms { width: 100%; height: auto; overflow: hidden; margin: 0 auto 20px; padding: 0 0 30px; border-bottom: 1px solid #e5e5e5; box-sizing: border-box; -webkit-box-sizing: border-box; -o-box-sizing: border-box; -moz-box-sizing: border-box; }
+.NyProDetail_Text .NyProDetail_Ms span { display: block; width: 100%; height: 30px; overflow: hidden; line-height: 30px; color: #333; font-size: 18px; margin: 0 auto 10px; padding: 0; }
+.NyProDetail_Text .NyProDetail_Ms span img { display: block; width: 20px; height: 20px; margin: 5px 10px 5px 0; padding: 0; float: left; }
+.NyProDetail_Text .NyProDetail_Ms p { width: 100%; height: auto; max-height: 56px; overflow: hidden; line-height: 28px; color: #666; font-size: 16px; word-break: break-all; text-align: justify; display: -webkit-box; text-overflow: ellipsis; -webkit-line-clamp: 2; -webkit-box-orient: vertical; margin: 0 auto; padding: 0; }
+.NyProDetail_Text .NyProDetail_Tags { width: 100%; height: auto; margin: 0 auto; padding: 0; }
+.NyProDetail_Tags dl dd { width: auto; max-width: 30%; height: 40px; overflow: hidden; line-height: 40px; color: #666; font-size: 16px; white-space: nowrap; text-overflow: ellipsis; margin: 0 4% 0 0; padding: 0; float: left; }
+.NyProDetail_Tags dl dd:nth-child(4) { margin: 0; }
+.NyProDetail_Tags dl dd i { display: block; width: 6px; height: 6px; margin: 16px 10px 16px 0; padding: 0; border: 1px solid #124b53; border-radius: 50%; float: left; }
+.NyProDetail_Text .NyProDetail_Btm { width: 100%; height: 60px; overflow: hidden; margin: 40px auto 0; padding: 0; box-sizing: border-box; -webkit-box-sizing: border-box; -o-box-sizing: border-box; -moz-box-sizing: border-box; }
+.NyProDetail_Btm a { display: block; width: auto; height: 60px; overflow: hidden; margin: 0 40px 0 0; padding: 0; background-color: #f9f9f9; border-radius: 30px; float: left; }
+.NyProDetail_Btm a.Btn01 i { display: block; width: 60px; height: 60px; margin: 0; padding: 6px; background-color: rgba(18,75,83,0.05); border-radius: 50%; float: left; box-sizing: border-box; -webkit-box-sizing: border-box; -o-box-sizing: border-box; -moz-box-sizing: border-box; }
+.NyProDetail_Btm a.Btn01 i em { display: block; width: 48px; height: 48px; margin: 0; padding: 0; background: #124b53 url(../images/ico11.png) center center no-repeat; background-size: 30px 30px; border-radius: 50%; }
+.NyProDetail_Btm a.Btn01 span { display: block; width: auto; height: 60px; line-height: 40px; color: #124b53; font-size: 20px; font-weight: bold; margin: 0; padding: 10px 30px 10px 20px; float: left; box-sizing: border-box; -webkit-box-sizing: border-box; -o-box-sizing: border-box; -moz-box-sizing: border-box; }
+.NyProDetail_Btm a.Btn02 { margin: 0; }
+.NyProDetail_Btm a.Btn02 i { display: block; width: 60px; height: 60px; margin: 0; padding: 6px; background: rgba(18,75,83,0.05); border-radius: 50%; float: left; box-sizing: border-box; -webkit-box-sizing: border-box; -o-box-sizing: border-box; -moz-box-sizing: border-box; }
+.NyProDetail_Btm a.Btn02 i em { display: block; width: 48px; height: 48px; margin: 0; padding: 0; background: #333333 url(../images/ico12.png) center center no-repeat; background-size: 30px 30px; border-radius: 50%; }
+.NyProDetail_Btm a.Btn02 span { display: block; width: auto; height: 60px; line-height: 40px; color: #333333; font-size: 24px; font-weight: bold; margin: 0; padding: 10px 30px 10px 20px; float: left; box-sizing: border-box; -webkit-box-sizing: border-box; -o-box-sizing: border-box; -moz-box-sizing: border-box; }
+.NyProDetail .NyProDetail_Content { width: 100%; height: auto; margin: 60px auto; padding: 0; }
+.NyProDetail_Content .NyProDetail_Left { width: 23.5%; height: auto; margin: 0; padding: 0; float: left; }
+.NyProDetail_Content .NyProDetail_Right { width: 76.5%; height: auto; margin: 0; padding: 0 0 0 30px; float: right; box-sizing: border-box; -webkit-box-sizing: border-box; -o-box-sizing: border-box; -moz-box-sizing: border-box; }
+.NyProDetail_Right .NyProDetail_Con { width: 100%; overflow: hidden; margin: 0 auto; padding: 30px; background-color: #fff; box-sizing: border-box; -webkit-box-sizing: border-box; -o-box-sizing: border-box; -moz-box-sizing: border-box; }
+.NyProDetail_Con .NyProDetail_Tit { width: 100%; height: auto; margin: 0 auto 30px; padding: 0; border-bottom: 1px solid #e6e6e6; }
+.NyProDetail_Con .NyProDetail_Tit span { display: block; width: auto; height: 40px; overflow: hidden; line-height: 38px; color: #124b53; font-size: 18px; font-weight: bold; margin: 0; padding: 0; border-bottom: 2px solid #124b53; float: left; }
+.NyProDetail_Con .NyProDetail_Tit a { display: block; width: auto; height: 40px; overflow: hidden; line-height: 38px; color: #333; font-size: 18px; font-weight: bold; margin: 0 0 0 60px; padding: 0; border-bottom: 2px solid #fff; float: left; }
+.NyProDetail_Con .NyProDetail_Tit a:hover { color: #124b53; border-bottom: 2px solid #124b53; }
+.NyProDetail_Con .ProDetailText { width: 100%; overflow: hidden; line-height: 30px; color: #666; font-size: 16px; margin: 0 auto; padding: 0; }
+.ProDetailText div, .ProDetailText p {/* margin: 0 auto 20px; */}
+.ProDetailText img, .ProDetailText table, .ProDetailText tr, .ProDetailText td, .ProDetailText p, .ProDetailText span, .ProDetailText div, .ProDetailText video, .ProDetailText embed { max-width: 100% !important; max-height: 100%;  line-height: 24px;  color: #666; font-size: 16px; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; white-space: normal; word-break: break-all; text-align: justify; }
+.ProDetailText p span, .ProDetailText span, .ProDetailText p em, .ProDetailText em { color: #666!important; font-family: Arial, \5FAE\8F6F\96C5\9ED1, Helvetica, sans-serif!important; font-size: 16px!important; }
+.ProDetailText b { display: block; line-height: 30px; color: #333; font-size: 16px; font-weight: normal; margin: 0 0 5px; }
+.ProDetailText table tr td p { text-indent: 0!important; }
+.ProDetailText img { /*display: inline-block; width: auto!important; height: auto!important;*/ max-width: 100%; margin: 0 auto; padding: 0; text-indent: 0!important; }
+.NyPro_PrevNext { width: 100%; height: auto; margin: 30px auto 0; padding: 7px 30px; background-color: #124b53; box-sizing: border-box; -webkit-box-sizing: border-box; -o-box-sizing: border-box; -moz-box-sizing: border-box; }
+.NyPro_PrevNext p { width: 42%; height: 40px; overflow: hidden; line-height: 40px; color: #fff; font-size: 16px; white-space: nowrap; text-overflow: ellipsis; margin: 0; padding: 0; position: relative; float: left; box-sizing: border-box; -webkit-box-sizing: border-box; -o-box-sizing: border-box; -moz-box-sizing: border-box; }
+.NyPro_PrevNext p a { line-height: 40px; color: #fff; font-size: 16px; }
+.NyPro_PrevNext p.NyProPrev { padding: 0 0 0 30px; }
+.NyPro_PrevNext p.NyProNext { padding: 0 30px 0 0; text-align: right; }
+.NyPro_PrevNext p img { display: block; width: 20px; height: 20px; margin: 0; padding: 0; position: absolute; top: 10px; }
+.NyPro_PrevNext p.NyProPrev img { left: 0; }
+.NyPro_PrevNext p.NyProNext img { right: 0; }
+.NyPro_PrevNext a.NyProAll { display: block; width: 16%; height: 40px; overflow: hidden; line-height: 40px; color: #fff; font-size: 16px; text-align: center; margin: 0; padding: 0; float: left; }
+.NyPro_PrevNext a.NyProAll img { display: inline-block; width: 20px; height: 20px; vertical-align: middle; margin: -2px 10px 0 0; padding: 0; }
+.OdrTitle { width: 100%; height: auto; margin: 0 auto 30px; padding: 0; }
+.OdrTitle p { width: 100%; height: 40px; overflow: hidden; line-height: 40px; color: #333; font-size: 30px; font-weight: bold; text-align: center; margin: 0 auto 10px; padding: 0; }
+.OdrTitle i { display: block; width: 128px; height: 13px; overflow: hidden; margin: 0 auto; padding: 0; background: url(../images/line04.png) center center no-repeat; }
+.NyProOrder_Main { width: 100%; height: auto; margin: 60px auto 0; padding: 0; position: relative; }
+.NyProOrder_Main #ab_msg.ab_msg { width: 100%!important; height: auto!important; margin: 0 auto!important; padding: 0!important; }
+.NyProOrder_Main #ab_msg.ab_msg h3 { display: none!important; }
+.NyProOrder_Main #ab_msg.ab_msg ul { width: 100%!important; overflow: hidden!important; margin: 0 auto!important; padding: 0!important; }
+.NyProOrder_Main #ab_msg.ab_msg ul li h4, .NyProOrder_Main #ab_msg.ab_msg ul li h4.xh { display: none!important; }
+.NyProOrder_Main #ab_msg.ab_msg ul li { width: 100%!important; height: auto!important; overflow: hidden!important; line-height: inherit!important; color: inherit!important; font-size: inherit!important; margin: 0 0 25px!important; padding: 0!important; clear: inherit!important; }
+.NyProOrder_Main #ab_msg.ab_msg ul li:last-child { margin: 25px auto 0!important; }
+.NyProOrder_Main #ab_msg.ab_msg ul li .msg_ipt1, .NyProOrder_Main #ab_msg.ab_msg ul li .msg_ipt12, .NyProOrder_Main #ab_msg.ab_msg ul li .msg_tara { width: 100%!important; height: auto!important; margin: 0!important; padding: 0!important; }
+.NyProOrder_Main #ab_msg.ab_msg ul li .msg_ipt1 input, .NyProOrder_Main #ab_msg.ab_msg ul li .msg_ipt12 input, .NyProOrder_Main #ab_msg.ab_msg ul li .msg_ipt2 input, .NyProOrder_Main #ab_msg.ab_msg ul li .msg_ipt12 .msg_option { display: block!important; width: 100%!important; height: 60px!important; line-height: 60px; color: #666; font-size: 16px; margin: 0!important; padding: 0 20px!important; background-color: #fff!important; border: 0!important; outline: none!important;}
+.NyProOrder_Main #ab_msg.ab_msg ul li .c_yzm { margin: 0 10px 0 0!important; padding: 0!important; float: left!important; }
+.NyProOrder_Main #ab_msg.ab_msg ul li .msg_ipt2 input { width: 200px!important; margin: 0 10px 0 0!important; float: left!important; }
+.NyProOrder_Main #ab_msg.ab_msg ul li a.yzm_img { display: block!important; width: 120px!important; height: 40px!important; padding: 0!important; float: left!important; }
+.NyProOrder_Main #ab_msg.ab_msg ul li .msg_ipt2>span { line-height: 60px!important; color: #666!important; font-size: 16px!important; }
+.NyProOrder_Main #ab_msg.ab_msg ul li .msg_tara textarea, .NyProOrder_Main #ab_msg.ab_msg ul li .msg_ipt0 textarea { display: block!important; width: 100%!important; height: 150px!important; line-height: 30px; color: #666; font-size: 16px; margin: 0!important; padding: 15px 20px!important; background-color: #fff!important; border: 0!important; outline: none!important; resize: none!important;}
+.NyProOrder_Main #ab_msg.ab_msg ul li .msg_btn { width: 100%!important; height: auto!important; overflow: hidden!important; margin: 20px 0 0!important; padding: 0!important; float: inherit!important; }
+.NyProOrder_Main #ab_msg.ab_msg .msg_btn input { width: 200px!important; height: 60px!important; overflow: hidden!important; line-height: 60px!important; color: #fff!important; font-size: 16px!important; text-align: center!important; background-color: #333!important; margin: 0 30px 0 0!important; padding: 0!important; border: none!important; cursor: pointer!important; float: left; }
+.NyProOrder_Main #ab_msg.ab_msg .msg_btn input:hover { background-color: #124b53!important; }
+.NyProOrder_Main #ab_msg.ab_msg .msg_btn input.msg_btn1 { background-color: #124b53!important; }
+.NyProOrder_Main #ab_msg.ab_msg .msg_btn input.msg_btn1:hover { background-color: #a2000d!important; }
+.NyProOrder_Main #ab_msg.ab_msg ul li .msg_ipt2 { width: 100%!important; }
+
+.NyProOrder_Main #ab_msg.ab_msg ul li .msg_ipt1 input::placeholder, .NyProOrder_Main #ab_msg.ab_msg ul li .msg_ipt12 input::placeholder, .NyProOrder_Main #ab_msg.ab_msg ul li .msg_ipt2 input::placeholder, .NyProOrder_Main #ab_msg.ab_msg ul li .msg_tara textarea::placeholder, .NyProOrder_Main #ab_msg.ab_msg ul li .msg_ipt0 textarea::placeholder { color:#666;}
+
+@media (max-width:1680px) {
+}
+@media (max-width:1600px) {
+}
+@media (max-width:1560px) {
+}
+@media (max-width:1440px) {
+.NyProDetail { width: 100%; padding: 0 60px; }
+.NyProDetail_Tags dl dd { margin: 0 30px 0 0; }
+}
+@media (max-width:1366px) {
+.NyProDetail_Main .NyProDetail_Img { width: 40%; }
+.jqzoom { height: 340px; }
+#spec-n5 { height: 90px; }
+#spec-list ul li { height: 80px; }
+.NyProDetail_Main .NyProDetail_Text { width: 60%; }
+.NyProDetail_Text .NyProDetail_Name { font-size: 26px; margin: 0 auto 30px; }
+.NyProDetail_Text .NyProDetail_Ms span { font-size: 16px; }
+.NyProDetail_Text .NyProDetail_Ms p { max-height: 50px; line-height: 25px; font-size: 15px; }
+.NyProDetail_Tags dl dd { width: 48.5%; max-width: inherit; font-size: 15px; margin: 0 3% 0 0; }
+.NyProDetail_Tags dl dd:nth-child(2n+2) { margin: 0; }
+.NyProDetail_Btm .NyProDetail_Tel span { font-size: 14px; }
+.NyProDetail_Con .ProDetailText { width: 100%; overflow: hidden; line-height: 30px; color: #666; font-size: 15px; margin: 0 auto; padding: 0; }
+.ProDetailText div, .ProDetailText p { margin: 0 auto 20px; }
+.ProDetailText img, .ProDetailText table, .ProDetailText tr, .ProDetailText td, .ProDetailText p, .ProDetailText span, .ProDetailText div, .ProDetailText video, .ProDetailText embed {line-height: 30px; color: #666; font-size: 15px;}
+.ProDetailText p span, .ProDetailText span, .ProDetailText p em, .ProDetailText em { color: #666!important; font-family: Arial, \5FAE\8F6F\96C5\9ED1, Helvetica, sans-serif!important; font-size: 15px!important; }
+.ProDetailText b { display: block; line-height: 30px; color: #666; font-size: 15px; font-weight: bold; margin: 0 0 5px; }
+.NyPro_PrevNext p, .NyPro_PrevNext p a { font-size: 15px; }
+.NyPro_PrevNext a.NyProAll { font-size: 15px; }
+.NyProOrder_Main #ab_msg.ab_msg ul li .c_yzm { width: auto!important; }
+}
+@media (max-width:1280px) {
+.NyProDetail_Main .NyProDetail_Img { width: 42%; }
+.NyProDetail_Main .NyProDetail_Text { width: 58%; padding: 20px 20px 0 40px; }
+.NyProDetail_Text .NyProDetail_Name { margin: 0 auto 20px; }
+.NyProDetail_Text .NyProDetail_Btm { margin: 30px auto 0; }
+.NyProDetail_Btm a { margin: 0 30px 0 0; }
+.NyProOrder_Main #ab_msg.ab_msg ul li .msg_ipt1 input, .NyProOrder_Main #ab_msg.ab_msg ul li .msg_ipt12 input, .NyProOrder_Main #ab_msg.ab_msg ul li .msg_ipt2 input, .NyProOrder_Main #ab_msg.ab_msg ul li .msg_ipt12 .msg_option { height: 50px!important; line-height: 50px!important; font-size: 15px; }
+.NyProOrder_Main #ab_msg.ab_msg ul li .msg_tara textarea, .NyProOrder_Main #ab_msg.ab_msg ul li .msg_ipt0 textarea { height: 145px!important; line-height: 25px; font-size: 15px; padding: 10px 20px!important; }
+.NyProOrder_Main #ab_msg.ab_msg ul li a.yzm_img { margin: 5px 0!important; }
+.NyProOrder_Main #ab_msg.ab_msg ul li .msg_ipt2>span { font-size: 15px!important; line-height: 50px!important; }
+.NyProOrder_Main #ab_msg.ab_msg .msg_btn input { height: 50px!important; line-height: 50px!important; }
+.NyProOrder_Main #ab_msg.ab_msg ul li .msg_btn { left: 20px; }
+}
+@media (max-width:1200px) {
+.NyProDetail { padding: 0 40px; }
+.NyProDetail_Main .NyProDetail_Img { width: 40%; }
+.NyProDetail_Main .NyProDetail_Text { width: 60%; padding: 20px 20px 0 40px; }
+.NyProDetail_Text .NyProDetail_Ms { margin: 0 auto 15px; padding: 0 0 20px; }
+.NyProDetail_Text .NyProDetail_Btm { height: 50px; margin: 20px auto 0; }
+.NyProDetail_Btm a { height: 50px; }
+.NyProDetail_Btm a.Btn01 i, .NyProDetail_Btm a.Btn02 i { width: 50px; height: 50px; padding: 4px; }
+.NyProDetail_Btm a.Btn01 i em, .NyProDetail_Btm a.Btn02 i em { width: 42px; height: 42px; }
+.NyProDetail_Btm a.Btn01 span { height: 50px; padding: 5px 30px 5px 20px; font-size: 18px; }
+.NyProDetail_Btm a.Btn02 span { height: 50px; padding: 5px 30px 5px 20px; font-size: 22px; }
+.jqzoom { height: 300px; }
+#spec-n5 { height: 82px; }
+#spec-list ul li { height: 72px; }
+.NyProDetail_Right .NyProDetail_Con { padding: 20px; }
+.NyProDetail_Con .NyProDetail_Tit { margin: 0 auto 20px; }
+.NyProDetail_Con .NyProDetail_Tit a { margin: 0 0 0 40px; }
+}
+@media (max-width:1080px) {
+.NyProDetail_Text .NyProDetail_Name { min-height: 36px; max-height: 72px; line-height: 36px; font-size: 24px; }
+.NyProDetail_Text .NyProDetail_Ms { padding: 0 0 15px; }
+.NyProDetail_Text .NyProDetail_Ms p { max-height: 48px; line-height: 24px; font-size: 14px; }
+.NyProDetail_Tags dl dd { height: 30px; line-height: 30px; font-size: 14px; }
+.NyProDetail_Tags dl dd i { margin: 11px 8px 11px 0; }
+.NyProDetail .NyProDetail_Main { margin: 40px auto; }
+.NyProDetail .NyProDetail_Content { margin: 40px auto; }
+.NyProDetail_Con .NyProDetail_Tit { margin: 0 auto 20px; }
+.ProDetailText div, .ProDetailText p { margin: 0 auto 20px; }
+.NyProOrder_Main { margin: 40px auto 0; }
+.NyProOrder_Main #ab_msg.ab_msg .msg_btn input { width: 160px!important; }
+.NyProOrder_Main #ab_msg.ab_msg ul li .c_yzm { height: 50px; }
+.NyProOrder_Main #ab_msg.ab_msg ul li .msg_ipt2>span { display: block; width: 100%; line-height: 30px!important; padding: 10px 0; font-size: 14px!important; }
+.NyProOrder_Main #ab_msg.ab_msg ul li .msg_btn { margin: 0!important; }
+.jqzoom { height: 280px; }
+#spec-n5 { height: 76px; }
+#spec-list ul li { height: 66px; }
+}
+@media (max-width:1024px) {
+}
+@media (max-width:800px) {
+.NyProDetail { padding: 0 20px; }
+.NyProDetail_Main .NyProDetail_Img { width: 100%; margin: 0 auto 20px; padding: 0; float: inherit; }
+.jqzoom { height: 480px; }
+#spec-n5 { height: 110px; }
+#spec-list ul li { height: 100px; }
+.zoomdiv { display: none!important; }
+.NyProDetail_Main .NyProDetail_Text { width: 100%; margin: 0 auto; padding: 0; float: inherit; }
+.NyProDetail_Text .NyProDetail_Ms { margin: 20px auto; }
+.NyProDetail_Text .NyProDetail_Name { font-size: 24px; }
+.NyProDetail_Content .NyProDetail_Right { width: 100%; margin: 0 auto; padding: 0; float: inherit; }
+.NyProDetail_Content .NyProDetail_Left { width: 100%; margin: 0 auto; padding: 0; float: inherit; }
+.ProDetailText img, .ProDetailText table, .ProDetailText tr, .ProDetailText td, .ProDetailText p, .ProDetailText span, .ProDetailText div, .ProDetailText video, .ProDetailText embed { width: auto !important; height: auto !important;}
+.NyProOrder_Main #ab_msg.ab_msg ul li:last-child { margin: 20px auto 0!important; }
+.NyProOrder_Main #ab_msg.ab_msg ul li .msg_btn { width: 100%!important; position: inherit; left: inherit; bottom: inherit; }
+.NyProOrder_Main #ab_msg.ab_msg .msg_btn input { margin: 0 20px 0 0!important; }
+.NyPro_PrevNext { padding: 5px 20px; }
+}
+@media (max-width:767px) {
+.NyProDetail { padding: 0 12px; }
+.NyProDetail .NyProDetail_Main { margin: 20px auto; padding: 12px; }
+.NyProDetail .NyProDetail_Content { margin: 20px auto; }
+.NyProDetail_Con .NyProDetail_Tit { margin: 0 auto 20px; }
+.NyProDetail_Con .ProDetailText { margin: 0 auto; }
+.ProDetailText div, .ProDetailText p { margin: 0 auto 10px; }
+.jqzoom { height: 260px; }
+#spec-n5 { height: 76px; }
+#spec-list ul li { height: 66px; }
+.NyProDetail_Text .NyProDetail_Name { min-height: 32px; max-height: 64px; line-height: 32px; font-size: 22px; margin: 0 auto 15px; }
+.NyProDetail_Text .NyProDetail_Name i { height: 22px; top: 5px; }
+.NyProDetail_Text .NyProDetail_Ms { margin: 0 auto 15px; padding: 0 0 15px; }
+.NyProDetail_Text .NyProDetail_Ms p { height: auto; max-height: 72px; line-height: 24px; font-size: 14px; }
+.NyProDetail_Tags dl dd { width: 100%; margin: 0 auto; padding: 4px 0; float: inherit; }
+.NyProDetail_Text .NyProDetail_Btm { height: auto; margin: 15px auto 0; }
+.NyProDetail_Btm a { margin: 0 0 12px; }
+.NyProDetail_Btm a.Btn01 span { padding: 5px 20px 5px 10px; }
+.NyProDetail_Btm a.Btn02 span { padding: 5px 20px 5px 10px; }
+.NyProDetail_Con .NyProDetail_Tit a { margin: 0 0 0 20px; }
+.NyPro_PrevNext { margin: 20px auto 0; padding: 10px 20px; }
+.NyPro_PrevNext p { width: 100%; font-size: 14px; text-align: left; padding: 0; }
+.NyPro_PrevNext p.NyProNext { text-align: left; padding: 0 0 0 30px; }
+.NyPro_PrevNext p.NyProNext img { right: inherit; left: 0; }
+.NyPro_PrevNext a.NyProAll { width: 100%; font-size: 14px; text-align: left; }
+.NyProOrder_Main { margin: 20px auto 0; }
+.NyProOrder_Main .NyProOrder_Left { padding: 0; margin: 0 auto 20px; }
+.NyProOrder_Title p { line-height: 36px; font-size: 26px; }
+.NyProOrder_Title i { height: 3px; margin: 7px 0 10px; }
+.NyProOrder_Title span { line-height: 24px; font-size: 16px; }
+.NyProOrder_Main #ab_msg.ab_msg ul li { margin: 0 auto 20px!important; }
+.NyProOrder_Main #ab_msg.ab_msg ul li:nth-child(1), .NyProOrder_Main #ab_msg.ab_msg ul li:nth-child(3), .NyProOrder_Main #ab_msg.ab_msg ul li:nth-child(5) { width: 100%!important; margin: 0 auto 20px!important; float: inherit!important; }
+.NyProOrder_Main #ab_msg.ab_msg ul li:nth-child(2), .NyProOrder_Main #ab_msg.ab_msg ul li:nth-child(4), .NyProOrder_Main #ab_msg.ab_msg ul li:nth-child(6) { width: 100%!important; margin: 0 auto 20px!important; float: inherit!important; }
+.NyProOrder_Main #ab_msg.ab_msg ul li .msg_ipt2 input { width: 160px!important; }
+.NyProOrder_Main #ab_msg.ab_msg .msg_btn input { width: 48%!important; margin: 0!important; }
+.NyProOrder_Main #ab_msg.ab_msg .msg_btn input.msg_btn1 { margin: 0 4% 0 0!important; }
+.NyProOrder_Main #ab_msg.ab_msg ul li .msg_ipt2>span { line-height: 24px!important; font-size: 14px!important; padding: 10px 0 0; }
+.NyProOrder_Main #ab_msg.ab_msg ul li .msg_ipt1 input, .NyProOrder_Main #ab_msg.ab_msg ul li .msg_ipt12 input, .NyProOrder_Main #ab_msg.ab_msg ul li .msg_ipt2 input, .NyProOrder_Main #ab_msg.ab_msg ul li .msg_ipt12 .msg_option { font-size: 14px; }
+.NyProOrder_Main #ab_msg.ab_msg ul li .msg_tara textarea, .NyProOrder_Main #ab_msg.ab_msg ul li .msg_ipt0 textarea { font-size: 14px; height: 140px!important; line-height: 24px; }
+.NyProOrder_Main #ab_msg.ab_msg ul li:last-child { margin: 20px auto 0!important; }
+.NyProOrder_Main #ab_msg.ab_msg ul li .c_yzm { float: inherit!important; }
+}
+@media (max-width:375px) {
+.jqzoom { height: 240px; }
+#spec-n5 { height: 70px; }
+#spec-list ul li { height: 60px; }
+}
+@media (max-width:320px) {
+.jqzoom { height: 210px; }
+#spec-n5 { height: 62px; }
+#spec-list ul li { height: 52px; }
+.NyProDetail_Btm .NyProDetail_Tel img { position: inherit; left: inherit; top: inherit; margin: 0 auto 10px; }
+.NyProDetail_Btm .NyProDetail_Tel span, .NyProDetail_Btm .NyProDetail_Tel p { text-align: center; }
+.NyProOrder_Main #ab_msg.ab_msg ul li .msg_ipt2 input { width: 130px!important; }
+}
+/*NyProDetail 结束*/
+.ab_img img{ max-width:100% !important; height:auto !important;display:inline-block;}
+.ab_img p{text-wrap: inherit !important;}
+.ab_img p span{text-wrap: inherit !important;}
+/* AB模板网新增分页样式 www.admibnuy.cn */
+.pagebar { padding:20px; overflow:hidden; clear:both}
+.pagebar .pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.pagination a {
+  background: #fff;
+  border: 1px solid #ccc;
+  color: #333;
+  font-size: 12px;
+  padding: 8px 10px;
+  margin: 0 2px;
+  border-radius: 3px; line-height:100%
+}
+.pagination span {
+    color: #333;
+    font-size: 12px;
+    padding: 7px 2px;
+    margin: 0 2px;
+    border-radius: 3px;
+}
+.pagination a:hover {
+  color: #333;
+  border: 1px solid #333;
+}
+.pagination a.page-num-current {
+  color: #fff;
+  background: #333;
+  border: 1px solid #333;
+}
+.pagination .st{ font-family:宋体}
+.text-secondary{ text-align:center; padding:20px 0}

@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>{pboot:if('{sort:title}'=='')}{pboot:pagetitle}{else}{sort:title}{/pboot:if}</title>
+<meta name="keywords" content="{pboot:if('{sort:keywords}'=='')}{pboot:pagekeywords}{else}{sort:keywords}{/pboot:if}">
+<meta name="description" content="{pboot:if('{sort:description}'=='')}{pboot:pagedescription}{else}{sort:description}{/pboot:if}">
+<link rel="stylesheet" type="text/css" href="{pboot:sitedomain}/skin/css/common.css">
+<link rel="stylesheet" type="text/css" href="{pboot:sitedomain}/skin/css/nystyle.css">
+<script src="{pboot:sitedomain}/skin/js/jquery-3.6.0.min.js"></script>
+</head>
+<body style="background-color:#f9f9f9;">
+{include file=head.html}
+{pboot:sort scode={sort:tcode}}
+<div class="NyBanner"> <img src="[sort:pic]" class="nyBa_Img" />
+  <div class="NyBa_Con">
+    <p>[sort:name]</p>
+    <i></i><span>[sort:subname]</span></div>
+</div>
+{/pboot:sort}
+<div class="NyCrumb"> <i></i>
+  <div class="NyCrumb_Main">
+    <ul>
+     <li {pboot:if('{sort:scode}'=='{sort:tcode}')}class="NyActive"{/pboot:if}><a href="{sort:toplink}">全部</a></li>
+      {pboot:nav num=50 parent={sort:tcode}}
+      <li {pboot:if('[nav:scode]'=='{sort:scode}')}class="NyActive"{/pboot:if}><a href="[nav:link]">[nav:name]</a></li>
+      {/pboot:nav}
+      <div class="clear"></div>
+    </ul>
+    <p><img src="{pboot:sitedomain}/skin/images/crumb.png" class="Crumb" />当前位置：{pboot:position}</p>
+    <div class="clear"></div>
+  </div>
+</div>
+<!--NyNews 开始-->
+<div class="NyNews">
+  <div class="NyNews_Main">
+    <div class="NyNews_List">
+      <ul class="newul">
+        {pboot:list num=10 order=sorting}
+        <li>
+          <div class="new_box">
+            <p><a href="[list:link]">[list:title]</a></p>
+            <em>[list:date style=Y-m-d]</em> <span>[list:description lencn=80]</span> </div>
+        </li>
+        {/pboot:list}
+      </ul>
+    </div>
+    <div class="clear"></div>
+    <!--分页 开始-->
+     {pboot:if({page:rows}>0)}
+    <div class="pagebar">
+    <div class="pagination">
+    <a class="page-item page-link hidden-sm" href="{page:index}" title="首页">首页</a>
+    <a class="page-item page-link st" href="{page:pre}" title="上一页"><<</a>
+    {page:numbar}
+    <a class="page-item page-link" href="javascript:;" title="当前页/总页数">{page:current}/{page:count}</a>
+    <a class="page-item page-link st" href="{page:next}" title="下一页">>></a>
+    <a class="page-item page-link hidden-sm" href="{page:last}" title="尾页">尾页</a>
+    </div>
+    </div>	
+    {else}
+    <div class="tac text-secondary">本分类下无任何数据！</div>
+    {/pboot:if}
+    <!--分页 结束--> 
+  </div>
+</div>
+{include file=foot.html}
+</body>
+</html>
