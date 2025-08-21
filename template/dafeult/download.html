@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>{pboot:if('{sort:title}'=='')}{pboot:pagetitle}{else}{sort:title}{/pboot:if}</title>
+<link rel="stylesheet" href="{pboot:sitedomain}/skin/css/common.css">
+<link rel="stylesheet" href="{pboot:sitedomain}/skin/css/nystyle.css">
+<link rel="stylesheet" href="{pboot:sitedomain}/skin/css/download.css">
+<script src="{pboot:sitedomain}/skin/js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+{include file=head.html}
+
+{pboot:sort scode={sort:tcode}}
+<div class="NyBanner">
+  <img src="[sort:pic]" alt="[sort:name]" />
+  <div class="NyBa_Con">
+    <p>[sort:name]</p>
+    <span>[sort:subname]</span>
+  </div>
+</div>
+{/pboot:sort}
+
+<div class="NyCrumb">
+  <div class="NyCrumb_Main">
+    <p><img src="{pboot:sitedomain}/skin/images/crumb.png" class="Crumb" />当前位置：{pboot:position}</p>
+  </div>
+</div>
+
+<div class="NyAboutus">
+  <div class="NyAboutus_Profile">
+    <div class="abGsjj_main">
+      <div class="ab_Title1">
+        <p>资料下载</p>
+        <span><i></i></span>
+      </div>
+
+      <div class="download-container">
+        <div class="download-grid">
+          {pboot:list scode={sort:scode} order=sorting extfields=file_size,file_type,download_count}
+          <div class="download-item">
+            <div class="download-icon">
+              <i class="file-icon {pboot:if('[list:file_type]'=='pdf')}pdf{/pboot:if}{pboot:if('[list:file_type]'=='doc'||'[list:file_type]'=='docx')}doc{/pboot:if}{pboot:if('[list:file_type]'=='xls'||'[list:file_type]'=='xlsx')}xls{/pboot:if}{pboot:if('[list:file_type]'=='ppt'||'[list:file_type]'=='pptx')}ppt{/pboot:if}{pboot:if('[list:file_type]'=='zip'||'[list:file_type]'=='rar')}zip{/pboot:if}"></i>
+            </div>
+            <div class="download-info">
+              <h3>[list:title]</h3>
+              <p class="download-desc">[list:content]</p>
+              <div class="download-meta">
+                <span class="file-size">{pboot:if('[list:file_size]'!='')}<i>📊</i> [list:file_size]{else}<i>📊</i> 未知大小{/pboot:if}</span>
+                <span class="file-type">{pboot:if('[list:file_type]'!='')}<i>📄</i> [list:file_type]{else}<i>📄</i> 文件{/pboot:if}</span>
+                <span class="download-count">{pboot:if('[list:download_count]'!='')}<i>⬇️</i> [list:download_count]次{else}<i>⬇️</i> 0次{/pboot:if}</span>
+              </div>
+              <div class="download-actions">
+                <a href="[list:enclosure]" class="download-btn" target="_blank">
+                  <i>⬇️</i>
+                  <span>立即下载</span>
+                </a>
+                <span class="download-date">[list:date]</span>
+              </div>
+            </div>
+          </div>
+          {/pboot:list}
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+{include file=foot.html}
+
+<script>
+$(function(){
+  // 下载统计
+  $('.download-btn').click(function(e){
+    var $item = $(this).closest('.download-item');
+    var $count = $item.find('.download-count');
+    var currentCount = parseInt($count.text().replace(/[^0-9]/g, '')) || 0;
+    $count.html('<i>⬇️</i> ' + (currentCount + 1) + '次');
+  });
+
+  // 悬停效果
+  $('.download-item').hover(
+    function(){
+      $(this).addClass('hover');
+    },
+    function(){
+      $(this).removeClass('hover');
+    }
+  );
+});
+</script>
+
+</body>
+</html>

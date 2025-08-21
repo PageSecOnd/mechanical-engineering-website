@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>页面测试 - 机械工程网站</title>
+<link rel="stylesheet" href="skin/css/common.css">
+<link rel="stylesheet" href="skin/css/nystyle.css">
+<link rel="stylesheet" href="skin/css/timeline.css">
+<link rel="stylesheet" href="skin/css/download.css">
+<script src="skin/js/jquery-3.6.0.min.js"></script>
+<script src="skin/js/timeline.js"></script>
+<style>
+body { margin: 0; padding: 20px; background: #f9f9f9; font-family: "Microsoft YaHei", sans-serif; }
+.test-container { max-width: 1200px; margin: 0 auto; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+.test-section { margin-bottom: 40px; padding: 20px; border: 1px solid #eee; border-radius: 8px; }
+h2 { color: #333; border-bottom: 2px solid #ff7e5f; padding-bottom: 10px; }
+.page-link { display: inline-block; margin: 10px; padding: 10px 20px; background: linear-gradient(135deg,#ff7e5f,#feb47b); color: white; text-decoration: none; border-radius: 25px; transition: all 0.3s; }
+.page-link:hover { transform: scale(1.05); box-shadow: 0 4px 15px rgba(255,126,95,0.4); }
+</style>
+</head>
+<body>
+
+<div class="test-container">
+  <h1>机械工程网站页面测试</h1>
+  
+  <div class="test-section">
+    <h2>页面列表</h2>
+    <p>以下是可用的页面模板：</p>
+    <a href="template/dafeult/timeline.html" class="page-link">时间轴页面</a>
+    <a href="template/dafeult/video.html" class="page-link">视频展示页面</a>
+    <a href="template/dafeult/download.html" class="page-link">资料下载页面</a>
+    <a href="template/dafeult/index.html" class="page-link">首页</a>
+  </div>
+
+  <div class="test-section">
+    <h2>样式测试 - 下载页面组件</h2>
+    <div class="download-grid" style="margin-top: 20px;">
+      <div class="download-item">
+        <div class="download-icon">
+          <i class="file-icon pdf"></i>
+        </div>
+        <div class="download-info">
+          <h3>产品规格说明书</h3>
+          <p class="download-desc">详细的产品技术规格和使用说明文档</p>
+          <div class="download-meta">
+            <span class="file-size"><i>📊</i> 2.5MB</span>
+            <span class="file-type"><i>📄</i> PDF</span>
+            <span class="download-count"><i>⬇️</i> 156次</span>
+          </div>
+          <div class="download-actions">
+            <a href="#" class="download-btn">
+              <i>⬇️</i>
+              <span>立即下载</span>
+            </a>
+            <span class="download-date">2024-01-15</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="download-item">
+        <div class="download-icon">
+          <i class="file-icon doc"></i>
+        </div>
+        <div class="download-info">
+          <h3>安装手册</h3>
+          <p class="download-desc">设备安装步骤和注意事项说明</p>
+          <div class="download-meta">
+            <span class="file-size"><i>📊</i> 1.8MB</span>
+            <span class="file-type"><i>📄</i> DOC</span>
+            <span class="download-count"><i>⬇️</i> 89次</span>
+          </div>
+          <div class="download-actions">
+            <a href="#" class="download-btn">
+              <i>⬇️</i>
+              <span>立即下载</span>
+            </a>
+            <span class="download-date">2024-01-10</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="test-section">
+    <h2>样式测试 - 时间轴组件</h2>
+    <div class="timeline-container" style="margin-top: 20px;">
+      <ul class="timeline">
+        <li class="timeline-visible">
+          <div class="timeline-icon"></div>
+          <div class="timeline-year">2024</div>
+          <div class="timeline-content">
+            <h3>最新发展</h3>
+            <p>公司在机械工程领域取得重大突破，推出新一代智能设备。</p>
+          </div>
+        </li>
+        <li class="timeline-visible">
+          <div class="timeline-icon"></div>
+          <div class="timeline-year">2023</div>
+          <div class="timeline-content">
+            <h3>技术创新</h3>
+            <p>引入先进的自动化生产线，提高生产效率50%。</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="test-section">
+    <h2>CSS文件状态</h2>
+    <p>✅ timeline.css - 时间轴样式</p>
+    <p>✅ download.css - 下载页面样式（新创建）</p>
+    <p>✅ common.css - 通用样式</p>
+    <p>✅ nystyle.css - 主题样式</p>
+  </div>
+
+</div>
+
+<script>
+$(function(){
+  $('.download-btn').click(function(e){
+    e.preventDefault();
+    alert('下载功能演示 - 在实际使用中这里会触发文件下载');
+  });
+});
+</script>
+
+</body>
+</html>
